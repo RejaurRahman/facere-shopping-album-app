@@ -1,18 +1,11 @@
 import './App.css';
+import ShoppingForm from './components/ShoppingForm/ShoppingForm';
 
 const App = () => {
   return (
-    <div className="App">
-      <input
-        type="text"
-        id="add-input"
-        className="input"
-        name="text"
-        autoComplete="off"
-      />
-      <button type="submit" className="btn">
-        Add
-      </button>
+    <div className="app">
+      <ShoppingForm />
+      <div className="list"></div> 
     </div>
   );
 }
