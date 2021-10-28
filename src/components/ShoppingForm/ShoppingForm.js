@@ -1,15 +1,34 @@
+import React, { useState } from 'react';
+
 import './ShoppingForm.css';
 
-const ShoppingForm = () => {
+const ShoppingForm = (props) => {
+  const [enteredTitle, setEnteredTitle] = useState('');
+
+  const titleChangeHandler = (event) => {
+    setEnteredTitle(event.target.value);
+  };
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+    const shoppingData = {
+      title: enteredTitle
+    };
+
+    props.onSaveShoppingData(shoppingData);
+    setEnteredTitle('');
+  };
+
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <input
         type="text"
-        id="add-input"
+        value={enteredTitle}
         className="input"
         name="text"
         placeholder="Enter task"
-        autoComplete="off"
+        onChange={titleChangeHandler}
       />
       <button type="submit" className="btn">
         Add
