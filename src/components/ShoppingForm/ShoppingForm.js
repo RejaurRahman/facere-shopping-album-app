@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from '../UI/Button/Button';
 
 import './ShoppingForm.css';
 
@@ -45,12 +46,12 @@ const ShoppingForm = (props) => {
         placeholder="Enter Category (For Ex. Food)"
         onChange={categoryChangeHandler}
       />
-      <button type="submit" className="btn">
+      <Button type="submit" className="add">
         Add to list
-      </button>
-      <button type="button" className="btn" onClick={props.onCancel}>
+      </Button>
+      <Button type="button" className="cancel" onClick={props.onCancel}>
         Cancel
-      </button>
+      </Button>
     </form>
   );
 };

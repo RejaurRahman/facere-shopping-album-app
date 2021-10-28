@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ShoppingForm from '../ShoppingForm/ShoppingForm';
+import Button from '../UI/Button/Button';
 
 import './NewShoppingItem.css';
 
@@ -28,7 +29,9 @@ const NewShoppingItem = (props) => {
     <div className="new-expense">
       {
         !isEditing && (
-          <button onClick={startEditingHandler}>Add New Shopping</button>
+          <Button type="button" className="add" onClick={startEditingHandler}>
+            Add New Shopping
+          </Button>
         )
       }
 
