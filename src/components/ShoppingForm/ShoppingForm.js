@@ -19,7 +19,7 @@ const ShoppingForm = (props) => {
 
     const shoppingData = {
       title: enteredTitle,
-      catgory: enteredCategory
+      category: enteredCategory
     };
 
     props.onSaveShoppingData(shoppingData);

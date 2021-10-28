@@ -10,8 +10,9 @@ const ShoppingFilter = (props) => {
   return (
     <div className="shoppingFilter">
       <select value={props.selected} onChange={dropdownChangeHandler}>
-        <option value="Food">Food</option>
-        <option value="Furniture">Furniture</option>
+        <option value="Food">Food</option>	
+        <option value="Furniture">Furniture</option>	
+        <option value="DIY">DIY</option>
       </select>
     </div>
   );

@@ -33,7 +33,7 @@ const App = () => {
   const addShoppingHandler = expense => {
     setExpenses(prevExpenses => {
       return [expense, ...prevExpenses];
-    });
+    }, [expenses])
   };
 
   return (
