@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ShoppingFilter from '../ShoppingFilter/ShoppingFilter';
 import ShoppingList from '../ShoppingList/ShoppingList';
-import Card from '../UI/Card';
+import Card from '../UI/Card/Card';
 
 import './Shopping.css';
 

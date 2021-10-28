@@ -9,7 +9,7 @@ const ShoppingList = (props) => {
   }
   
   return (
-    <ul className="shoppingList">
+    <ul className="list">
       {
         props.items.map((expense) => (
           <ShoppingItem

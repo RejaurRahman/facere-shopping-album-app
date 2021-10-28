@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import NewShoppingItem from './components/NewShoppingItem/NewShoppingItem';
 import Shopping from './components/Shopping/Shopping';
+import Background from './components/UI/Background/Background';
 
 import './App.css';
 
@@ -38,6 +39,7 @@ const App = () => {
 
   return (
     <div className="app">
+      <Background />
       <NewShoppingItem onAddShopping={addShoppingHandler} />
       <Shopping items={expenses} />
     </div>
