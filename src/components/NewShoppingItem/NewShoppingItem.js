@@ -5,7 +5,7 @@ import Button from '../UI/Button/Button';
 import './NewShoppingItem.css';
 
 const NewShoppingItem = (props) => {
-  const [isEditing, setIsEditing] = useState(false);
+  const [isAdding, setIsAdding] = useState(false);
 
   const saveShoppingDataHandler = (enteredShoppingData) => {
     const shoppingData = {
@@ -14,32 +14,32 @@ const NewShoppingItem = (props) => {
     };
 
     props.onAddShopping(shoppingData);
-    setIsEditing(false);
+    setIsAdding(false);
   };
 
-  const startEditingHandler = () => {
-    setIsEditing(true);
+  const startAddingHandler = () => {
+    setIsAdding(true);
   };
 
-  const stopEditingHandler = () => {
-    setIsEditing(false);
+  const stopAddingHandler = () => {
+    setIsAdding(false);
   };
 
   return (
     <div className="new-expense">
       {
-        !isEditing && (
-          <Button type="button" className="add" onClick={startEditingHandler}>
+        !isAdding && (
+          <Button type="button" className="add" onClick={startAddingHandler}>
             Add New Shopping
           </Button>
         )
       }
 
       {
-        isEditing && (
+        isAdding && (
           <ShoppingForm 
             onSaveShoppingData={saveShoppingDataHandler}
-            onCancel={stopEditingHandler}
+            onCancel={stopAddingHandler}
           />
         )
       }
