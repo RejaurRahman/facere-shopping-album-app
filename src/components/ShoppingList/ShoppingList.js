@@ -17,9 +17,9 @@ const ShoppingList = (props) => {
       <ShoppingFilter selected={filteredCategory} onChangeFilter={filterChangeHandler} />
       {
         props.items.map((expense) => (
-          <ShoppingItem 
+          <ShoppingItem
+            key={expense.id}
             title={expense.title}
-            amount={expense.amount}
             category={expense.category}
           />
         ))

@@ -1,37 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NewShoppingItem from './components/NewShoppingItem/NewShoppingItem';
 import ShoppingList from './components/ShoppingList/ShoppingList';
 
 import './App.css';
 
+const dummy_expenses = [
+  {
+    id: 'e1',
+    title: 'Chopped Tomatoes',
+    category: 'Food'
+  },
+  {
+    id: 'e2',
+    title: 'Cardamon Pods',
+    category: 'Food'
+  },
+  {
+    id: 'e3',
+    title: 'Paneer',
+    category: 'Food'
+  },
+  {
+    id: 'e4',
+    title: 'Desk Chair',
+    category: 'Furniture'
+  }
+];
+
 const App = () => {
-  const expenses = [
-    {
-      id: 'e1',
-      title: 'Chopped Tomatoes',
-      category: 'Food'
-    },
-    {
-      id: 'e2',
-      title: 'Cardamon Pods',
-      category: 'Food'
-    },
-    {
-      id: 'e3',
-      title: 'Paneer',
-      category: 'Food'
-    },
-    {
-      id: 'e4',
-      title: 'Desk Chair',
-      category: 'Furniture'
-    }
-  ];
+  const [expenses, setExpenses] = useState(dummy_expenses);
 
   const addShoppingHandler = expense => {
-    console.log('In App.js')
-    console.log(expenses);
-  }
+    setExpenses(prevExpenses => {
+      return [expense, ...prevExpenses];
+    });
+  };
 
   return (
     <div className="app">

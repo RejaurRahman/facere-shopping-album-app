@@ -1,3 +1,5 @@
+
+   
 import React, { useState } from 'react';
 import Card from '../UI/Card';
 
@@ -5,18 +7,22 @@ import './ShoppingItem.css';
 
 const ShoppingItem = (props) => {
   const [title, setTitle] = useState(props.title);
-  console.log('Shopping Item Item evaluated by React')
+  const [category, setCategory] = useState(props.category);
 
-  const clickHandler = () => {
+  const clickTitleHandler = () => {
     setTitle('Updated!');
-    console.log('clicked!');
+  };
+
+  const clickCategoryHandler = () => {
+    setCategory('Updated Category!');
   };
 
   return (
     <Card className="list">
-      <div>{props.category}</div>
+      <div>{category}</div>
       <div>{title}</div>
-      <button onClick={clickHandler}>change title</button>  
+      <button onClick={clickTitleHandler}>change title</button> 
+      <button onClick={clickCategoryHandler}>change category</button> 
     </Card>
   );
 };
