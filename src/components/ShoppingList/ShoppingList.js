@@ -4,6 +4,10 @@ import ShoppingItem from '../ShoppingItem/ShoppingItem';
 import './ShoppingList.css';
 
 const ShoppingList = (props) => {
+  if (props.items.length === 0) {	
+    return <h2 className="shoppingListFallback">Found no shopping data.</h2>	
+  }
+  
   return (
     <ul className="shoppingList">
       {
