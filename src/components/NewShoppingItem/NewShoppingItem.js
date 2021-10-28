@@ -18,6 +18,6 @@ const NewShoppingItem = (props) => {
       <ShoppingForm onSaveShoppingData={saveShoppingDataHandler} />
     </div>
   );
-}
+};
 
 export default NewShoppingItem;

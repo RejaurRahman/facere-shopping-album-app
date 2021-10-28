@@ -14,10 +14,11 @@ const ShoppingItem = (props) => {
 
   return (
     <Card className="list">
+      <div>{props.category}</div>
       <div>{title}</div>
       <button onClick={clickHandler}>change title</button>  
     </Card>
   );
-}
+};
 
 export default ShoppingItem;
