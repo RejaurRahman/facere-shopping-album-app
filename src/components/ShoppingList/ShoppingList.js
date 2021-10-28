@@ -1,20 +1,11 @@
-import React, { useState } from 'react';
-import ShoppingFilter from '../ShoppingFilter/ShoppingFilter';
+import React from 'react';
 import ShoppingItem from '../ShoppingItem/ShoppingItem';
-import Card from '../UI/Card';
 
 import './ShoppingList.css';
 
 const ShoppingList = (props) => {
-  const [filteredCategory, setFilteredCategory] = useState('Food');
-
-  const filterChangeHandler = selectedCategory => {
-    setFilteredCategory(selectedCategory);
-  };
-
   return (
-    <Card className="list">
-      <ShoppingFilter selected={filteredCategory} onChangeFilter={filterChangeHandler} />
+    <ul className="shoppingList">
       {
         props.items.map((expense) => (
           <ShoppingItem
@@ -24,7 +15,7 @@ const ShoppingList = (props) => {
           />
         ))
       }
-    </Card>
+    </ul>
   );
 };
 
