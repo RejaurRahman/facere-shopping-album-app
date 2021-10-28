@@ -17,7 +17,7 @@ const Shopping = (props) => {
   });
 
   return (
-    <div>
+    <>
       <Card className="shopping">
         <ShoppingFilter 
           selected={filteredCategory} 
@@ -27,7 +27,7 @@ const Shopping = (props) => {
           items={filteredShopping} 
         />
       </Card>
-    </div>
+    </>
   );
 };
 

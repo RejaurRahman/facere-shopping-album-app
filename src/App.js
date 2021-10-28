@@ -38,11 +38,15 @@ const App = () => {
   };
 
   return (
-    <div className="app">
+    <>
       <Background />
-      <NewShoppingItem onAddShopping={addShoppingHandler} />
-      <Shopping items={expenses} />
-    </div>
+      <div className="app">
+        <div className="app__container">
+          <NewShoppingItem onAddShopping={addShoppingHandler} />
+          <Shopping items={expenses} />
+        </div>
+      </div>
+    </>
   );
 };
 

@@ -25,7 +25,7 @@ const NewShoppingItem = (props) => {
   };
 
   return (
-    <div className="newExpense">
+    <div className="new-expense">
       {
         !isEditing && (
           <button onClick={startEditingHandler}>Add New Shopping</button>
