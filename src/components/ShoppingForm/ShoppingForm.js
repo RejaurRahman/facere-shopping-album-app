@@ -48,6 +48,9 @@ const ShoppingForm = (props) => {
       <button type="submit" className="btn">
         Add to list
       </button>
+      <button type="button" className="btn" onClick={props.onCancel}>
+        Cancel
+      </button>
     </form>
   );
 };
