@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from '../UI/Button/Button';
-import Card from '../UI/Card/Card';
+import Button from '../../UI/Button/Button';
+import Card from '../../UI/Card/Card';
 
 import './ShoppingItem.css';
 

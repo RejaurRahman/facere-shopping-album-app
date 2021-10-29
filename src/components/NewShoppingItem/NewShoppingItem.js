@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ShoppingForm from '../ShoppingForm/ShoppingForm';
+import ShoppingForm from '../Shopping/ShoppingForm/ShoppingForm';
 import Button from '../UI/Button/Button';
 
 import './NewShoppingItem.css';

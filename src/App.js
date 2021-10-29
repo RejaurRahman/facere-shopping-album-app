@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import NewShoppingItem from './components/NewShoppingItem/NewShoppingItem';
-import Shopping from './components/Shopping/Shopping';
+import ShoppingBoard from './components/Shopping/ShoppingBoard/ShoppingBoard';
 import Background from './components/UI/Background/Background';
 
 import './App.css';
@@ -27,7 +27,7 @@ const App = () => {
       <div className="app">
         <div className="app__container">
           <NewShoppingItem onAddShopping={addShoppingHandler} />
-          <Shopping onDeleteShopping={deleteShoppingHandler} items={expenses} />
+          <ShoppingBoard onDeleteShopping={deleteShoppingHandler} items={expenses} />
         </div>
       </div>
     </>

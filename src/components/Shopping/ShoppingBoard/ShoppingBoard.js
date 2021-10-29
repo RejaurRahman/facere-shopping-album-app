@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import ShoppingFilter from '../ShoppingFilter/ShoppingFilter';
 import ShoppingList from '../ShoppingList/ShoppingList';
-import Card from '../UI/Card/Card';
+import Card from '../../UI/Card/Card';
 
-import './Shopping.css';
+import './ShoppingBoard.css';
 
-const Shopping = (props) => {
+const ShoppingBoard = (props) => {
   const [filteredCategory, setFilteredCategory] = useState('Food');
 
   const filterChangeHandler = (selectedCategory) => {
@@ -32,4 +32,4 @@ const Shopping = (props) => {
   );
 };
 
-export default Shopping;
+export default ShoppingBoard;
