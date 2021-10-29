@@ -24,7 +24,8 @@ const Shopping = (props) => {
           onChangeFilter={filterChangeHandler} 
         />
         <ShoppingList 
-          items={filteredShopping} 
+          items={filteredShopping}
+          onDeleteShopping={props.onDeleteShopping}
         />
       </Card>
     </>

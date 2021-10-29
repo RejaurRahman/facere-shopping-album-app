@@ -14,8 +14,10 @@ const ShoppingList = (props) => {
         props.items.map((expense) => (
           <ShoppingItem
             key={expense.id}
+            shopItemId={expense.id}
             title={expense.title}
             category={expense.category}
+            onDeleteShopping={props.onDeleteShopping}
           />
         ))
       }

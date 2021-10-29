@@ -14,13 +14,20 @@ const App = () => {
     }, [expenses])
   };
 
+  const deleteShoppingHandler = (id) => {
+    const shoppingList = expenses.filter((item) => {
+      return item.id !== id;
+    })
+    setExpenses(shoppingList);
+  }
+
   return (
     <>
       <Background />
       <div className="app">
         <div className="app__container">
           <NewShoppingItem onAddShopping={addShoppingHandler} />
-          <Shopping items={expenses} />
+          <Shopping onDeleteShopping={deleteShoppingHandler} items={expenses} />
         </div>
       </div>
     </>
