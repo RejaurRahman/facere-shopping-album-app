@@ -4,6 +4,7 @@ import ShoppingBoard from './components/Shopping/ShoppingBoard/ShoppingBoard';
 import Background from './components/UI/Background/Background';
 
 import './App.css';
+import './styles/fonts.css'
 
 const App = () => {
   const [expenses, setExpenses] = useState([]);

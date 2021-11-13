@@ -5,7 +5,11 @@ import './ShoppingList.css';
 
 const ShoppingList = (props) => {
   if (props.items.length === 0) {	
-    return <h2 className="shoppingListFallback">Found no shopping data.</h2>	
+    return (
+      <div className="alert">
+        <h2 className="alert__message">Found no shopping data.</h2>
+      </div>
+    )  
   }
   
   return (
