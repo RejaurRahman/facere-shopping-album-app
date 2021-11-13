@@ -10,15 +10,15 @@ const ShoppingItem = (props) => {
   };
 
   return (
-    <li>
-      <Card className="item">
+    <li className="item">
+      <Card className="item__list">
         <div className="item__left">
-          <div>{props.category}</div> 
-          <div>{props.title}</div>
+          <span className="item__category">{props.category}</span> 
+          <p className="item__name">{props.title}</p>
         </div>
         <div className="item__right">
-          <Button type="button" className="edit">Edit</Button>
-          <Button type="button" className="delete" onClick={(event) => deleteHandler(event, props.shopItemId)}>Delete</Button>
+          <Button type="button" className="item__button item__button--edit">Edit</Button>
+          <Button type="button" className="item__button item__button--delete" onClick={(event) => deleteHandler(event, props.shopItemId)}>Delete</Button>
         </div>
       </Card>
     </li>

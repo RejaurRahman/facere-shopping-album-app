@@ -9,4 +9,5 @@
   margin: 0 auto;
   height: 80vh;
   background-color: #FFF;
+  overflow-y: auto;
 }
