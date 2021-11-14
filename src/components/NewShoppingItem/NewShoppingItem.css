@@ -1,0 +1,21 @@
+.button__add {
+  margin: 0;
+  background-color: #4a0fcb;
+}
+
+.new-expense {
+  position: relative;
+  border-bottom: 1px solid #D1D0CE;
+  padding: 24px;
+}
+
+.new-expense:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #4a0fcb;
+  z-index: 0;
+}

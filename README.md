@@ -54,7 +54,6 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 - Filter through categories
 
 ** To work on
-- Update UI
 - Filter not visible if no data shown
 - Filter dropdown add (show all) and view all items added to list - set as default
 - Sort out shopping lisy by A-Z, Z-A, Sort by completed and uncompleted items, complete all items on list

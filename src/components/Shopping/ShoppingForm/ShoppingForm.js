@@ -3,6 +3,8 @@ import Button from '../../UI/Button/Button';
 
 import './ShoppingForm.css';
 
+import { ReactComponent as AddIcon } from '../../../assets/icons/add-plus.svg';
+
 const ShoppingForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredCategory, setEnteredCategory] = useState('');
@@ -29,11 +31,11 @@ const ShoppingForm = (props) => {
   };
 
   return (
-    <form onSubmit={submitHandler}>
+    <form onSubmit={submitHandler} className="form">
       <input
         type="text"
         value={enteredTitle}
-        className="input"
+        className="input input__text"
         name="text"
         placeholder="Enter task"
         onChange={titleChangeHandler}
@@ -41,15 +43,15 @@ const ShoppingForm = (props) => {
       <input
         type="text"
         value={enteredCategory}
-        className="input"
+        className="input input__category"
         name="text"
         placeholder="Enter Category (For Ex. Food)"
         onChange={categoryChangeHandler}
       />
-      <Button type="submit" className="add">
-        Add to list
+      <Button type="submit" className="button--rounded button__submit">
+        <AddIcon />
       </Button>
-      <Button type="button" className="cancel" onClick={props.onCancel}>
+      <Button type="button" className="button--rounded button__cancel" onClick={props.onCancel}>
         Cancel
       </Button>
     </form>

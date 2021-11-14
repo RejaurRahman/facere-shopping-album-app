@@ -1,3 +1,22 @@
 .button {
-  appearance: none;  
+  appearance: none;
+  border: none;
+  cursor: pointer;
 }
+
+.button svg {
+  height: 32px;
+  width: 32px;
+}
+
+.button svg path,
+.button svg g,
+.button svg rect {
+  fill: #FFF;
+}
+
+.button--rounded {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+} 

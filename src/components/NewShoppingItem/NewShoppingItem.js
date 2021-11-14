@@ -4,6 +4,8 @@ import Button from '../UI/Button/Button';
 
 import './NewShoppingItem.css';
 
+import { ReactComponent as AddIcon } from '../../assets/icons/add-plus.svg';
+
 const NewShoppingItem = (props) => {
   const [isAdding, setIsAdding] = useState(false);
 
@@ -29,8 +31,12 @@ const NewShoppingItem = (props) => {
     <div className="new-expense">
       {
         !isAdding && (
-          <Button type="button" className="add" onClick={startAddingHandler}>
-            Add New Shopping
+          <Button 
+            type="button" 
+            className="button--rounded button__add" 
+            onClick={startAddingHandler}
+          >
+            <AddIcon />
           </Button>
         )
       }
