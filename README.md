@@ -50,7 +50,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Actions the application performs
 - Adding a new item to the shopping list
-- ~~Delete an existing item
+- Delete an existing item
 - Filter through categories
 
 ** To work on
