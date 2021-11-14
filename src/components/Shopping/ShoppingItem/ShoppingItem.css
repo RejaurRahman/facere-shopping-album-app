@@ -37,7 +37,17 @@
   border: none;
   padding-top: 45px;
   padding-bottom: 45px;
-  width: 75px;
+}
+
+.item__button svg {
+  height: 32px;
+  width: 32px;
+}
+
+.item__button svg path,
+.item__button svg g,
+.item__button svg rect {
+  fill: #FFF;
 }
 
 .item__button--edit {
