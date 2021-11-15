@@ -1,18 +1,17 @@
 .form {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   position: relative;
   z-index: 1;
 }
 
 .button__submit {
   background-color: #32CD32;
-  margin: 0 4px 0 8px;
 }
 
 .button__cancel {
   background-color: #FBB917;
-  margin: 0 0 0 4px;
 }
 
 .input__category,
@@ -25,7 +24,6 @@
   border-left: 1px solid #D1D0CE;
   border-right: 1px solid #D1D0CE;
   border-bottom: 3px solid #85219d;
-  margin-right: 8px;
   padding: 2px 12px;
   color: #85219d;
 }
@@ -48,4 +46,36 @@
 .input__category:-moz-placeholder,
 .input__text:-moz-placeholder { /* Firefox 18- */
   color: #85219d;
+}
+
+@media screen and (min-width: 992px) {
+  .input__category,
+  .input__text {
+    margin-right: 8px;
+  }
+
+  .button__submit,
+  .button__cancel {
+    margin: 0 4px 0 4px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .form {
+    justify-content: center;
+  }
+
+  .input__category,
+  .input__text {
+    flex-basis: 100%;
+  }
+
+  .input__text {
+    margin-bottom: 4px;
+  }
+
+  .button__submit,
+  .button__cancel {
+    margin: 4px 4px 0 4px;
+  }
 }
