@@ -10,7 +10,7 @@ import { ReactComponent as AddIcon } from '../../assets/icons/add-plus.svg';
 const NewShoppingItem = (props) => {
   const [isAdding, setIsAdding] = useState(false);
 
-  const [filteredCategory, setFilteredCategory] = useState('Food');	
+  const [filteredCategory, setFilteredCategory] = useState('All');	
 
   const filterChangeHandler = async (selectedCategory) => {	
     await setFilteredCategory(selectedCategory);	
@@ -37,11 +37,6 @@ const NewShoppingItem = (props) => {
 
   return (
     <div className="new-expense">
-      <ShoppingFilter	
-        selected={filteredCategory}	
-        onChangeFilter={filterChangeHandler}	
-      />
-
       {
         !isAdding && (
           <Button 
@@ -61,6 +56,15 @@ const NewShoppingItem = (props) => {
             onCancel={stopAddingHandler}
           />
         )
+      }
+
+      {
+        props.isExpenseAdded ? (
+          <ShoppingFilter	
+            selected={filteredCategory}	
+            onChangeFilter={filterChangeHandler}	
+          />
+        ) : ''
       }
     </div>
   );

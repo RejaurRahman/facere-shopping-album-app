@@ -9,12 +9,16 @@ import './styles/fonts.css'
 const App = () => {
   const [expenses, setExpenses] = useState([]);
 
-  const [filteredCategory, setFilteredCategory] = useState('Food');
+  const [filteredCategory, setFilteredCategory] = useState('All');
+
+  const [isExpenseAdded, setIsExpenseAdded] = useState(false);
 
   const addShoppingHandler = expense => {
     setExpenses(prevExpenses => {
       return [expense, ...prevExpenses];
     }, [expenses])
+
+    setIsExpenseAdded(true);
   };
 
   const filterItems = (currentCategory) => {
@@ -25,6 +29,11 @@ const App = () => {
     const shoppingList = expenses.filter((item) => {
       return item.id !== id;
     })
+
+    if (shoppingList.length === 0) {	
+      setIsExpenseAdded(false);	
+    }
+
     setExpenses(shoppingList);
   }
 
@@ -33,7 +42,7 @@ const App = () => {
       <Background />
       <div className="app">
         <div className="app__container">
-          <NewShoppingItem onFilterValueChange={filterItems} onAddShopping={addShoppingHandler} />
+          <NewShoppingItem onFilterValueChange={filterItems} onAddShopping={addShoppingHandler} isExpenseAdded={isExpenseAdded} />
           <ShoppingBoard onDeleteShopping={deleteShoppingHandler} items={expenses} currentCategory={filteredCategory} />
         </div>
       </div>

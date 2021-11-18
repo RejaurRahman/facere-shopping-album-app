@@ -23,7 +23,6 @@
 @media screen and (min-width: 992px) {
   .new-expense {
     padding: 24px;
-    flex-flow: row-reverse;
     justify-content: space-between;
   }
 
@@ -35,7 +34,6 @@
 @media screen and (max-width: 991px) {
   .new-expense {
     padding: 12px;
-    flex-flow: column-reverse;
   }
 
   .new-expense:before {
