@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import Button from '../../UI/Button/Button';
 
-import './ShoppingForm.css';
+import './AddShoppingForm.css';
 
 import { ReactComponent as AddIcon } from '../../../assets/icons/add-plus.svg';
 import { ReactComponent as CancelIcon } from '../../../assets/icons/back-cancel.svg';
 
-const ShoppingForm = (props) => {
+const AddShoppingForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredCategory, setEnteredCategory] = useState('');
 
@@ -66,4 +66,4 @@ const ShoppingForm = (props) => {
   );
 };
 
-export default ShoppingForm;
+export default AddShoppingForm;

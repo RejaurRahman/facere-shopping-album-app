@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ShoppingForm from '../Shopping/ShoppingForm/ShoppingForm';
+import AddShoppingForm from '../Form/AddShoppingForm/AddShoppingForm';
 import Button from '../UI/Button/Button';
 import ShoppingFilter from '../Shopping/ShoppingFilter/ShoppingFilter';
 
@@ -51,7 +51,7 @@ const NewShoppingItem = (props) => {
 
       {
         isAdding && (
-          <ShoppingForm 
+          <AddShoppingForm 
             onSaveShoppingData={saveShoppingDataHandler}
             onCancel={stopAddingHandler}
           />
