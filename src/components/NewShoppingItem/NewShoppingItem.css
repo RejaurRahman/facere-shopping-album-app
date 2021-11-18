@@ -4,6 +4,8 @@
 }
 
 .new-expense {
+  display: flex;
+  align-items: center;
   position: relative;
   border-bottom: 1px solid #D1D0CE;
 }
@@ -21,6 +23,8 @@
 @media screen and (min-width: 992px) {
   .new-expense {
     padding: 24px;
+    flex-flow: row-reverse;
+    justify-content: space-between;
   }
 
   .new-expense:before {
@@ -31,6 +35,7 @@
 @media screen and (max-width: 991px) {
   .new-expense {
     padding: 12px;
+    flex-flow: column-reverse;
   }
 
   .new-expense:before {

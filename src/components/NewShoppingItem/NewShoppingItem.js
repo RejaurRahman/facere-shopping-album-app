@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ShoppingForm from '../Shopping/ShoppingForm/ShoppingForm';
 import Button from '../UI/Button/Button';
+import ShoppingFilter from '../Shopping/ShoppingFilter/ShoppingFilter';
 
 import './NewShoppingItem.css';
 
@@ -9,6 +10,13 @@ import { ReactComponent as AddIcon } from '../../assets/icons/add-plus.svg';
 const NewShoppingItem = (props) => {
   const [isAdding, setIsAdding] = useState(false);
 
+  const [filteredCategory, setFilteredCategory] = useState('Food');	
+
+  const filterChangeHandler = async (selectedCategory) => {	
+    await setFilteredCategory(selectedCategory);	
+    props.onFilterValueChange(selectedCategory);	
+  };
+  
   const saveShoppingDataHandler = (enteredShoppingData) => {
     const shoppingData = {
       ...enteredShoppingData,
@@ -29,6 +37,11 @@ const NewShoppingItem = (props) => {
 
   return (
     <div className="new-expense">
+      <ShoppingFilter	
+        selected={filteredCategory}	
+        onChangeFilter={filterChangeHandler}	
+      />
+
       {
         !isAdding && (
           <Button 

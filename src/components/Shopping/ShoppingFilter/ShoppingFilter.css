@@ -1,0 +1,10 @@
+.filter {
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (max-width: 991px) {
+  .filter {
+    margin-top: 4px;
+  }
+}

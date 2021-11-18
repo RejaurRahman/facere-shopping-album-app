@@ -9,11 +9,17 @@ import './styles/fonts.css'
 const App = () => {
   const [expenses, setExpenses] = useState([]);
 
+  const [filteredCategory, setFilteredCategory] = useState('Food');
+
   const addShoppingHandler = expense => {
     setExpenses(prevExpenses => {
       return [expense, ...prevExpenses];
     }, [expenses])
   };
+
+  const filterItems = (currentCategory) => {
+    setFilteredCategory(currentCategory);
+  }
 
   const deleteShoppingHandler = (id) => {
     const shoppingList = expenses.filter((item) => {
@@ -27,8 +33,8 @@ const App = () => {
       <Background />
       <div className="app">
         <div className="app__container">
-          <NewShoppingItem onAddShopping={addShoppingHandler} />
-          <ShoppingBoard onDeleteShopping={deleteShoppingHandler} items={expenses} />
+          <NewShoppingItem onFilterValueChange={filterItems} onAddShopping={addShoppingHandler} />
+          <ShoppingBoard onDeleteShopping={deleteShoppingHandler} items={expenses} currentCategory={filteredCategory} />
         </div>
       </div>
     </>
