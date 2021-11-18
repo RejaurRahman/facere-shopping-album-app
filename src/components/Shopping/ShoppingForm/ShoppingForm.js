@@ -4,6 +4,7 @@ import Button from '../../UI/Button/Button';
 import './ShoppingForm.css';
 
 import { ReactComponent as AddIcon } from '../../../assets/icons/add-plus.svg';
+import { ReactComponent as CancelIcon } from '../../../assets/icons/back-cancel.svg';
 
 const ShoppingForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState('');
@@ -48,11 +49,18 @@ const ShoppingForm = (props) => {
         placeholder="Enter Category (For Ex. Food)"
         onChange={categoryChangeHandler}
       />
-      <Button type="submit" className="button--rounded button__submit">
+      <Button 
+        type="submit" 
+        className="button--rounded button__submit"
+      >
         <AddIcon />
       </Button>
-      <Button type="button" className="button--rounded button__cancel" onClick={props.onCancel}>
-        Cancel
+      <Button 
+        type="button" 
+        className="button--rounded button__cancel" 
+        onClick={props.onCancel}
+      >
+        <CancelIcon />
       </Button>
     </form>
   );

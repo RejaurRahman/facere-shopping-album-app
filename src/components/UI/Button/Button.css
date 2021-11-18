@@ -11,6 +11,7 @@
 
 .button svg path,
 .button svg g,
+.button svg polygon,
 .button svg rect {
   fill: #FFF;
 }
