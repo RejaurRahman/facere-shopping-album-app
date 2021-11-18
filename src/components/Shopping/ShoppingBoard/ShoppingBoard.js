@@ -5,7 +5,7 @@ import Card from '../../UI/Card/Card';
 import './ShoppingBoard.css';
 
 const ShoppingBoard = (props) => {
-  const filteredShopping = props.items.filter((expense) => {
+  const filteredShopping = props.currentCategory === 'All' ? props.items : props.items.filter((expense) => {
     return expense.category === props.currentCategory;
   });
 
