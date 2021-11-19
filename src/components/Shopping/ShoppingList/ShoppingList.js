@@ -22,6 +22,8 @@ const ShoppingList = (props) => {
             title={expense.title}
             category={expense.category}
             onDeleteShopping={props.onDeleteShopping}
+            onCompleteShopping={props.onCompleteShopping}
+            isCompleted={expense.isCompleted}
           />
         ))
       }

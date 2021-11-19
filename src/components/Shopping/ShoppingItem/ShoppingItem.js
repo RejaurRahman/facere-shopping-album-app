@@ -12,10 +12,17 @@ const ShoppingItem = (props) => {
     props.onDeleteShopping(id);
   };
 
+  const completeHandler = (index) => {
+    props.onCompleteShopping(index);
+  }
+
   return (
     <li className="item">
       <Card className="item__list">
-        <div className="item__left">
+        <div 
+          className={'item__left ' + (props.isCompleted ? 'item__completed' : '')} 
+          onClick={() => completeHandler(props.shopItemId)}
+        >
           <span className="item__category">{props.category}</span> 
           <p className="item__name">{props.title}</p>
         </div>

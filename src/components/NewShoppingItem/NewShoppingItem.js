@@ -20,7 +20,8 @@ const NewShoppingItem = (props) => {
   const saveShoppingDataHandler = (enteredShoppingData) => {
     const shoppingData = {
       ...enteredShoppingData,
-      id: Math.random().toString()
+      id: Math.random().toString(),
+      isCompleted: false
     };
 
     props.onAddShopping(shoppingData);

@@ -9,6 +9,7 @@
   flex-flow: column;
   justify-content: center;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .item__right {
@@ -45,6 +46,18 @@
 
 .item__button--delete {
   background-color: #34282C;
+}
+
+.item__completed {
+  background-color: #00FA9A;
+}
+
+.item__completed .item__name {
+  color: #254117;
+}
+
+.item__completed .item__category {
+  color: #4E9258;
 }
 
 @media screen and (min-width: 569px) {

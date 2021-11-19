@@ -54,9 +54,9 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 - Filter through categories
 - Filter not visible if no data shown
 - Filter dropdown has (show all). You can view all items added to list - set as default
+- Complete an item from an existing list
 
 ** To work on
 - Sort out shopping lisy by A-Z, Z-A, Sort by completed and uncompleted items, complete all items on list
 - Edit existing data from shopping item (title) and (category)
-- Complete an item from an existing list
 - Counter for total items in category, all categories complete and counter for how many left

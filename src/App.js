@@ -37,13 +37,38 @@ const App = () => {
     setExpenses(shoppingList);
   }
 
+  const completeShoppingHandler = (id) => {
+    const newExpenseList = [...expenses];
+
+    newExpenseList.map((item) => {
+      if (item.id === id) {
+        item['isCompleted'] = !item['isCompleted'];
+
+        return item;
+      }
+
+      return item;
+    })
+
+    setExpenses(newExpenseList);
+  }
+
   return (
     <>
       <Background />
       <div className="app">
         <div className="app__container">
-          <NewShoppingItem onFilterValueChange={filterItems} onAddShopping={addShoppingHandler} isExpenseAdded={isExpenseAdded} />
-          <ShoppingBoard onDeleteShopping={deleteShoppingHandler} items={expenses} currentCategory={filteredCategory} />
+          <NewShoppingItem 
+            onFilterValueChange={filterItems} 
+            onAddShopping={addShoppingHandler} 
+            isExpenseAdded={isExpenseAdded} 
+          />
+          <ShoppingBoard 
+            onCompleteShopping={completeShoppingHandler} 
+            onDeleteShopping={deleteShoppingHandler} 
+            items={expenses} 
+            currentCategory={filteredCategory} 
+          />
         </div>
       </div>
     </>

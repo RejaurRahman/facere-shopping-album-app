@@ -15,6 +15,7 @@ const ShoppingBoard = (props) => {
         <ShoppingList 
           items={filteredShopping}
           onDeleteShopping={props.onDeleteShopping}
+          onCompleteShopping={props.onCompleteShopping}
         />
       </Card>
     </>
