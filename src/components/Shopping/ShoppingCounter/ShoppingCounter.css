@@ -1,0 +1,55 @@
+.counter {
+  position: absolute;
+  bottom: 0;
+  background-color: #fff;
+  border-top: 1px solid #4a0fcb;
+  padding: 8px 12px;
+  width: calc(100% - 24px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.counter__right {
+  display: flex;
+  align-items: center;
+}
+
+.counter__divider {
+  font-family: "Source Pro Regular", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  margin: 0 8px;
+  color: #4a0fcb;
+  cursor: default;
+}
+
+.counter__amount {
+  font-family: "Source Pro Bold", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #4a0fcb;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+}
+
+.counter__text {
+  font-family: "Source Pro Regular", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  color: #4a0fcb;
+  text-transform: capitalize;
+  margin-left: 8px;
+}
+
+@media screen and (min-width: 992px) {
+  .counter {
+    padding: 8px 24px;
+    width: calc(100% - 48px);
+  }
+}

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import NewShoppingItem from './components/NewShoppingItem/NewShoppingItem';
 import ShoppingBoard from './components/Shopping/ShoppingBoard/ShoppingBoard';
 import Background from './components/UI/Background/Background';
+import ShoppingCounter from './components/Shopping/ShoppingCounter/ShoppingCounter';
 
 import './App.css';
 import './styles/fonts.css'
@@ -69,6 +70,7 @@ const App = () => {
             items={expenses} 
             currentCategory={filteredCategory} 
           />
+          <ShoppingCounter />
         </div>
       </div>
     </>

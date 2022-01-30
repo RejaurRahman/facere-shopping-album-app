@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   position: relative;
-  border-bottom: 1px solid #D1D0CE;
+  border-bottom: 1px solid #d1d0ce;
 }
 
 .new-expense:before {
@@ -27,13 +27,14 @@
   }
 
   .new-expense:before {
-    content: '';
-  }  
+    content: "";
+  }
 }
 
 @media screen and (max-width: 991px) {
   .new-expense {
     padding: 12px;
+    flex-flow: column;
   }
 
   .new-expense:before {
