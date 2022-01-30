@@ -70,7 +70,13 @@ const App = () => {
             items={expenses} 
             currentCategory={filteredCategory} 
           />
-          <ShoppingCounter />
+          <ShoppingCounter
+            items={
+              filteredCategory === "All"
+                ? expenses
+                : expenses.filter((item) => item.category === filteredCategory)
+            }
+          />
         </div>
       </div>
     </>

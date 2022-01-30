@@ -46,6 +46,15 @@
   margin-left: 8px;
 }
 
+.counter__amount--current__amount {
+  background-color: #c11b17;
+}
+
+.counter__amount--completed {
+  background-color: #00fa9a;
+  color: #254117;
+}
+
 @media screen and (min-width: 992px) {
   .counter {
     padding: 8px 24px;

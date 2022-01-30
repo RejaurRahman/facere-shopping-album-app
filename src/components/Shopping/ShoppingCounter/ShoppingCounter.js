@@ -1,21 +1,31 @@
-import React from 'react';
+import React from "react";
 
-import './ShoppingCounter.css';
+import "./ShoppingCounter.css";
 
-const ShoppingCounter = () => {
-
+const ShoppingCounter = (props) => {
+  const completedItems = props.items.filter((item) => item.isCompleted).length;
   return (
-    <>
-      <div className="counter">
-        <div className="counter__left"></div> 
-        <div className="counter__right">
-          <span className="counter__amount">0</span>
-          <span className="counter__divider">/</span>
-          <span className="counter__amount">0</span>
-          <span className="counter__text">completed</span>
-        </div> 
-      </div>
-    </>
+    props.items.length > 0 && (
+      <>
+        <div className="counter">
+          <div className="counter__left"></div>
+          <div className="counter__right">
+            <span
+              className={`counter__amount ${
+                completedItems === props.items.length
+                  ? "counter__amount--completed"
+                  : "counter__amount--current__amount"
+              }`}
+            >
+              {completedItems}
+            </span>
+            <span className="counter__divider">/</span>
+            <span className="counter__amount">{props.items.length}</span>
+            <span className="counter__text">completed</span>
+          </div>
+        </div>
+      </>
+    )
   );
 };
 
