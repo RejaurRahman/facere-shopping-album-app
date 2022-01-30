@@ -5,9 +5,14 @@
 }
 
 .app__container {
-  width: 75%;
+  width: 85%;
   margin: 0 auto;
-  height: 80vh;
-  background-color: #FFF;
-  overflow-y: auto;
+  background-color: #fff;
+  position: relative;
+}
+
+@media screen and (min-width: 992px) {
+  .app__container {
+    width: 75%;
+  }
 }
