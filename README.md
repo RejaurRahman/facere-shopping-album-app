@@ -49,14 +49,15 @@ Instead, it will copy all the configuration files and the transitive dependencie
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Actions the application performs
+
 - Adding a new item to the shopping list
 - Delete an existing item
 - Filter through categories
 - Filter not visible if no data shown
 - Filter dropdown has (show all). You can view all items added to list - set as default
 - Complete an item from an existing list
+- Counter status on all tasks remaining and if tasks are complete
 
-** To work on
-- Sort out shopping lisy by A-Z, Z-A, Sort by completed and uncompleted items, complete all items on list
+## To work on
+
 - Edit existing data from shopping item (title) and (category)
-- Counter for total items in category, all categories complete and counter for how many left

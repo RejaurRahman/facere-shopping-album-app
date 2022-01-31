@@ -1,6 +1,43 @@
 .filter {
   position: relative;
+  left: -23px;
   z-index: 0;
+}
+
+.filter select {
+  appearance: none;
+  border: none;
+  box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+  background-color: #4a0fcb;
+  color: #fff;
+  padding: 4px;
+  width: calc(100% + 23px);
+}
+
+.filter:before,
+.filter:after {
+  content: "";
+  position: absolute;
+  right: -23px;
+}
+
+.filter:before {
+  background-image: url("../../../assets/icons/arrow-down.png");
+  background-repeat: no-repeat;
+  right: -20px;
+  top: 7px;
+  width: 16px;
+  height: 16px;
+  z-index: 1;
+}
+
+.filter:after {
+  top: 0;
+  right: -23px;
+  width: 23px;
+  height: 23px;
+  pointer-events: none;
+  background-color: #370a9a;
 }
 
 @media screen and (max-width: 991px) {
