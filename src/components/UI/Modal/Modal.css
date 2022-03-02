@@ -20,6 +20,11 @@
   max-width: 250px;
 }
 
+.modal__box--top {
+  display: flex;
+  justify-content: end;
+}
+
 .modal__overlay {
   background-color: rgba(0, 0, 0, 0.75);
   position: absolute;
@@ -29,7 +34,17 @@
 }
 
 .modal__close {
+  display: inline-block;
   cursor: pointer;
+}
+
+.modal__close svg {
+  height: 24px;
+  width: 24px;
+}
+
+.modal__close svg g {
+  fill: #4a0fcb;
 }
 
 .modal__footer {
