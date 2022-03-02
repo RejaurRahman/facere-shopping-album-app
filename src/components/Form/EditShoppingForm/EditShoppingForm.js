@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../../UI/Button/Button';
+import Modal from '../../UI/Modal/Modal';
 
 import './EditShoppingForm.css';
 
@@ -37,58 +38,46 @@ const EditShoppingForm = (props) => {
   };
 
   return (
-    <div className="modal">
-      <div className="modal__box">
-        <span 
-          className="modal__close" 
-          onClick={props.onCancelEdit}
-        >
-          close
-        </span>
-        <form 
-          onSubmit={submitHandler} 
-          className="form form__edit"
-        >
-          <input
-            type="text"
-            value={enteredTitle}
-            className="input input__text"
-            name="text"
-            placeholder="Change entered task"
-            onChange={titleChangeHandler}
-          />
-          <input
-            type="text"
-            value={enteredCategory}
-            className="input input__category"
-            name="text"
-            placeholder="Change entered Category (For Ex. Food)"
-            onChange={categoryChangeHandler}
-          />
-          <div className="modal__footer">
-            {validationError && (
-              <p className="error__message">{validationError}</p>
-            )}
-            <div className="buttons__container">
-              <Button type="submit" className="button__submit">
-                Update
-              </Button>
-              <Button
-                type="button"
-                className="button__cancel"
-                onClick={props.onCancelEdit}
-              >
-                Cancel
-              </Button>
-            </div>
+    <Modal onClick={props.onCancelEdit}>
+      <form 
+        onSubmit={submitHandler} 
+        className="form form__edit"
+      >
+        <input
+          type="text"
+          value={enteredTitle}
+          className="input input__text"
+          name="text"
+          placeholder="Change entered task"
+          onChange={titleChangeHandler}
+        />
+        <input
+          type="text"
+          value={enteredCategory}
+          className="input input__category"
+          name="text"
+          placeholder="Change entered Category (For Ex. Food)"
+          onChange={categoryChangeHandler}
+        />
+        <div className="modal__footer">
+          {validationError && (
+            <p className="error__message">{validationError}</p>
+          )}
+          <div className="buttons__container">
+            <Button type="submit" className="button__submit">
+              Update
+            </Button>
+            <Button
+              type="button"
+              className="button__cancel"
+              onClick={props.onCancelEdit}
+            >
+              Cancel
+            </Button>
           </div>
-        </form>
-      </div>
-      <div 
-        className="modal__overlay" 
-        onClick={props.onCancelEdit}
-      ></div> 
-    </div>   
+        </div>
+      </form>
+    </Modal>   
   );
 }
 
