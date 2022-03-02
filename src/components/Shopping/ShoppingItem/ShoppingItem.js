@@ -16,6 +16,10 @@ const ShoppingItem = (props) => {
     props.onCompleteShopping(index);
   }
 
+  const editHandler = (id) => {
+    props.onEditShopping(id);
+  }
+
   return (
     <li className="item">
       <Card className="item__list">
@@ -30,6 +34,7 @@ const ShoppingItem = (props) => {
           <Button 
             type="button" 
             className="item__button item__button--edit"
+            onClick={() => editHandler(props.shopItemId)}
           >
             <EditIcon />
           </Button>

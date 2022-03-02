@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import NewShoppingItem from './components/NewShoppingItem/NewShoppingItem';
 import ShoppingBoard from './components/Shopping/ShoppingBoard/ShoppingBoard';
 import Background from './components/UI/Background/Background';
+import EditShoppingForm from './components/Form/EditShoppingForm/EditShoppingForm';
 import ShoppingCounter from './components/Shopping/ShoppingCounter/ShoppingCounter';
 
 import './App.css';
@@ -13,6 +14,10 @@ const App = () => {
   const [filteredCategory, setFilteredCategory] = useState('All');
 
   const [isExpenseAdded, setIsExpenseAdded] = useState(false);
+
+  const [isEditing, setIsEditing] = useState(false);
+
+  const [editItemId, setEditItemId] = useState();
 
   const addShoppingHandler = expense => {
     setExpenses(prevExpenses => {
@@ -54,6 +59,40 @@ const App = () => {
     setExpenses(newExpenseList);
   }
 
+  const editShoppingHandler = (id) => {
+    setIsEditing(!isEditing);
+    setEditItemId(id);
+  }
+
+  const onCompleteEdit = (editedItem) => {
+    if (editedItem['title'] === '' || editedItem['category'] === '') {
+      setIsEditing(false);
+      setEditItemId('');
+      return;
+    }
+    const newExpenseList = [...expenses];
+
+    newExpenseList.map((item) => {
+      if (item.id === editItemId) {
+        item['title'] = editedItem['title'];
+        item['category'] = editedItem['category'];
+
+        return item;
+      }
+
+      return item;
+    });
+
+    setExpenses(newExpenseList);
+    setIsEditing(false);
+    setEditItemId('');
+  }
+
+  const onCancelEdit = () => {
+    setIsEditing(false);
+    setEditItemId('');
+  }
+
   return (
     <>
       <Background />
@@ -64,8 +103,14 @@ const App = () => {
             onAddShopping={addShoppingHandler} 
             isExpenseAdded={isExpenseAdded} 
           />
+
+          {
+            isEditing ? <EditShoppingForm onCancelEdit={onCancelEdit} onCompleteEdit={onCompleteEdit} id={editItemId} /> : ''
+          }
+
           <ShoppingBoard 
-            onCompleteShopping={completeShoppingHandler} 
+            onCompleteShopping={completeShoppingHandler}
+            onEditHandler={editShoppingHandler} 
             onDeleteShopping={deleteShoppingHandler} 
             items={expenses} 
             currentCategory={filteredCategory} 

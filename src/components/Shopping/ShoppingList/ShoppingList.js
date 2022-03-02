@@ -23,6 +23,7 @@ const ShoppingList = (props) => {
             category={expense.category}
             onDeleteShopping={props.onDeleteShopping}
             onCompleteShopping={props.onCompleteShopping}
+            onEditShopping={props.onEditHandler}
             isCompleted={expense.isCompleted}
           />
         ))
