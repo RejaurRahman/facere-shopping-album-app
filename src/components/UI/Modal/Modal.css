@@ -26,7 +26,7 @@
 
 .modal__box--top {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .modal__overlay {
