@@ -15,9 +15,13 @@
   position: relative;
   z-index: 2;
   background-color: #fff;
-  padding: 16px;
+  padding: 16px 0 0 0;
   width: 100%;
   max-width: 250px;
+}
+
+.modal__box .form .input {
+  margin: 0 16px;
 }
 
 .modal__box--top {
@@ -36,6 +40,7 @@
 .modal__close {
   display: inline-block;
   cursor: pointer;
+  padding: 0 16px;
 }
 
 .modal__close svg {
@@ -48,7 +53,29 @@
 }
 
 .modal__footer {
+  padding-top: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.modal__footer--container,
+.modal__footer {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  width: 100%;
+}
+
+.modal__footer .button__update,
+.modal__footer .button__exit {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__footer .button__update {
+  background-color: #12ad2b;
+}
+
+.modal__footer .button__exit {
+  background-color: #c11b17;
 }

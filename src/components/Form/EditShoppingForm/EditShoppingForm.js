@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import Button from '../../UI/Button/Button';
 import Modal from '../../UI/Modal/Modal';
 
+import { ReactComponent as TickIcon } from '../../../assets/icons/tick.svg';
+import { ReactComponent as MinusIcon } from '../../../assets/icons/minus-cancel.svg';
+
 import './EditShoppingForm.css';
 
 const EditShoppingForm = (props) => {
@@ -63,16 +66,16 @@ const EditShoppingForm = (props) => {
           {validationError && (
             <p className="error__message">{validationError}</p>
           )}
-          <div className="buttons__container">
-            <Button type="submit" className="button__submit">
-              Update
+          <div className="modal__footer--container">
+            <Button type="submit" className="button__update">
+              <TickIcon />
             </Button>
             <Button
               type="button"
-              className="button__cancel"
+              className="button__exit"
               onClick={props.onCancelEdit}
             >
-              Cancel
+              <MinusIcon />
             </Button>
           </div>
         </div>
