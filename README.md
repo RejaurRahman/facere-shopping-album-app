@@ -57,7 +57,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 - Filter dropdown has (show all). You can view all items added to list - set as default
 - Complete an item from an existing list
 - Counter status on all tasks remaining and if tasks are complete
-
-## To work on
-
 - Edit existing data from shopping item (title) and (category)
