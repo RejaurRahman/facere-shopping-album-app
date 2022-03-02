@@ -15,12 +15,6 @@
   text-align: center;
 }
 
-.modal__footer {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
 .buttons__container {
   display: flex;
   flex-direction: row;

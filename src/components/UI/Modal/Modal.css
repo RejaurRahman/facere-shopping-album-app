@@ -31,3 +31,9 @@
 .modal__close {
   cursor: pointer;
 }
+
+.modal__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
