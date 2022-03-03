@@ -20,10 +20,6 @@
   max-width: 250px;
 }
 
-.modal__box .form .input {
-  margin: 0 16px;
-}
-
 .modal__box--top {
   display: flex;
   justify-content: flex-end;
@@ -77,5 +73,5 @@
 }
 
 .modal__footer .button__exit {
-  background-color: #c11b17;
+  background-color: #c35817;
 }

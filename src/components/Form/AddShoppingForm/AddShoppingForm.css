@@ -7,44 +7,45 @@
 }
 
 .button__submit {
-  background-color: #12AD2B;
+  background-color: #12ad2b;
 }
 
 .button__cancel {
-  background-color: #E8A317;
+  background-color: #e8a317;
 }
 
 .input__category,
 .input__text {
   font-family: "Source Pro Light", sans-serif;
+  font-size: 16px;
   appearance: none;
   height: 32px;
   border-radius: 0;
-  border-top: 1px solid #D1D0CE;
-  border-left: 1px solid #D1D0CE;
-  border-right: 1px solid #D1D0CE;
+  border-top: 1px solid #d1d0ce;
+  border-left: 1px solid #d1d0ce;
+  border-right: 1px solid #d1d0ce;
   border-bottom: 3px solid #85219d;
   padding: 2px 12px;
   color: #85219d;
 }
 
 .input__category::-webkit-input-placeholder,
-.input__text::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+.input__text::-webkit-input-placeholder {
   color: #85219d;
 }
 
 .input__category::-moz-placeholder,
-.input__text::-moz-placeholder { /* Firefox 19+ */
+.input__text::-moz-placeholder {
   color: #85219d;
 }
 
 .input__category:-ms-input-placeholder,
-.input__text:-ms-input-placeholder { /* IE 10+ */
+.input__text:-ms-input-placeholder {
   color: #85219d;
 }
 
 .input__category:-moz-placeholder,
-.input__text:-moz-placeholder { /* Firefox 18- */
+.input__text:-moz-placeholder {
   color: #85219d;
 }
 

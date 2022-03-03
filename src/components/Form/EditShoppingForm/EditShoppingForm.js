@@ -49,7 +49,7 @@ const EditShoppingForm = (props) => {
         <input
           type="text"
           value={enteredTitle}
-          className="input input__text"
+          className="input input__edit-text"
           name="text"
           placeholder="Change entered task"
           onChange={titleChangeHandler}
@@ -57,7 +57,7 @@ const EditShoppingForm = (props) => {
         <input
           type="text"
           value={enteredCategory}
-          className="input input__category"
+          className="input input__edit-category"
           name="text"
           placeholder="Change entered Category (For Ex. Food)"
           onChange={categoryChangeHandler}
