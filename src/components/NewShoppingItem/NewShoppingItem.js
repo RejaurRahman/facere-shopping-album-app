@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import AddShoppingForm from '../Form/AddShoppingForm/AddShoppingForm';
-import Button from '../UI/Button/Button';
-import ShoppingFilter from '../Shopping/ShoppingFilter/ShoppingFilter';
+import React, { useState } from "react";
+import AddShoppingForm from "../Form/AddShoppingForm/AddShoppingForm";
+import Button from "../UI/Button/Button";
+import ShoppingFilter from "../Shopping/ShoppingFilter/ShoppingFilter";
 
-import './NewShoppingItem.css';
+import "./NewShoppingItem.css";
 
-import { ReactComponent as AddIcon } from '../../assets/icons/add-plus.svg';
+import { ReactComponent as AddIcon } from "../../assets/icons/add-plus.svg";
 
 const NewShoppingItem = (props) => {
   const [isAdding, setIsAdding] = useState(false);
 
-  const [filteredCategory, setFilteredCategory] = useState('All');	
+  const [filteredCategory, setFilteredCategory] = useState("All");	
 
   const filterChangeHandler = async (selectedCategory) => {	
     await setFilteredCategory(selectedCategory);	
@@ -65,7 +65,7 @@ const NewShoppingItem = (props) => {
             selected={filteredCategory}	
             onChangeFilter={filterChangeHandler}	
           />
-        ) : ''
+        ) : ""
       }
     </div>
   );

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import './Card.css';
+import "./Card.css";
 
 const Card = (props) => {
-  const defineClass = 'card ' + props.className;
+  const defineClass = "card " + props.className;
 
   return (
     <div className={defineClass}>

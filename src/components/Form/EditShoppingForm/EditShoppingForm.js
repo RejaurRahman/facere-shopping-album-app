@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import Button from '../../UI/Button/Button';
-import Modal from '../../UI/Modal/Modal';
+import React, { useState } from "react";
+import Button from "../../UI/Button/Button";
+import Modal from "../../UI/Modal/Modal";
 
-import { ReactComponent as TickIcon } from '../../../assets/icons/tick.svg';
-import { ReactComponent as MinusIcon } from '../../../assets/icons/minus-cancel.svg';
+import { ReactComponent as TickIcon } from "../../../assets/icons/tick.svg";
+import { ReactComponent as MinusIcon } from "../../../assets/icons/minus-cancel.svg";
 
-import './EditShoppingForm.css';
+import "./EditShoppingForm.css";
 
 const EditShoppingForm = (props) => {
-  const [enteredTitle, setEnteredTitle] = useState('');
-  const [enteredCategory, setEnteredCategory] = useState('');
-  const [validationError, setValidationError] = useState('');
+  const [enteredTitle, setEnteredTitle] = useState("");
+  const [enteredCategory, setEnteredCategory] = useState("");
+  const [validationError, setValidationError] = useState("");
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);

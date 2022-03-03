@@ -1,7 +1,7 @@
-import React from 'react';
-import ShoppingItem from '../ShoppingItem/ShoppingItem';
+import React from "react";
+import ShoppingItem from "../ShoppingItem/ShoppingItem";
 
-import './ShoppingList.css';
+import "./ShoppingList.css";
 
 const ShoppingList = (props) => {
   if (props.items.length === 0) {	

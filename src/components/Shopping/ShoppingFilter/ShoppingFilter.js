@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import './ShoppingFilter.css';
+import "./ShoppingFilter.css";
 
 const ShoppingFilter = (props) => {
   const dropdownChangeHandler = (event) => {

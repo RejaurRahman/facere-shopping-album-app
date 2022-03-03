@@ -1,11 +1,11 @@
-import React from 'react';
-import ShoppingList from '../ShoppingList/ShoppingList';
-import Card from '../../UI/Card/Card';
+import React from "react";
+import ShoppingList from "../ShoppingList/ShoppingList";
+import Card from "../../UI/Card/Card";
 
-import './ShoppingBoard.css';
+import "./ShoppingBoard.css";
 
 const ShoppingBoard = (props) => {
-  const filteredShopping = props.currentCategory === 'All' ? props.items : props.items.filter((expense) => {
+  const filteredShopping = props.currentCategory === "All" ? props.items : props.items.filter((expense) => {
     return expense.category === props.currentCategory;
   });
 

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import './Button.css';
+import "./Button.css";
 
 const Button = (props) => {
-  const defineClass = 'button ' + props.className;
+  const defineClass = "button " + props.className;
   const buttonType = props.type;
 
   return (

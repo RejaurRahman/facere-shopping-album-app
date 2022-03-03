@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import Button from '../../UI/Button/Button';
+import React, { useState } from "react";
+import Button from "../../UI/Button/Button";
 
-import './AddShoppingForm.css';
+import "./AddShoppingForm.css";
 
-import { ReactComponent as AddIcon } from '../../../assets/icons/add-plus.svg';
-import { ReactComponent as CancelIcon } from '../../../assets/icons/back-cancel.svg';
+import { ReactComponent as AddIcon } from "../../../assets/icons/add-plus.svg";
+import { ReactComponent as CancelIcon } from "../../../assets/icons/back-cancel.svg";
 
 const AddShoppingForm = (props) => {
-  const [enteredTitle, setEnteredTitle] = useState('');
-  const [enteredCategory, setEnteredCategory] = useState('');
+  const [enteredTitle, setEnteredTitle] = useState("");
+  const [enteredCategory, setEnteredCategory] = useState("");
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
@@ -27,8 +27,8 @@ const AddShoppingForm = (props) => {
     };
 
     props.onSaveShoppingData(shoppingData);
-    setEnteredTitle('');
-    setEnteredCategory('');
+    setEnteredTitle("");
+    setEnteredCategory("");
   };
 
   return (

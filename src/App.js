@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import NewShoppingItem from './components/NewShoppingItem/NewShoppingItem';
-import ShoppingBoard from './components/Shopping/ShoppingBoard/ShoppingBoard';
-import Background from './components/UI/Background/Background';
-import EditShoppingForm from './components/Form/EditShoppingForm/EditShoppingForm';
-import ShoppingCounter from './components/Shopping/ShoppingCounter/ShoppingCounter';
+import React, { useState } from "react";
+import NewShoppingItem from "./components/NewShoppingItem/NewShoppingItem";
+import ShoppingBoard from "./components/Shopping/ShoppingBoard/ShoppingBoard";
+import Background from "./components/UI/Background/Background";
+import EditShoppingForm from "./components/Form/EditShoppingForm/EditShoppingForm";
+import ShoppingCounter from "./components/Shopping/ShoppingCounter/ShoppingCounter";
 
-import './App.css';
-import './styles/fonts.css'
+import "./App.css";
+import "./styles/fonts.css";
 
 const App = () => {
   const [expenses, setExpenses] = useState([]);
 
-  const [filteredCategory, setFilteredCategory] = useState('All');
+  const [filteredCategory, setFilteredCategory] = useState("All");
 
   const [isExpenseAdded, setIsExpenseAdded] = useState(false);
 
@@ -48,7 +48,7 @@ const App = () => {
 
     newExpenseList.map((item) => {
       if (item.id === id) {
-        item['isCompleted'] = !item['isCompleted'];
+        item["isCompleted"] = !item["isCompleted"];
 
         return item;
       }
@@ -65,17 +65,17 @@ const App = () => {
   }
 
   const onCompleteEdit = (editedItem) => {
-    if (editedItem['title'] === '' || editedItem['category'] === '') {
+    if (editedItem["title"] === "" || editedItem["category"] === "") {
       setIsEditing(false);
-      setEditItemId('');
+      setEditItemId("");
       return;
     }
     const newExpenseList = [...expenses];
 
     newExpenseList.map((item) => {
       if (item.id === editItemId) {
-        item['title'] = editedItem['title'];
-        item['category'] = editedItem['category'];
+        item["title"] = editedItem["title"];
+        item["category"] = editedItem["category"];
 
         return item;
       }
@@ -85,12 +85,12 @@ const App = () => {
 
     setExpenses(newExpenseList);
     setIsEditing(false);
-    setEditItemId('');
+    setEditItemId("");
   }
 
   const onCancelEdit = () => {
     setIsEditing(false);
-    setEditItemId('');
+    setEditItemId("");
   }
 
   return (
@@ -105,7 +105,7 @@ const App = () => {
           />
 
           {
-            isEditing ? <EditShoppingForm onCancelEdit={onCancelEdit} onCompleteEdit={onCompleteEdit} id={editItemId} /> : ''
+            isEditing ? <EditShoppingForm onCancelEdit={onCancelEdit} onCompleteEdit={onCompleteEdit} id={editItemId} /> : ""
           }
 
           <ShoppingBoard 

@@ -1,11 +1,11 @@
-import React from 'react';
-import Button from '../../UI/Button/Button';
-import Card from '../../UI/Card/Card';
+import React from "react";
+import Button from "../../UI/Button/Button";
+import Card from "../../UI/Card/Card";
 
-import './ShoppingItem.css';
+import "./ShoppingItem.css";
 
-import { ReactComponent as EditIcon } from '../../../assets/icons/edit-pencil.svg';
-import { ReactComponent as DeleteIcon } from '../../../assets/icons/trash-bin.svg';
+import { ReactComponent as EditIcon } from "../../../assets/icons/edit-pencil.svg";
+import { ReactComponent as DeleteIcon } from "../../../assets/icons/trash-bin.svg";
 
 const ShoppingItem = (props) => {
   const deleteHandler = (event, id) => {
@@ -24,7 +24,7 @@ const ShoppingItem = (props) => {
     <li className="item">
       <Card className="item__list">
         <div 
-          className={'item__left ' + (props.isCompleted ? 'item__completed' : '')} 
+          className={"item__left " + (props.isCompleted ? "item__completed" : "")} 
           onClick={() => completeHandler(props.shopItemId)}
         >
           <span className="item__category">{props.category}</span> 

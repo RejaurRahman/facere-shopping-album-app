@@ -1,7 +1,7 @@
-import React from 'react';
-import { ReactComponent as CloseIcon } from '../../../assets/icons/close.svg';
+import React from "react";
+import { ReactComponent as CloseIcon } from "../../../assets/icons/close.svg";
 
-import './Modal.css';
+import "./Modal.css";
 
 const Modal = (props) => {
   return (
