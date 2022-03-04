@@ -9,6 +9,8 @@ import { ReactComponent as CancelIcon } from "../../../assets/icons/back-cancel.
 const AddShoppingForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredCategory, setEnteredCategory] = useState("");
+  const [validationTitleError, setValidationTitleError] = useState("");
+  const [validationCategoryError, setValidationCategoryError] = useState("");
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
@@ -20,15 +22,23 @@ const AddShoppingForm = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    setValidationTitleError("");
+    setValidationCategoryError("");
 
-    const shoppingData = {
-      title: enteredTitle,
-      category: enteredCategory
-    };
+    if (enteredTitle.trim().length === 0) {
+      setValidationTitleError("empty-title");
+    } else if (enteredCategory.trim().length === 0) {
+      setValidationCategoryError("empty-category");
+    } else {
+      const shoppingData = {
+        title: enteredTitle,
+        category: enteredCategory
+      };
 
-    props.onSaveShoppingData(shoppingData);
-    setEnteredTitle("");
-    setEnteredCategory("");
+      props.onSaveShoppingData(shoppingData);
+      setEnteredTitle("");
+      setEnteredCategory("");
+    }
   };
 
   return (
@@ -36,7 +46,7 @@ const AddShoppingForm = (props) => {
       <input
         type="text"
         value={enteredTitle}
-        className="input input__text"
+        className={`input input__text ${validationTitleError ? validationTitleError : ""}`}
         name="text"
         placeholder="Enter task"
         onChange={titleChangeHandler}
@@ -44,7 +54,7 @@ const AddShoppingForm = (props) => {
       <input
         type="text"
         value={enteredCategory}
-        className="input input__category"
+        className={`input input__category ${validationCategoryError ? validationCategoryError : ""}`}
         name="text"
         placeholder="Enter Category (For Ex. Food)"
         onChange={categoryChangeHandler}
