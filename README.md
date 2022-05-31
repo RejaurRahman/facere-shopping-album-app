@@ -50,6 +50,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Actions the application performs
 
+### Phase 1
+
 - Adding a new item to the shopping list
 - Delete an existing item
 - Filter through categories
@@ -58,3 +60,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 - Complete an item from an existing list
 - Counter status on all tasks remaining and if tasks are complete
 - Edit existing data from shopping item (title) and (category)
+
+### Phase 2
+
+- Sentry.io integrates sp errors are tracked and monitored via the Sentry.io application dashboard
