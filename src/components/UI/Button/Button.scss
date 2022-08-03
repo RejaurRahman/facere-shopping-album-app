@@ -1,0 +1,23 @@
+.button {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+
+  &--rounded {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  }
+
+  svg {
+    height: 32px;
+    width: 32px;
+
+    path,
+    g,
+    polygon,
+    rect {
+      fill: #FFF;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./ShoppingCounter.css";
+import "./ShoppingCounter.scss";
 
 const ShoppingCounter = (props) => {
   const completedItems = props.items.filter((item) => item.isCompleted).length;

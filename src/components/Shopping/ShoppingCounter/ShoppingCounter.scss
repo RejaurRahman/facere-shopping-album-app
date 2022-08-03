@@ -1,0 +1,61 @@
+.counter {
+  position: absolute;
+  bottom: 0;
+  background-color: #fff;
+  border-top: 1px solid #4a0fcb;
+  padding: 8px 12px;
+  width: calc(100% - 24px);
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (min-width: 992px) {
+    padding: 8px 24px;
+    width: calc(100% - 48px);
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__divider {
+    font-family: "Source Pro Regular", sans-serif;
+    font-size: 22px;
+    line-height: 22px;
+    margin: 0 8px;
+    color: #4a0fcb;
+    cursor: default;
+  }
+
+  &__amount {
+    font-family: "Source Pro Bold", sans-serif;
+    font-size: 12px;
+    line-height: 12px;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: #4a0fcb;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+
+    &--current__amount {
+      background-color: #c11b17;
+    }
+
+    &--completed {
+      background-color: #00fa9a;
+      color: #254117;
+    }
+  }
+
+  &__text {
+    font-family: "Source Pro Regular", sans-serif;
+    font-size: 12px;
+    line-height: 12px;
+    color: #4a0fcb;
+    text-transform: capitalize;
+    margin-left: 8px;
+  }
+}

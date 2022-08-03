@@ -3,20 +3,20 @@ import AddShoppingForm from "../Form/AddShoppingForm/AddShoppingForm";
 import Button from "../UI/Button/Button";
 import ShoppingFilter from "../Shopping/ShoppingFilter/ShoppingFilter";
 
-import "./NewShoppingItem.css";
+import "./NewShoppingItem.scss";
 
 import { ReactComponent as AddIcon } from "../../assets/icons/add-plus.svg";
 
 const NewShoppingItem = (props) => {
   const [isAdding, setIsAdding] = useState(false);
 
-  const [filteredCategory, setFilteredCategory] = useState("All");	
+  const [filteredCategory, setFilteredCategory] = useState("All");
 
-  const filterChangeHandler = async (selectedCategory) => {	
-    await setFilteredCategory(selectedCategory);	
-    props.onFilterValueChange(selectedCategory);	
+  const filterChangeHandler = async (selectedCategory) => {
+    await setFilteredCategory(selectedCategory);
+    props.onFilterValueChange(selectedCategory);
   };
-  
+
   const saveShoppingDataHandler = (enteredShoppingData) => {
     const shoppingData = {
       ...enteredShoppingData,
@@ -40,9 +40,9 @@ const NewShoppingItem = (props) => {
     <div className="new-expense">
       {
         !isAdding && (
-          <Button 
-            type="button" 
-            className="button--rounded button__add" 
+          <Button
+            type="button"
+            className="button--rounded button__add"
             onClick={startAddingHandler}
           >
             <AddIcon />
@@ -52,7 +52,7 @@ const NewShoppingItem = (props) => {
 
       {
         isAdding && (
-          <AddShoppingForm 
+          <AddShoppingForm
             onSaveShoppingData={saveShoppingDataHandler}
             onCancel={stopAddingHandler}
           />
@@ -61,9 +61,9 @@ const NewShoppingItem = (props) => {
 
       {
         props.isExpenseAdded ? (
-          <ShoppingFilter	
-            selected={filteredCategory}	
-            onChangeFilter={filterChangeHandler}	
+          <ShoppingFilter
+            selected={filteredCategory}
+            onChangeFilter={filterChangeHandler}
           />
         ) : ""
       }

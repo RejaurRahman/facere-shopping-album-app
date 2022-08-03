@@ -5,8 +5,8 @@ import Background from "./components/UI/Background/Background";
 import EditShoppingForm from "./components/Form/EditShoppingForm/EditShoppingForm";
 import ShoppingCounter from "./components/Shopping/ShoppingCounter/ShoppingCounter";
 
-import "./App.css";
-import "./styles/fonts.css";
+import "./App.scss";
+import "./styles/fonts.scss";
 
 const App = () => {
   const [expenses, setExpenses] = useState([]);
@@ -36,8 +36,8 @@ const App = () => {
       return item.id !== id;
     })
 
-    if (shoppingList.length === 0) {	
-      setIsExpenseAdded(false);	
+    if (shoppingList.length === 0) {
+      setIsExpenseAdded(false);
     }
 
     setExpenses(shoppingList);
@@ -98,22 +98,22 @@ const App = () => {
       <Background />
       <div className="app">
         <div className="app__container">
-          <NewShoppingItem 
-            onFilterValueChange={filterItems} 
-            onAddShopping={addShoppingHandler} 
-            isExpenseAdded={isExpenseAdded} 
+          <NewShoppingItem
+            onFilterValueChange={filterItems}
+            onAddShopping={addShoppingHandler}
+            isExpenseAdded={isExpenseAdded}
           />
 
           {
             isEditing ? <EditShoppingForm onCancelEdit={onCancelEdit} onCompleteEdit={onCompleteEdit} id={editItemId} /> : ""
           }
 
-          <ShoppingBoard 
+          <ShoppingBoard
             onCompleteShopping={completeShoppingHandler}
-            onEditHandler={editShoppingHandler} 
-            onDeleteShopping={deleteShoppingHandler} 
-            items={expenses} 
-            currentCategory={filteredCategory} 
+            onEditHandler={editShoppingHandler}
+            onDeleteShopping={deleteShoppingHandler}
+            items={expenses}
+            currentCategory={filteredCategory}
           />
           <ShoppingCounter
             items={

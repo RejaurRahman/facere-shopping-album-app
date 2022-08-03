@@ -1,17 +1,17 @@
 import React from "react";
 import ShoppingItem from "../ShoppingItem/ShoppingItem";
 
-import "./ShoppingList.css";
+import "./ShoppingList.scss";
 
 const ShoppingList = (props) => {
-  if (props.items.length === 0) {	
+  if (props.items.length === 0) {
     return (
       <div className="alert">
         <h2 className="alert__message">Found no shopping data.</h2>
       </div>
-    )  
+    )
   }
-  
+
   return (
     <ul className="list">
       {

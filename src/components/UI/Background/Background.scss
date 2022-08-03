@@ -1,0 +1,37 @@
+.background {
+  display: flex;
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+
+  &__left {
+    width: 65%;
+    background-color: #4a0fcb;
+    position: relative;
+
+    &--side {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-top: 40vh solid #ff9462;
+      border-left: 40vh solid transparent;
+    }
+  }
+
+  &__right {
+    width: 35%;
+
+    &--top {
+      background-color: #85219d;
+      height: 40%;
+    }
+
+    &--bottom {
+      background-color: #c63457;
+      height: 60%;
+    }
+  }
+}

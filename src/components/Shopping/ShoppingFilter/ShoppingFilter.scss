@@ -1,0 +1,49 @@
+.filter {
+  position: relative;
+  z-index: 0;
+
+  @media screen and (min-width: 992px) {
+    left: -23px;
+  }
+
+  @media screen and (max-width: 991px) {
+    margin-top: 4px;
+    left: -12px;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    right: -23px;
+  }
+
+  &:before {
+    background-image: url("../../../assets/icons/arrow-down.png");
+    background-repeat: no-repeat;
+    right: -20px;
+    top: 7px;
+    width: 16px;
+    height: 16px;
+    z-index: 1;
+  }
+
+  &:after {
+    top: 0;
+    right: -23px;
+    width: 23px;
+    height: 23px;
+    pointer-events: none;
+    background-color: #370a9a;
+  }
+
+  select {
+    appearance: none;
+    border: none;
+    box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+    background-color: #4a0fcb;
+    color: #fff;
+    padding: 4px;
+    width: calc(100% + 23px);
+  }
+}

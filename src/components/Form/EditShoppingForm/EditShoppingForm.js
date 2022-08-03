@@ -5,7 +5,7 @@ import Modal from "../../UI/Modal/Modal";
 import { ReactComponent as TickIcon } from "../../../assets/icons/tick.svg";
 import { ReactComponent as MinusIcon } from "../../../assets/icons/minus-cancel.svg";
 
-import "./EditShoppingForm.css";
+import "./EditShoppingForm.scss";
 
 const EditShoppingForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
@@ -42,8 +42,8 @@ const EditShoppingForm = (props) => {
 
   return (
     <Modal onClick={props.onCancelEdit}>
-      <form 
-        onSubmit={submitHandler} 
+      <form
+        onSubmit={submitHandler}
         className="form form__edit"
       >
         <input
@@ -80,7 +80,7 @@ const EditShoppingForm = (props) => {
           </div>
         </div>
       </form>
-    </Modal>   
+    </Modal>
   );
 }
 

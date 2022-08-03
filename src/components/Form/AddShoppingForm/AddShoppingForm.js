@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "../../UI/Button/Button";
 
-import "./AddShoppingForm.css";
+import "./AddShoppingForm.scss";
 
 import { ReactComponent as AddIcon } from "../../../assets/icons/add-plus.svg";
 import { ReactComponent as CancelIcon } from "../../../assets/icons/back-cancel.svg";
@@ -59,15 +59,15 @@ const AddShoppingForm = (props) => {
         placeholder="Enter Category (For Ex. Food)"
         onChange={categoryChangeHandler}
       />
-      <Button 
-        type="submit" 
+      <Button
+        type="submit"
         className="button--rounded button__submit"
       >
         <AddIcon />
       </Button>
-      <Button 
-        type="button" 
-        className="button--rounded button__cancel" 
+      <Button
+        type="button"
+        className="button--rounded button__cancel"
         onClick={props.onCancel}
       >
         <CancelIcon />

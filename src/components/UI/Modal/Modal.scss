@@ -1,0 +1,78 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
+  &__box {
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+    padding: 16px 0 0 0;
+    width: 100%;
+    max-width: 250px;
+
+    &--top {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__overlay {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__close {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0 16px;
+
+    svg {
+      height: 24px;
+      width: 24px;
+
+      g {
+        fill: #4a0fcb;
+      }
+    }
+  }
+
+  &__footer {
+    padding-top: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+
+    &--container {
+      display: flex;
+      width: 100%;
+    }
+
+    .button__update,
+    .button__exit {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .button__update {
+      background-color: #12ad2b;
+    }
+
+    .button__exit {
+      background-color: #c35817;
+    }
+  }
+}

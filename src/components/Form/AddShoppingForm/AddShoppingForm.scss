@@ -1,0 +1,160 @@
+.form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+
+  @media screen and (max-width: 991px) {
+    justify-content: center;
+  }
+}
+
+.button__submit {
+  background-color: #12ad2b;
+
+  @media screen and (min-width: 992px) {
+    margin: 0 4px 0 4px;
+  }
+
+  @media screen and (max-width: 991px) {
+    margin: 4px 4px 0 4px;
+  }
+}
+
+.button__cancel {
+  background-color: #e8a317;
+
+  @media screen and (min-width: 992px) {
+    margin: 0 4px 0 4px;
+  }
+
+  @media screen and (max-width: 991px) {
+    margin: 4px 4px 0 4px;
+  }
+}
+
+.input__category {
+  font-family: "Source Pro Light", sans-serif;
+  font-size: 16px;
+  appearance: none;
+  height: 32px;
+  border-radius: 0;
+  border-top: 1px solid #d1d0ce;
+  border-left: 1px solid #d1d0ce;
+  border-right: 1px solid #d1d0ce;
+  border-bottom: 3px solid #85219d;
+  padding: 2px 12px;
+  color: #85219d;
+
+  @media screen and (min-width: 992px) {
+    margin-right: 8px;
+  }
+
+  @media screen and (max-width: 991px) {
+    flex-basis: 100%;
+  }
+
+  &.empty-category {
+    font-family: "Source Pro Light", sans-serif;
+    border: 3px solid #c11b17;
+    color: #c11b17;
+    box-sizing: border-box;
+    height: 40px;
+
+    &::-webkit-input-placeholder {
+      color: #c11b17;
+    }
+
+    &::-moz-placeholder {
+      color: #c11b17;
+    }
+
+    &:-ms-input-placeholder {
+      color: #c11b17;
+    }
+
+    &:-moz-placeholder {
+      color: #c11b17;
+    }
+  }
+
+  &::-webkit-input-placeholder {
+    color: #85219d;
+  }
+
+  &::-moz-placeholder {
+    color: #85219d;
+  }
+
+  &:-ms-input-placeholder {
+    color: #85219d;
+  }
+
+  &:-moz-placeholder {
+    color: #85219d;
+  }
+}
+
+.input__text {
+  font-family: "Source Pro Light", sans-serif;
+  font-size: 16px;
+  appearance: none;
+  height: 32px;
+  border-radius: 0;
+  border-top: 1px solid #d1d0ce;
+  border-left: 1px solid #d1d0ce;
+  border-right: 1px solid #d1d0ce;
+  border-bottom: 3px solid #85219d;
+  padding: 2px 12px;
+  color: #85219d;
+
+  @media screen and (min-width: 992px) {
+    margin-right: 8px;
+  }
+
+  @media screen and (max-width: 991px) {
+    flex-basis: 100%;
+    margin-bottom: 4px;
+  }
+
+  &.empty-title {
+    font-family: "Source Pro Light", sans-serif;
+    border: 3px solid #c11b17;
+    color: #c11b17;
+    box-sizing: border-box;
+    height: 40px;
+
+    &::-webkit-input-placeholder {
+      color: #c11b17;
+    }
+
+    &::-moz-placeholder {
+      color: #c11b17;
+    }
+
+    &:-ms-input-placeholder {
+      color: #c11b17;
+    }
+
+    &:-moz-placeholder {
+      color: #c11b17;
+    }
+  }
+
+  &::-webkit-input-placeholder {
+    color: #85219d;
+  }
+
+  &::-moz-placeholder {
+    color: #85219d;
+  }
+
+  &:-ms-input-placeholder {
+    color: #85219d;
+  }
+
+  &:-moz-placeholder {
+    color: #85219d;
+  }
+}
