@@ -11,12 +11,12 @@
   position: relative;
   border-bottom: 1px solid $american-silver;
 
-  @media screen and (min-width: 992px) {
+  @include breakpoint(min-width, tablet) {
     padding: 24px;
     justify-content: space-between;
   }
 
-  @media screen and (max-width: 991px) {
+  @include breakpoint(max-width, tablet) {
     padding: 12px;
     flex-flow: column;
   }
@@ -30,11 +30,11 @@
     background-color: $interdimensional-blue;
     z-index: 0;
 
-    @media screen and (min-width: 992px) {
+    @include breakpoint(min-width, tablet) {
       content: "";
     }
 
-    @media screen and (max-width: 991px) {
+    @include breakpoint(max-width, tablet) {
       content: none;
     }
   }

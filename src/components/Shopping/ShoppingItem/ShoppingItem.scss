@@ -13,12 +13,12 @@
   overflow: hidden;
   cursor: pointer;
 
-  @media screen and (min-width: 569px) {
+  @include breakpoint(min-width, mobile) {
     padding: 0 24px;
     width: calc(100% - 150px);
   }
 
-  @media screen and (max-width: 568px) {
+  @include breakpoint(max-width, mobile) {
     padding: 0 8px;
     width: calc(100% - 120px);
   }
@@ -27,11 +27,11 @@
 .item__right {
   display: flex;
 
-  @media screen and (min-width: 569px) {
+  @include breakpoint(min-width, mobile) {
     width: 150px;
   }
 
-  @media screen and (max-width: 568px) {
+  @include breakpoint(max-width, mobile) {
     width: 120px;
   }
 }
@@ -49,12 +49,12 @@
   word-break: break-word;
   color: $interdimensional-blue;
 
-  @media screen and (min-width: 569px) {
+  @include breakpoint(min-width, mobile) {
     font-size: 24px;
     line-height: 32px;
   }
 
-  @media screen and (max-width: 568px) {
+  @include breakpoint(max-width, mobile) {
     font-size: 20px;
     line-height: 28px;
   }
@@ -64,11 +64,11 @@
   padding-top: 45px;
   padding-bottom: 45px;
 
-  @media screen and (min-width: 569px) {
+  @include breakpoint(min-width, mobile) {
     width: 75px;
   }
 
-  @media screen and (max-width: 568px) {
+  @include breakpoint(max-width, mobile) {
     width: 60px;
   }
 

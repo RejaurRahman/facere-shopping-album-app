@@ -4,11 +4,11 @@
   position: relative;
   z-index: 0;
 
-  @media screen and (min-width: 992px) {
+  @include breakpoint(min-width, tablet) {
     left: -23px;
   }
 
-  @media screen and (max-width: 991px) {
+  @include breakpoint(max-width, tablet) {
     margin-top: 4px;
     left: -12px;
   }

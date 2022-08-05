@@ -7,7 +7,7 @@
   position: relative;
   z-index: 1;
 
-  @media screen and (max-width: 991px) {
+  @include breakpoint(max-width, tablet) {
     justify-content: center;
   }
 }
@@ -15,11 +15,11 @@
 .button__submit {
   background-color: $dark-pastel-green;
 
-  @media screen and (min-width: 992px) {
+  @include breakpoint(min-width, tablet) {
     margin: 0 4px 0 4px;
   }
 
-  @media screen and (max-width: 991px) {
+  @include breakpoint(max-width, tablet) {
     margin: 4px 4px 0 4px;
   }
 }
@@ -27,11 +27,11 @@
 .button__cancel {
   background-color: $marigold;
 
-  @media screen and (min-width: 992px) {
+  @include breakpoint(min-width, tablet) {
     margin: 0 4px 0 4px;
   }
 
-  @media screen and (max-width: 991px) {
+  @include breakpoint(max-width, tablet) {
     margin: 4px 4px 0 4px;
   }
 }
@@ -49,11 +49,11 @@
   padding: 2px 12px;
   color: $grape;
 
-  @media screen and (min-width: 992px) {
+  @include breakpoint(min-width, tablet) {
     margin-right: 8px;
   }
 
-  @media screen and (max-width: 991px) {
+  @include breakpoint(max-width, tablet) {
     flex-basis: 100%;
   }
 
@@ -111,11 +111,11 @@
   padding: 2px 12px;
   color: $grape;
 
-  @media screen and (min-width: 992px) {
+  @include breakpoint(min-width, tablet) {
     margin-right: 8px;
   }
 
-  @media screen and (max-width: 991px) {
+  @include breakpoint(max-width, tablet) {
     flex-basis: 100%;
     margin-bottom: 4px;
   }
