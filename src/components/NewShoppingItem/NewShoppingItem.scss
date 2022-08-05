@@ -1,13 +1,15 @@
+@import "../../styles/base.scss";
+
 .button__add {
   margin: 0;
-  background-color: #4a0fcb;
+  background-color: $interdimensional-blue;
 }
 
 .new-expense {
   display: flex;
   align-items: center;
   position: relative;
-  border-bottom: 1px solid #d1d0ce;
+  border-bottom: 1px solid $american-silver;
 
   @media screen and (min-width: 992px) {
     padding: 24px;
@@ -25,7 +27,7 @@
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: #4a0fcb;
+    background-color: $interdimensional-blue;
     z-index: 0;
 
     @media screen and (min-width: 992px) {

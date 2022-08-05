@@ -1,8 +1,10 @@
+@import "../../../styles/base.scss";
+
 .counter {
   position: absolute;
   bottom: 0;
-  background-color: #fff;
-  border-top: 1px solid #4a0fcb;
+  background-color: $white;
+  border-top: 1px solid $interdimensional-blue;
   padding: 8px 12px;
   width: calc(100% - 24px);
   display: flex;
@@ -23,7 +25,7 @@
     font-size: 22px;
     line-height: 22px;
     margin: 0 8px;
-    color: #4a0fcb;
+    color: $interdimensional-blue;
     cursor: default;
   }
 
@@ -33,20 +35,20 @@
     line-height: 12px;
     border-radius: 4px;
     padding: 5px;
-    background-color: #4a0fcb;
-    color: #fff;
+    background-color: $interdimensional-blue;
+    color: $white;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: default;
 
     &--current__amount {
-      background-color: #c11b17;
+      background-color: $international-orange;
     }
 
     &--completed {
-      background-color: #00fa9a;
-      color: #254117;
+      background-color: $medium-spring-green;
+      color: $black-leather-jacket;
     }
   }
 
@@ -54,7 +56,7 @@
     font-family: "Source Pro Regular", sans-serif;
     font-size: 12px;
     line-height: 12px;
-    color: #4a0fcb;
+    color: $interdimensional-blue;
     text-transform: capitalize;
     margin-left: 8px;
   }

@@ -1,7 +1,9 @@
+@import "../../../styles/base.scss";
+
 .item__list {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #D1D0CE;
+  border-bottom: 1px solid $american-silver;
 }
 
 .item__left {
@@ -36,7 +38,7 @@
 
 .item__category {
   font-family: "Source Pro Italic", sans-serif;
-  color: #D1D0CE;
+  color: $american-silver;
   font-size: 16px;
   line-height: 24px;
 }
@@ -45,7 +47,7 @@
   font-family: "Source Pro Regular", sans-serif;
   margin: 0;
   word-break: break-word;
-  color: #4a0fcb;
+  color: $interdimensional-blue;
 
   @media screen and (min-width: 569px) {
     font-size: 24px;
@@ -71,11 +73,11 @@
   }
 
   &--edit {
-    background-color: #C11B17;
+    background-color: $international-orange;
   }
 
   &--delete {
-    background-color: #34282C;
+    background-color: $black-coffee;
   }
 
   svg {
@@ -85,13 +87,13 @@
 }
 
 .item__completed {
-  background-color: #00FA9A;
+  background-color: $medium-spring-green;
 
   .item__name {
-    color: #254117;
+    color: $black-leather-jacket;
   }
 
   .item__category {
-    color: #4E9258;
+    color: $middle-green;
   }
 }

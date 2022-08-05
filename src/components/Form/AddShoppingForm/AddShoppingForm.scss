@@ -1,3 +1,5 @@
+@import "../../../styles/base.scss";
+
 .form {
   display: flex;
   align-items: center;
@@ -11,7 +13,7 @@
 }
 
 .button__submit {
-  background-color: #12ad2b;
+  background-color: $dark-pastel-green;
 
   @media screen and (min-width: 992px) {
     margin: 0 4px 0 4px;
@@ -23,7 +25,7 @@
 }
 
 .button__cancel {
-  background-color: #e8a317;
+  background-color: $marigold;
 
   @media screen and (min-width: 992px) {
     margin: 0 4px 0 4px;
@@ -40,12 +42,12 @@
   appearance: none;
   height: 32px;
   border-radius: 0;
-  border-top: 1px solid #d1d0ce;
-  border-left: 1px solid #d1d0ce;
-  border-right: 1px solid #d1d0ce;
-  border-bottom: 3px solid #85219d;
+  border-top: 1px solid $american-silver;
+  border-left: 1px solid $american-silver;
+  border-right: 1px solid $american-silver;
+  border-bottom: 3px solid $grape;
   padding: 2px 12px;
-  color: #85219d;
+  color: $grape;
 
   @media screen and (min-width: 992px) {
     margin-right: 8px;
@@ -57,42 +59,42 @@
 
   &.empty-category {
     font-family: "Source Pro Light", sans-serif;
-    border: 3px solid #c11b17;
-    color: #c11b17;
+    border: 3px solid $international-orange;
+    color: $international-orange;
     box-sizing: border-box;
     height: 40px;
 
     &::-webkit-input-placeholder {
-      color: #c11b17;
+      color: $international-orange;
     }
 
     &::-moz-placeholder {
-      color: #c11b17;
+      color: $international-orange;
     }
 
     &:-ms-input-placeholder {
-      color: #c11b17;
+      color: $international-orange;
     }
 
     &:-moz-placeholder {
-      color: #c11b17;
+      color: $international-orange;
     }
   }
 
   &::-webkit-input-placeholder {
-    color: #85219d;
+    color: $grape;
   }
 
   &::-moz-placeholder {
-    color: #85219d;
+    color: $grape;
   }
 
   &:-ms-input-placeholder {
-    color: #85219d;
+    color: $grape;
   }
 
   &:-moz-placeholder {
-    color: #85219d;
+    color: $grape;
   }
 }
 
@@ -102,12 +104,12 @@
   appearance: none;
   height: 32px;
   border-radius: 0;
-  border-top: 1px solid #d1d0ce;
-  border-left: 1px solid #d1d0ce;
-  border-right: 1px solid #d1d0ce;
-  border-bottom: 3px solid #85219d;
+  border-top: 1px solid $american-silver;
+  border-left: 1px solid $american-silver;
+  border-right: 1px solid $american-silver;
+  border-bottom: 3px solid $grape;
   padding: 2px 12px;
-  color: #85219d;
+  color: $grape;
 
   @media screen and (min-width: 992px) {
     margin-right: 8px;
@@ -120,41 +122,41 @@
 
   &.empty-title {
     font-family: "Source Pro Light", sans-serif;
-    border: 3px solid #c11b17;
-    color: #c11b17;
+    border: 3px solid $international-orange;
+    color: $international-orange;
     box-sizing: border-box;
     height: 40px;
 
     &::-webkit-input-placeholder {
-      color: #c11b17;
+      color: $international-orange;
     }
 
     &::-moz-placeholder {
-      color: #c11b17;
+      color: $international-orange;
     }
 
     &:-ms-input-placeholder {
-      color: #c11b17;
+      color: $international-orange;
     }
 
     &:-moz-placeholder {
-      color: #c11b17;
+      color: $international-orange;
     }
   }
 
   &::-webkit-input-placeholder {
-    color: #85219d;
+    color: $grape;
   }
 
   &::-moz-placeholder {
-    color: #85219d;
+    color: $grape;
   }
 
   &:-ms-input-placeholder {
-    color: #85219d;
+    color: $grape;
   }
 
   &:-moz-placeholder {
-    color: #85219d;
+    color: $grape;
   }
 }

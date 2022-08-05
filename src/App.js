@@ -6,7 +6,7 @@ import EditShoppingForm from "./components/Form/EditShoppingForm/EditShoppingFor
 import ShoppingCounter from "./components/Shopping/ShoppingCounter/ShoppingCounter";
 
 import "./App.scss";
-import "./styles/fonts.scss";
+import "./styles/base.scss";
 
 const App = () => {
   const [expenses, setExpenses] = useState([]);

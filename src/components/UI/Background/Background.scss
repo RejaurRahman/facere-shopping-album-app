@@ -1,3 +1,5 @@
+@import "../../../styles/base.scss";
+
 .background {
   display: flex;
   height: 100vh;
@@ -7,7 +9,7 @@
 
   &__left {
     width: 65%;
-    background-color: #4a0fcb;
+    background-color: $interdimensional-blue;
     position: relative;
 
     &--side {
@@ -16,8 +18,8 @@
       right: 0;
       width: 0;
       height: 0;
-      border-top: 40vh solid #ff9462;
-      border-left: 40vh solid transparent;
+      border-top: 40vh solid $atomic-tangerine;
+      border-left: 40vh solid $transparent;
     }
   }
 
@@ -25,12 +27,12 @@
     width: 35%;
 
     &--top {
-      background-color: #85219d;
+      background-color: $grape;
       height: 40%;
     }
 
     &--bottom {
-      background-color: #c63457;
+      background-color: $dingy-dungeon;
       height: 60%;
     }
   }

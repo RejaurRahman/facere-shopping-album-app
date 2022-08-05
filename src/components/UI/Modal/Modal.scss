@@ -1,3 +1,5 @@
+@import "../../../styles/base.scss";
+
 .modal {
   position: fixed;
   top: 0;
@@ -13,7 +15,7 @@
   &__box {
     position: relative;
     z-index: 2;
-    background-color: #fff;
+    background-color: $white;
     padding: 16px 0 0 0;
     width: 100%;
     max-width: 250px;
@@ -25,7 +27,7 @@
   }
 
   &__overlay {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba($black, 0.75);
     position: absolute;
     height: 100%;
     width: 100%;
@@ -42,7 +44,7 @@
       width: 24px;
 
       g {
-        fill: #4a0fcb;
+        fill: $interdimensional-blue;
       }
     }
   }
@@ -68,11 +70,11 @@
     }
 
     .button__update {
-      background-color: #12ad2b;
+      background-color: $dark-pastel-green;
     }
 
     .button__exit {
-      background-color: #c35817;
+      background-color: $alloy-orange;
     }
   }
 }

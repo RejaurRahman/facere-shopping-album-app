@@ -1,3 +1,5 @@
+@import "../../../styles/base.scss";
+
 .form__edit {
   justify-content: center;
 
@@ -9,8 +11,8 @@
     appearance: none;
     padding: 16px;
     margin: 0 16px;
-    color: #4a0fcb;
-    border: 2px solid #4a0fcb;
+    color: $interdimensional-blue;
+    border: 2px solid $interdimensional-blue;
 
     &:first-child {
       margin-bottom: 16px;
@@ -18,25 +20,25 @@
     }
 
     &::-webkit-input-placeholder {
-      color: #4a0fcb;
+      color: $interdimensional-blue;
     }
 
     &::-moz-placeholder {
-      color: #4a0fcb;
+      color: $interdimensional-blue;
     }
 
     &:-ms-input-placeholder {
-      color: #4a0fcb;
+      color: $interdimensional-blue;
     }
 
     &:-moz-placeholder {
-      color: #4a0fcb;
+      color: $interdimensional-blue;
     }
   }
 
   .error__message {
     font-family: "Source Pro Bold", sans-serif;
-    color: #c11b17;
+    color: $international-orange;
     font-size: 14px;
     margin: 0 0 16px 0;
     text-transform: uppercase;
