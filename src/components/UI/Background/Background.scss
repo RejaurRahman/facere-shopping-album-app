@@ -14,10 +14,10 @@
 
     &--side {
       position: absolute;
-      top: 0;
-      right: 0;
-      width: 0;
-      height: 0;
+      top: to-rem(0);
+      right: to-rem(0);
+      width: to-rem(0);
+      height: to-rem(0);
       border-top: 40vh solid $atomic-tangerine;
       border-left: 40vh solid $transparent;
     }

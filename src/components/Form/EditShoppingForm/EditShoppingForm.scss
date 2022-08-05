@@ -5,18 +5,18 @@
 
   .input {
     font-family: "Source Pro Light", sans-serif;
-    font-size: 16px;
+    font-size: to-rem(16);
     width: 100%;
     box-sizing: border-box;
     appearance: none;
-    padding: 16px;
-    margin: 0 16px;
+    padding: to-rem(16);
+    margin: to-rem(0) to-rem(16);
     color: $interdimensional-blue;
-    border: 2px solid $interdimensional-blue;
+    border: to-rem(2) solid $interdimensional-blue;
 
     &:first-child {
-      margin-bottom: 16px;
-      margin-top: 10px;
+      margin-bottom: to-rem(16);
+      margin-top: to-rem(10);
     }
 
     &::-webkit-input-placeholder {
@@ -39,8 +39,8 @@
   .error__message {
     font-family: "Source Pro Bold", sans-serif;
     color: $international-orange;
-    font-size: 14px;
-    margin: 0 0 16px 0;
+    font-size: to-rem(14);
+    margin: to-rem(0) to-rem(0) to-rem(16) to-rem(0);
     text-transform: uppercase;
   }
 }
@@ -48,5 +48,5 @@
 .buttons__container {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: to-rem(10);
 }

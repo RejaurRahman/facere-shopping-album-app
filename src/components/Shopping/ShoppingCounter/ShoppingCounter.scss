@@ -2,16 +2,16 @@
 
 .counter {
   position: absolute;
-  bottom: 0;
+  bottom: to-rem(0);
   background-color: $white;
-  border-top: 1px solid $interdimensional-blue;
-  padding: 8px 12px;
+  border-top: to-rem(1) solid $interdimensional-blue;
+  padding: to-rem(8) to-rem(12);
   width: calc(100% - 24px);
   display: flex;
   justify-content: space-between;
 
   @include breakpoint(min-width, tablet) {
-    padding: 8px 24px;
+    padding: to-rem(8) to-rem(24);
     width: calc(100% - 48px);
   }
 
@@ -22,19 +22,19 @@
 
   &__divider {
     font-family: "Source Pro Regular", sans-serif;
-    font-size: 22px;
-    line-height: 22px;
-    margin: 0 8px;
+    font-size: to-rem(22);
+    line-height: to-rem(22);
+    margin: to-rem(0) to-rem(8);
     color: $interdimensional-blue;
     cursor: default;
   }
 
   &__amount {
     font-family: "Source Pro Bold", sans-serif;
-    font-size: 12px;
-    line-height: 12px;
-    border-radius: 4px;
-    padding: 5px;
+    font-size: to-rem(12);
+    line-height: to-rem(12);
+    border-radius: to-rem(4);
+    padding: to-rem(5);
     background-color: $interdimensional-blue;
     color: $white;
     display: flex;
@@ -54,10 +54,10 @@
 
   &__text {
     font-family: "Source Pro Regular", sans-serif;
-    font-size: 12px;
-    line-height: 12px;
+    font-size: to-rem(12);
+    line-height: to-rem(12);
     color: $interdimensional-blue;
     text-transform: capitalize;
-    margin-left: 8px;
+    margin-left: to-rem(8);
   }
 }

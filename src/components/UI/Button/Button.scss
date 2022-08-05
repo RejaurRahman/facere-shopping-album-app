@@ -6,14 +6,14 @@
   cursor: pointer;
 
   &--rounded {
-    width: 64px;
-    height: 64px;
+    width: to-rem(64);
+    height: to-rem(64);
     border-radius: 50%;
   }
 
   svg {
-    height: 32px;
-    width: 32px;
+    height: to-rem(32);
+    width: to-rem(32);
 
     path,
     g,

@@ -16,11 +16,11 @@
   background-color: $dark-pastel-green;
 
   @include breakpoint(min-width, tablet) {
-    margin: 0 4px 0 4px;
+    margin: to-rem(0) to-rem(4) to-rem(0) to-rem(4);
   }
 
   @include breakpoint(max-width, tablet) {
-    margin: 4px 4px 0 4px;
+    margin: to-rem(4) to-rem(4) to-rem(0) to-rem(4);
   }
 }
 
@@ -28,29 +28,29 @@
   background-color: $marigold;
 
   @include breakpoint(min-width, tablet) {
-    margin: 0 4px 0 4px;
+    margin: to-rem(0) to-rem(4) to-rem(0) to-rem(4);
   }
 
   @include breakpoint(max-width, tablet) {
-    margin: 4px 4px 0 4px;
+    margin: to-rem(4) to-rem(4) to-rem(0) to-rem(4);
   }
 }
 
 .input__category {
   font-family: "Source Pro Light", sans-serif;
-  font-size: 16px;
+  font-size: to-rem(16);
   appearance: none;
-  height: 32px;
-  border-radius: 0;
-  border-top: 1px solid $american-silver;
-  border-left: 1px solid $american-silver;
-  border-right: 1px solid $american-silver;
-  border-bottom: 3px solid $grape;
-  padding: 2px 12px;
+  height: to-rem(32);
+  border-radius: to-rem(0);
+  border-top: to-rem(1) solid $american-silver;
+  border-left: to-rem(1) solid $american-silver;
+  border-right: to-rem(1) solid $american-silver;
+  border-bottom: to-rem(3) solid $grape;
+  padding: to-rem(2)to-rem(12);
   color: $grape;
 
   @include breakpoint(min-width, tablet) {
-    margin-right: 8px;
+    margin-right: to-rem(8);
   }
 
   @include breakpoint(max-width, tablet) {
@@ -59,10 +59,10 @@
 
   &.empty-category {
     font-family: "Source Pro Light", sans-serif;
-    border: 3px solid $international-orange;
+    border: to-rem(3) solid $international-orange;
     color: $international-orange;
     box-sizing: border-box;
-    height: 40px;
+    height: to-rem(40);
 
     &::-webkit-input-placeholder {
       color: $international-orange;
@@ -100,32 +100,32 @@
 
 .input__text {
   font-family: "Source Pro Light", sans-serif;
-  font-size: 16px;
+  font-size: to-rem(16);
   appearance: none;
-  height: 32px;
-  border-radius: 0;
-  border-top: 1px solid $american-silver;
-  border-left: 1px solid $american-silver;
-  border-right: 1px solid $american-silver;
-  border-bottom: 3px solid $grape;
-  padding: 2px 12px;
+  height: to-rem(32);
+  border-radius: to-rem(0);
+  border-top: to-rem(1) solid $american-silver;
+  border-left: to-rem(1) solid $american-silver;
+  border-right: to-rem(1) solid $american-silver;
+  border-bottom: to-rem(3) solid $grape;
+  padding: to-rem(2) to-rem(12);
   color: $grape;
 
   @include breakpoint(min-width, tablet) {
-    margin-right: 8px;
+    margin-right: to-rem(8);
   }
 
   @include breakpoint(max-width, tablet) {
     flex-basis: 100%;
-    margin-bottom: 4px;
+    margin-bottom: to-rem(4);
   }
 
   &.empty-title {
     font-family: "Source Pro Light", sans-serif;
-    border: 3px solid $international-orange;
+    border: to-rem(3) solid $international-orange;
     color: $international-orange;
     box-sizing: border-box;
-    height: 40px;
+    height: to-rem(40);
 
     &::-webkit-input-placeholder {
       color: $international-orange;

@@ -3,7 +3,7 @@
 .item__list {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid $american-silver;
+  border-bottom: to-rem(1) solid $american-silver;
 }
 
 .item__left {
@@ -14,12 +14,12 @@
   cursor: pointer;
 
   @include breakpoint(min-width, mobile) {
-    padding: 0 24px;
+    padding: to-rem(0) to-rem(24);
     width: calc(100% - 150px);
   }
 
   @include breakpoint(max-width, mobile) {
-    padding: 0 8px;
+    padding: to-rem(0) to-rem(8);
     width: calc(100% - 120px);
   }
 }
@@ -28,48 +28,48 @@
   display: flex;
 
   @include breakpoint(min-width, mobile) {
-    width: 150px;
+    width: to-rem(150);
   }
 
   @include breakpoint(max-width, mobile) {
-    width: 120px;
+    width: to-rem(120);
   }
 }
 
 .item__category {
   font-family: "Source Pro Italic", sans-serif;
   color: $american-silver;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: to-rem(16);
+  line-height: to-rem(24);
 }
 
 .item__name {
   font-family: "Source Pro Regular", sans-serif;
-  margin: 0;
+  margin: to-rem(0);
   word-break: break-word;
   color: $interdimensional-blue;
 
   @include breakpoint(min-width, mobile) {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: to-rem(24);
+    line-height: to-rem(32);
   }
 
   @include breakpoint(max-width, mobile) {
-    font-size: 20px;
-    line-height: 28px;
+    font-size: to-rem(20);
+    line-height: to-rem(28);
   }
 }
 
 .item__button {
-  padding-top: 45px;
-  padding-bottom: 45px;
+  padding-top: to-rem(45);
+  padding-bottom: to-rem(45);
 
   @include breakpoint(min-width, mobile) {
-    width: 75px;
+    width: to-rem(75);
   }
 
   @include breakpoint(max-width, mobile) {
-    width: 60px;
+    width: to-rem(60);
   }
 
   &--edit {
@@ -81,8 +81,8 @@
   }
 
   svg {
-    height: 32px;
-    width: 32px;
+    height: to-rem(32);
+    width: to-rem(32);
   }
 }
 
