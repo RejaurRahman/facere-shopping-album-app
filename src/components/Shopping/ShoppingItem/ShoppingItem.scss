@@ -3,7 +3,7 @@
 .item__list {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #D1D0CE;
+  border-bottom: to-rem(1) solid #D1D0CE;
 }
 
 .item__left {
@@ -14,12 +14,12 @@
   cursor: pointer;
 
   @media screen and (min-width: 569px) {
-    padding: 0 24px;
+    padding: to-rem(0) to-rem(24);
     width: calc(100% - 150px);
   }
 
   @media screen and (max-width: 568px) {
-    padding: 0 8px;
+    padding: to-rem(0) to-rem(8);
     width: calc(100% - 120px);
   }
 }
@@ -28,48 +28,48 @@
   display: flex;
 
   @media screen and (min-width: 569px) {
-    width: 150px;
+    width: to-rem(150);
   }
 
   @media screen and (max-width: 568px) {
-    width: 120px;
+    width: to-rem(120);
   }
 }
 
 .item__category {
   font-family: "Source Pro Italic", sans-serif;
   color: #D1D0CE;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: to-rem(16);
+  line-height: to-rem(24);
 }
 
 .item__name {
   font-family: "Source Pro Regular", sans-serif;
-  margin: 0;
+  margin: to-rem(0);
   word-break: break-word;
   color: #4A0FCB;
 
   @media screen and (min-width: 569px) {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: to-rem(24);
+    line-height: to-rem(32);
   }
 
   @media screen and (max-width: 568px) {
-    font-size: 20px;
-    line-height: 28px;
+    font-size: to-rem(20);
+    line-height: to-rem(28);
   }
 }
 
 .item__button {
-  padding-top: 45px;
-  padding-bottom: 45px;
+  padding-top: to-rem(45);
+  padding-bottom: to-rem(45);
 
   @media screen and (min-width: 569px) {
-    width: 75px;
+    width: to-rem(75);
   }
 
   @media screen and (max-width: 568px) {
-    width: 60px;
+    width: to-rem(60);
   }
 
   &--edit {
@@ -81,8 +81,8 @@
   }
 
   svg {
-    height: 32px;
-    width: 32px;
+    height: to-rem(32);
+    width: to-rem(32);
   }
 }
 

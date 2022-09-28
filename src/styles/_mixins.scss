@@ -1,26 +1,21 @@
-@use "sass:math";
-@use "./breakpoints" as *;
+// @use "sass:math";
+// @use "./breakpoints" as *;
 
-@mixin breakpoint($direction, $breakpoint) {
-  $breakpoint-value: map-get($breakpoints, $breakpoint);
+// @mixin breakpoint($direction, $breakpoint) {
+//   $breakpoint-value: map-get($breakpoints, $breakpoint);
 
-  @if $direction == min-width {
-    @media screen and (min-width: $breakpoint-value) {
-      @content;
-    }
-  } @else if $direction == max-width {
-    @media screen and (max-width: ($breakpoint-value - 1)) {
-      @content;
-    }
-  }
-}
+//   @if $direction == min-width {
+//     @media screen and (min-width: $breakpoint-value) {
+//       @content;
+//     }
+//   } @else if $direction == max-width {
+//     @media screen and (max-width: ($breakpoint-value - 1)) {
+//       @content;
+//     }
+//   }
+// }
 
-$html-font-size: 16px;
-
-@function stripUnit($value) {
-    @return $value / ($value * 0 + 1);
-}
-
-@function to-rem($pxValue) {
-    @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+@function to-rem($value) {
+  $remValue: ($value / 16) + rem;
+  @return $remValue;
 }

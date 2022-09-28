@@ -12,8 +12,8 @@
   }
 
   svg {
-    height: 32px;
-    width: 32px;
+    height: to-rem(32);
+    width: to-rem(32);
 
     path,
     g,

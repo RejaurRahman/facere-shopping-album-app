@@ -1,4 +1,4 @@
-@use "./colours" as *;
-@use "./fonts" as *;
-@use "./breakpoints" as *;
-@use "./mixins" as *;
+@import "./colours";
+@import "./fonts";
+@import "./breakpoints";
+@import "./mixins";

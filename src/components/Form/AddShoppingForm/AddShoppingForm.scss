@@ -16,11 +16,11 @@
   background-color: #12AD2B;
 
   @media screen and (min-width: 992px) {
-    margin: 0 4px 0 4px;
+    margin: to-rem(0) to-rem(4) to-rem(0) to-rem(4);
   }
 
   @media screen and (max-width: 991px) {
-    margin: 4px 4px 0 4px;
+    margin: to-rem(4) to-rem(4) to-rem(0) to-rem(4);
   }
 }
 
@@ -28,29 +28,29 @@
   background-color: #E8A317;
 
   @media screen and (min-width: 992px) {
-    margin: 0 4px 0 4px;
+    margin: to-rem(0) to-rem(4) to-rem(0) to-rem(4);
   }
 
   @media screen and (max-width: 991px) {
-    margin: 4px 4px 0 4px;
+    margin: to-rem(4) to-rem(4) to-rem(0) to-rem(4);
   }
 }
 
 .input__category {
   font-family: "Source Pro Light", sans-serif;
-  font-size: 16px;
+  font-size: to-rem(16);
   appearance: none;
-  height: 32px;
-  border-radius: 0;
-  border-top: 1px solid #D1D0CE;
-  border-left: 1px solid #D1D0CE;
-  border-right: 1px solid #D1D0CE;
-  border-bottom: 3px solid #85219D;
-  padding: 2px 12px;
+  height: to-rem(32);
+  border-radius: to-rem(0);
+  border-top: to-rem(1) solid #D1D0CE;
+  border-left: to-rem(1) solid #D1D0CE;
+  border-right: to-rem(1) solid #D1D0CE;
+  border-bottom: to-rem(3) solid #85219D;
+  padding: to-rem(2) to-rem(12);
   color: #85219D;
 
   @media screen and (min-width: 992px) {
-    margin-right: 8px;
+    margin-right: to-rem(8);
   }
 
   @media screen and (max-width: 991px) {
@@ -59,10 +59,10 @@
 
   &.empty-category {
     font-family: "Source Pro Light", sans-serif;
-    border: 3px solid #C11B17;
+    border: to-rem(3) solid #C11B17;
     color: #C11B17;
     box-sizing: border-box;
-    height: 40px;
+    height: to-rem(40);
 
     &::-webkit-input-placeholder {
       color: #C11B17;
@@ -100,32 +100,32 @@
 
 .input__text {
   font-family: "Source Pro Light", sans-serif;
-  font-size: 16px;
+  font-size: to-rem(16);
   appearance: none;
-  height: 32px;
-  border-radius: 0;
-  border-top: 1px solid #D1D0CE;
-  border-left: 1px solid #D1D0CE;
-  border-right: 1px solid #D1D0CE;
-  border-bottom: 3px solid #85219D;
-  padding: 2px 12px;
+  height: to-rem(32);
+  border-radius: to-rem(0);
+  border-top: to-rem(1) solid #D1D0CE;
+  border-left: to-rem(1) solid #D1D0CE;
+  border-right: to-rem(1) solid #D1D0CE;
+  border-bottom: to-rem(3) solid #85219D;
+  padding: to-rem(2) to-rem(12);
   color: #85219D;
 
   @media screen and (min-width: 992px) {
-    margin-right: 8px;
+    margin-right: to-rem(8);
   }
 
   @media screen and (max-width: 991px) {
     flex-basis: 100%;
-    margin-bottom: 4px;
+    margin-bottom: to-rem(4);
   }
 
   &.empty-title {
     font-family: "Source Pro Light", sans-serif;
-    border: 3px solid #C11B17;
+    border: to-rem(3) solid #C11B17;
     color: #C11B17;
     box-sizing: border-box;
-    height: 40px;
+    height: to-rem(40);
 
     &::-webkit-input-placeholder {
       color: #C11B17;
