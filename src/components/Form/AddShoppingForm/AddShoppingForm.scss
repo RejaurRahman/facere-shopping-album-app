@@ -7,156 +7,156 @@
   position: relative;
   z-index: 1;
 
-  @include breakpoint(max-width, tablet) {
+  @media screen and (max-width: 991px) {
     justify-content: center;
   }
 }
 
 .button__submit {
-  background-color: $dark-pastel-green;
+  background-color: #12AD2B;
 
-  @include breakpoint(min-width, tablet) {
-    margin: to-rem(0) to-rem(4) to-rem(0) to-rem(4);
+  @media screen and (min-width: 992px) {
+    margin: 0 4px 0 4px;
   }
 
-  @include breakpoint(max-width, tablet) {
-    margin: to-rem(4) to-rem(4) to-rem(0) to-rem(4);
+  @media screen and (max-width: 991px) {
+    margin: 4px 4px 0 4px;
   }
 }
 
 .button__cancel {
-  background-color: $marigold;
+  background-color: #E8A317;
 
-  @include breakpoint(min-width, tablet) {
-    margin: to-rem(0) to-rem(4) to-rem(0) to-rem(4);
+  @media screen and (min-width: 992px) {
+    margin: 0 4px 0 4px;
   }
 
-  @include breakpoint(max-width, tablet) {
-    margin: to-rem(4) to-rem(4) to-rem(0) to-rem(4);
+  @media screen and (max-width: 991px) {
+    margin: 4px 4px 0 4px;
   }
 }
 
 .input__category {
   font-family: "Source Pro Light", sans-serif;
-  font-size: to-rem(16);
+  font-size: 16px;
   appearance: none;
-  height: to-rem(32);
-  border-radius: to-rem(0);
-  border-top: to-rem(1) solid $american-silver;
-  border-left: to-rem(1) solid $american-silver;
-  border-right: to-rem(1) solid $american-silver;
-  border-bottom: to-rem(3) solid $grape;
-  padding: to-rem(2)to-rem(12);
-  color: $grape;
+  height: 32px;
+  border-radius: 0;
+  border-top: 1px solid #D1D0CE;
+  border-left: 1px solid #D1D0CE;
+  border-right: 1px solid #D1D0CE;
+  border-bottom: 3px solid #85219D;
+  padding: 2px 12px;
+  color: #85219D;
 
-  @include breakpoint(min-width, tablet) {
-    margin-right: to-rem(8);
+  @media screen and (min-width: 992px) {
+    margin-right: 8px;
   }
 
-  @include breakpoint(max-width, tablet) {
+  @media screen and (max-width: 991px) {
     flex-basis: 100%;
   }
 
   &.empty-category {
     font-family: "Source Pro Light", sans-serif;
-    border: to-rem(3) solid $international-orange;
-    color: $international-orange;
+    border: 3px solid #C11B17;
+    color: #C11B17;
     box-sizing: border-box;
-    height: to-rem(40);
+    height: 40px;
 
     &::-webkit-input-placeholder {
-      color: $international-orange;
+      color: #C11B17;
     }
 
     &::-moz-placeholder {
-      color: $international-orange;
+      color: #C11B17;
     }
 
     &:-ms-input-placeholder {
-      color: $international-orange;
+      color: #C11B17;
     }
 
     &:-moz-placeholder {
-      color: $international-orange;
+      color: #C11B17;
     }
   }
 
   &::-webkit-input-placeholder {
-    color: $grape;
+    color: #85219D;
   }
 
   &::-moz-placeholder {
-    color: $grape;
+    color: #85219D;
   }
 
   &:-ms-input-placeholder {
-    color: $grape;
+    color: #85219D;
   }
 
   &:-moz-placeholder {
-    color: $grape;
+    color: #85219D;
   }
 }
 
 .input__text {
   font-family: "Source Pro Light", sans-serif;
-  font-size: to-rem(16);
+  font-size: 16px;
   appearance: none;
-  height: to-rem(32);
-  border-radius: to-rem(0);
-  border-top: to-rem(1) solid $american-silver;
-  border-left: to-rem(1) solid $american-silver;
-  border-right: to-rem(1) solid $american-silver;
-  border-bottom: to-rem(3) solid $grape;
-  padding: to-rem(2) to-rem(12);
-  color: $grape;
+  height: 32px;
+  border-radius: 0;
+  border-top: 1px solid #D1D0CE;
+  border-left: 1px solid #D1D0CE;
+  border-right: 1px solid #D1D0CE;
+  border-bottom: 3px solid #85219D;
+  padding: 2px 12px;
+  color: #85219D;
 
-  @include breakpoint(min-width, tablet) {
-    margin-right: to-rem(8);
+  @media screen and (min-width: 992px) {
+    margin-right: 8px;
   }
 
-  @include breakpoint(max-width, tablet) {
+  @media screen and (max-width: 991px) {
     flex-basis: 100%;
-    margin-bottom: to-rem(4);
+    margin-bottom: 4px;
   }
 
   &.empty-title {
     font-family: "Source Pro Light", sans-serif;
-    border: to-rem(3) solid $international-orange;
-    color: $international-orange;
+    border: 3px solid #C11B17;
+    color: #C11B17;
     box-sizing: border-box;
-    height: to-rem(40);
+    height: 40px;
 
     &::-webkit-input-placeholder {
-      color: $international-orange;
+      color: #C11B17;
     }
 
     &::-moz-placeholder {
-      color: $international-orange;
+      color: #C11B17;
     }
 
     &:-ms-input-placeholder {
-      color: $international-orange;
+      color: #C11B17;
     }
 
     &:-moz-placeholder {
-      color: $international-orange;
+      color: #C11B17;
     }
   }
 
   &::-webkit-input-placeholder {
-    color: $grape;
+    color: #85219D;
   }
 
   &::-moz-placeholder {
-    color: $grape;
+    color: #85219D;
   }
 
   &:-ms-input-placeholder {
-    color: $grape;
+    color: #85219D;
   }
 
   &:-moz-placeholder {
-    color: $grape;
+    color: #85219D;
   }
 }

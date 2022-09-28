@@ -1,40 +1,40 @@
 @import "../../styles/base.scss";
 
 .button__add {
-  margin: to-rem(0);
-  background-color: $interdimensional-blue;
+  margin: 0;
+  background-color: #4A0FCB;
 }
 
 .new-expense {
   display: flex;
   align-items: center;
   position: relative;
-  border-bottom: to-rem(1) solid $american-silver;
+  border-bottom: 1px solid #D1D0CE;
 
-  @include breakpoint(min-width, tablet) {
-    padding: to-rem(24);
+  @media screen and (min-width: 992px) {
+    padding: 24px;
     justify-content: space-between;
   }
 
-  @include breakpoint(max-width, tablet) {
-    padding: to-rem(12);
+  @media screen and (max-width: 991px) {
+    padding: 12px;
     flex-flow: column;
   }
 
   &:before {
     position: absolute;
     top: 50%;
-    left: to-rem(0);
+    left: 0;
     width: 100%;
-    height: to-rem(1);
-    background-color: $interdimensional-blue;
+    height: 1px;
+    background-color: #4A0FCB;
     z-index: 0;
 
-    @include breakpoint(min-width, tablet) {
+    @media screen and (min-width: 992px) {
       content: "";
     }
 
-    @include breakpoint(max-width, tablet) {
+    @media screen and (max-width: 991px) {
       content: none;
     }
   }

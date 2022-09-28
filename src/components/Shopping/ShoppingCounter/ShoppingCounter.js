@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./ShoppingCounter.scss";
 
 const ShoppingCounter = (props) => {

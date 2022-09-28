@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./ShoppingFilter.scss";
 
 const ShoppingFilter = (props) => {

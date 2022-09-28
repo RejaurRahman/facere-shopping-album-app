@@ -1,7 +1,6 @@
 import React from "react";
 import ShoppingList from "../ShoppingList/ShoppingList";
 import Card from "../../UI/Card/Card";
-
 import "./ShoppingBoard.scss";
 
 const ShoppingBoard = (props) => {

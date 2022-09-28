@@ -9,17 +9,17 @@
 
   &__left {
     width: 65%;
-    background-color: $interdimensional-blue;
+    background-color: #4A0FCB;
     position: relative;
 
     &--side {
       position: absolute;
-      top: to-rem(0);
-      right: to-rem(0);
-      width: to-rem(0);
-      height: to-rem(0);
-      border-top: 40vh solid $atomic-tangerine;
-      border-left: 40vh solid $transparent;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-top: 40vh solid #FF9462;
+      border-left: 40vh solid transparent;
     }
   }
 
@@ -27,12 +27,12 @@
     width: 35%;
 
     &--top {
-      background-color: $grape;
+      background-color: #85219D;
       height: 40%;
     }
 
     &--bottom {
-      background-color: $dingy-dungeon;
+      background-color: #C63457;
       height: 60%;
     }
   }

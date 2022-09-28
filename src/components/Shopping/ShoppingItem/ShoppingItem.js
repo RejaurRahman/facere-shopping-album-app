@@ -1,9 +1,7 @@
 import React from "react";
 import Button from "../../UI/Button/Button";
 import Card from "../../UI/Card/Card";
-
 import "./ShoppingItem.scss";
-
 import { ReactComponent as EditIcon } from "../../../assets/icons/edit-pencil.svg";
 import { ReactComponent as DeleteIcon } from "../../../assets/icons/trash-bin.svg";
 

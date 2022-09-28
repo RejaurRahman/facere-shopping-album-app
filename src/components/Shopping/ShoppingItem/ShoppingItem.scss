@@ -3,7 +3,7 @@
 .item__list {
   display: flex;
   justify-content: space-between;
-  border-bottom: to-rem(1) solid $american-silver;
+  border-bottom: 1px solid #D1D0CE;
 }
 
 .item__left {
@@ -13,13 +13,13 @@
   overflow: hidden;
   cursor: pointer;
 
-  @include breakpoint(min-width, mobile) {
-    padding: to-rem(0) to-rem(24);
+  @media screen and (min-width: 569px) {
+    padding: 0 24px;
     width: calc(100% - 150px);
   }
 
-  @include breakpoint(max-width, mobile) {
-    padding: to-rem(0) to-rem(8);
+  @media screen and (max-width: 568px) {
+    padding: 0 8px;
     width: calc(100% - 120px);
   }
 }
@@ -27,73 +27,73 @@
 .item__right {
   display: flex;
 
-  @include breakpoint(min-width, mobile) {
-    width: to-rem(150);
+  @media screen and (min-width: 569px) {
+    width: 150px;
   }
 
-  @include breakpoint(max-width, mobile) {
-    width: to-rem(120);
+  @media screen and (max-width: 568px) {
+    width: 120px;
   }
 }
 
 .item__category {
   font-family: "Source Pro Italic", sans-serif;
-  color: $american-silver;
-  font-size: to-rem(16);
-  line-height: to-rem(24);
+  color: #D1D0CE;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .item__name {
   font-family: "Source Pro Regular", sans-serif;
-  margin: to-rem(0);
+  margin: 0;
   word-break: break-word;
-  color: $interdimensional-blue;
+  color: #4A0FCB;
 
-  @include breakpoint(min-width, mobile) {
-    font-size: to-rem(24);
-    line-height: to-rem(32);
+  @media screen and (min-width: 569px) {
+    font-size: 24px;
+    line-height: 32px;
   }
 
-  @include breakpoint(max-width, mobile) {
-    font-size: to-rem(20);
-    line-height: to-rem(28);
+  @media screen and (max-width: 568px) {
+    font-size: 20px;
+    line-height: 28px;
   }
 }
 
 .item__button {
-  padding-top: to-rem(45);
-  padding-bottom: to-rem(45);
+  padding-top: 45px;
+  padding-bottom: 45px;
 
-  @include breakpoint(min-width, mobile) {
-    width: to-rem(75);
+  @media screen and (min-width: 569px) {
+    width: 75px;
   }
 
-  @include breakpoint(max-width, mobile) {
-    width: to-rem(60);
+  @media screen and (max-width: 568px) {
+    width: 60px;
   }
 
   &--edit {
-    background-color: $international-orange;
+    background-color: #C11B17;
   }
 
   &--delete {
-    background-color: $black-coffee;
+    background-color: #34282C;
   }
 
   svg {
-    height: to-rem(32);
-    width: to-rem(32);
+    height: 32px;
+    width: 32px;
   }
 }
 
 .item__completed {
-  background-color: $medium-spring-green;
+  background-color: #00FA9A;
 
   .item__name {
-    color: $black-leather-jacket;
+    color: #254117;
   }
 
   .item__category {
-    color: $middle-green;
+    color: #4E9258;
   }
 }

@@ -2,8 +2,8 @@
 
 .modal {
   position: fixed;
-  top: to-rem(0);
-  left: to-rem(0);
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
   display: flex;
@@ -15,10 +15,10 @@
   &__box {
     position: relative;
     z-index: 2;
-    background-color: $white;
-    padding: to-rem(16) to-rem(0) to-rem(0) to-rem(0);
+    background-color: #FFF;
+    padding: 16px 0 0 0;
     width: 100%;
-    max-width: to-rem(250);
+    max-width: 250px;
 
     &--top {
       display: flex;
@@ -27,7 +27,7 @@
   }
 
   &__overlay {
-    background-color: rgba($black, 0.75);
+    background-color: rgba(#000, 0.75);
     position: absolute;
     height: 100%;
     width: 100%;
@@ -37,20 +37,20 @@
   &__close {
     display: inline-block;
     cursor: pointer;
-    padding: to-rem(0) to-rem(16);
+    padding: 0 16px;
 
     svg {
-      height: to-rem(24);
-      width: to-rem(24);
+      height: 24px;
+      width: 24px;
 
       g {
-        fill: $interdimensional-blue;
+        fill: #4A0FCB;
       }
     }
   }
 
   &__footer {
-    padding-top: to-rem(16);
+    padding-top: 16px;
     flex-wrap: wrap;
     justify-content: center;
     display: flex;
@@ -70,11 +70,11 @@
     }
 
     .button__update {
-      background-color: $dark-pastel-green;
+      background-color: #12AD2B;
     }
 
     .button__exit {
-      background-color: $alloy-orange;
+      background-color: #C35817;
     }
   }
 }

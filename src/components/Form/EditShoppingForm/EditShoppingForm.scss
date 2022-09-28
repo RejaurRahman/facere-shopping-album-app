@@ -5,42 +5,42 @@
 
   .input {
     font-family: "Source Pro Light", sans-serif;
-    font-size: to-rem(16);
+    font-size: 16px;
     width: 100%;
     box-sizing: border-box;
     appearance: none;
-    padding: to-rem(16);
-    margin: to-rem(0) to-rem(16);
-    color: $interdimensional-blue;
-    border: to-rem(2) solid $interdimensional-blue;
+    padding: 16px;
+    margin: 0 16px;
+    color: #4A0FCB;
+    border: 2px solid #4A0FCB;
 
     &:first-child {
-      margin-bottom: to-rem(16);
-      margin-top: to-rem(10);
+      margin-bottom: 16px;
+      margin-top: 10px;
     }
 
     &::-webkit-input-placeholder {
-      color: $interdimensional-blue;
+      color: #4A0FCB;
     }
 
     &::-moz-placeholder {
-      color: $interdimensional-blue;
+      color: #4A0FCB;
     }
 
     &:-ms-input-placeholder {
-      color: $interdimensional-blue;
+      color: #4A0FCB;
     }
 
     &:-moz-placeholder {
-      color: $interdimensional-blue;
+      color: #4A0FCB;
     }
   }
 
   .error__message {
     font-family: "Source Pro Bold", sans-serif;
-    color: $international-orange;
-    font-size: to-rem(14);
-    margin: to-rem(0) to-rem(0) to-rem(16) to-rem(0);
+    color: #C11B17;
+    font-size: 14px;
+    margin: 0 0 16px 0;
     text-transform: uppercase;
   }
 }
@@ -48,5 +48,5 @@
 .buttons__container {
   display: flex;
   flex-direction: row;
-  gap: to-rem(10);
+  gap: 10px;
 }

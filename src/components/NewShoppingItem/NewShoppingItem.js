@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import AddShoppingForm from "../Form/AddShoppingForm/AddShoppingForm";
 import Button from "../UI/Button/Button";
 import ShoppingFilter from "../Shopping/ShoppingFilter/ShoppingFilter";
-
 import "./NewShoppingItem.scss";
-
 import { ReactComponent as AddIcon } from "../../assets/icons/add-plus.svg";
 
 const NewShoppingItem = (props) => {

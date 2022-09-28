@@ -1,6 +1,5 @@
 import React from "react";
 import ShoppingItem from "../ShoppingItem/ShoppingItem";
-
 import "./ShoppingList.scss";
 
 const ShoppingList = (props) => {

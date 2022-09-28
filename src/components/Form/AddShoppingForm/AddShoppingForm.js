@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Button from "../../UI/Button/Button";
-
 import "./AddShoppingForm.scss";
-
 import { ReactComponent as AddIcon } from "../../../assets/icons/add-plus.svg";
 import { ReactComponent as CancelIcon } from "../../../assets/icons/back-cancel.svg";
 
