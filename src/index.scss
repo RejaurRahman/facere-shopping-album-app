@@ -1,5 +1,7 @@
+@use "./styles/base.scss" as styles;
+
 body {
-  margin: 0;
+  margin: styles.to-rem(0);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

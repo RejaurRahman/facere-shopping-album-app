@@ -1,46 +1,46 @@
-@import "../../../styles/base.scss";
+@use "../../../styles/base.scss" as styles;
 
 .form__edit {
   justify-content: center;
 
   .input {
     font-family: "Source Pro Light", sans-serif;
-    font-size: to-rem(16);
+    font-size: styles.to-rem(16);
     width: 100%;
     box-sizing: border-box;
     appearance: none;
-    padding: to-rem(16);
-    margin: to-rem(0) to-rem(16);
-    color: #4A0FCB;
-    border: to-rem(2) solid #4A0FCB;
+    padding: styles.to-rem(16);
+    margin: styles.to-rem(0) styles.to-rem(16);
+    color: styles.$interdimensional-blue;
+    border: styles.to-rem(2) solid styles.$interdimensional-blue;
 
     &:first-child {
-      margin-bottom: to-rem(16);
-      margin-top: to-rem(10);
+      margin-bottom: styles.to-rem(16);
+      margin-top: styles.to-rem(10);
     }
 
     &::-webkit-input-placeholder {
-      color: #4A0FCB;
+      color: styles.$interdimensional-blue;
     }
 
     &::-moz-placeholder {
-      color: #4A0FCB;
+      color: styles.$interdimensional-blue;
     }
 
     &:-ms-input-placeholder {
-      color: #4A0FCB;
+      color: styles.$interdimensional-blue;
     }
 
     &:-moz-placeholder {
-      color: #4A0FCB;
+      color: styles.$interdimensional-blue;
     }
   }
 
   .error__message {
     font-family: "Source Pro Bold", sans-serif;
-    color: #C11B17;
-    font-size: to-rem(14);
-    margin: to-rem(0) to-rem(0) to-rem(16) to-rem(0);
+    color: styles.$international-orange;
+    font-size: styles.to-rem(14);
+    margin: styles.to-rem(0) styles.to-rem(0) styles.to-rem(16) styles.to-rem(0);
     text-transform: uppercase;
   }
 }
@@ -48,5 +48,5 @@
 .buttons__container {
   display: flex;
   flex-direction: row;
-  gap: to-rem(10);
+  gap: styles.to-rem(10);
 }

@@ -1,51 +1,51 @@
-@import "../../../styles/base.scss";
+@use "../../../styles/base.scss" as styles;
 
 .filter {
   position: relative;
   z-index: 0;
 
-  @media screen and (min-width: 992px) {
-    left: to-rem(-23);
+  @include styles.breakpoint(min-width, tablet) {
+    left: styles.to-rem(-23);
   }
 
-  @media screen and (max-width: 991px) {
-    margin-top: to-rem(4);
-    left: to-rem(-12);
+  @include styles.breakpoint(max-width, tablet) {
+    margin-top: styles.to-rem(4);
+    left: styles.to-rem(-12);
   }
 
   &:before,
   &:after {
     content: "";
     position: absolute;
-    right: to-rem(-23);
+    right: styles.to-rem(-23);
   }
 
   &:before {
     background-image: url("../../../assets/icons/arrow-down.png");
     background-repeat: no-repeat;
-    right: to-rem(-20);
-    top: to-rem(7);
-    width: to-rem(16);
-    height: to-rem(16);
+    right: styles.to-rem(-20);
+    top: styles.to-rem(7);
+    width: styles.to-rem(16);
+    height: styles.to-rem(16);
     z-index: 1;
   }
 
   &:after {
-    top: to-rem(0);
-    right: to-rem(-23);
-    width: to-rem(23);
-    height: to-rem(23);
+    top: styles.to-rem(0);
+    right: styles.to-rem(-23);
+    width: styles.to-rem(23);
+    height: styles.to-rem(23);
     pointer-events: none;
-    background-color: #370A9A;
+    background-color: styles.$interdimensional-blue;
   }
 
   select {
     appearance: none;
     border: none;
-    box-shadow: to-rem(0) to-rem(5) to-rem(25) rgba(#000, .2);
-    background-color: #4A0FCB;
-    color: #FFF;
-    padding: to-rem(4);
+    box-shadow: styles.to-rem(0) styles.to-rem(5) styles.to-rem(25) rgba(styles.$black, .2);
+    background-color: styles.$interdimensional-blue;
+    color: styles.$white;
+    padding: styles.to-rem(4);
     width: calc(100% + 23px);
   }
 }

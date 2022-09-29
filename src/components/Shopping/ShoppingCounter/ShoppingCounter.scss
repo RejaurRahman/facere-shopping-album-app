@@ -1,17 +1,17 @@
-@import "../../../styles/base.scss";
+@use "../../../styles/base.scss" as styles;
 
 .counter {
   position: absolute;
-  bottom: to-rem(0);
-  background-color: #FFF;
-  border-top: to-rem(1) solid #4A0FCB;
-  padding: to-rem(8) to-rem(12);
+  bottom: styles.to-rem(0);
+  background-color: styles.$white;
+  border-top: styles.to-rem(1) solid styles.$interdimensional-blue;
+  padding: styles.to-rem(8) styles.to-rem(12);
   width: calc(100% - 24px);
   display: flex;
   justify-content: space-between;
 
-  @media screen and (min-width: 992px) {
-    padding: to-rem(8) to-rem(24);
+  @include styles.breakpoint(min-width, tablet) {
+    padding: styles.to-rem(8) styles.to-rem(24);
     width: calc(100% - 48px);
   }
 
@@ -22,42 +22,42 @@
 
   &__divider {
     font-family: "Source Pro Regular", sans-serif;
-    font-size: to-rem(22);
-    line-height: to-rem(22);
-    margin: to-rem(0) to-rem(8);
-    color: #4A0FCB;
+    font-size: styles.to-rem(22);
+    line-height: styles.to-rem(22);
+    margin: styles.to-rem(0) styles.to-rem(8);
+    color: styles.$interdimensional-blue;
     cursor: default;
   }
 
   &__amount {
     font-family: "Source Pro Bold", sans-serif;
-    font-size: to-rem(12);
-    line-height: to-rem(12);
-    border-radius: to-rem(4);
-    padding: to-rem(5);
-    background-color: #4A0FCB;
-    color: #FFF;
+    font-size: styles.to-rem(12);
+    line-height: styles.to-rem(12);
+    border-radius: styles.to-rem(4);
+    padding: styles.to-rem(5);
+    background-color: styles.$interdimensional-blue;
+    color: styles.$white;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: default;
 
     &--current__amount {
-      background-color: #C11B17;
+      background-color: styles.$international-orange;
     }
 
     &--completed {
-      background-color: #00FA9A;
-      color: #254117;
+      background-color: styles.$medium-spring-green;
+      color: styles.$black-leather-jacket;
     }
   }
 
   &__text {
     font-family: "Source Pro Regular", sans-serif;
-    font-size: to-rem(12);
-    line-height: to-rem(12);
-    color: #4A0FCB;
+    font-size: styles.to-rem(12);
+    line-height: styles.to-rem(12);
+    color: styles.$interdimensional-blue;
     text-transform: capitalize;
-    margin-left: to-rem(8);
+    margin-left: styles.to-rem(8);
   }
 }

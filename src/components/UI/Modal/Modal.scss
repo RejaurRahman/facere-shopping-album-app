@@ -1,9 +1,9 @@
-@import "../../../styles/base.scss";
+@use "../../../styles/base.scss" as styles;
 
 .modal {
   position: fixed;
-  top: to-rem(0);
-  left: to-rem(0);
+  top: styles.to-rem(0);
+  left: styles.to-rem(0);
   height: 100%;
   width: 100%;
   display: flex;
@@ -15,10 +15,10 @@
   &__box {
     position: relative;
     z-index: 2;
-    background-color: #FFF;
-    padding: to-rem(16) to-rem(0) to-rem(0) to-rem(0);
+    background-color: styles.$white;
+    padding: styles.to-rem(16) styles.to-rem(0) styles.to-rem(0) styles.to-rem(0);
     width: 100%;
-    max-width: to-rem(250);
+    max-width: styles.to-rem(250);
 
     &--top {
       display: flex;
@@ -27,7 +27,7 @@
   }
 
   &__overlay {
-    background-color: rgba(#000, 0.75);
+    background-color: rgba(styles.$black, 0.75);
     position: absolute;
     height: 100%;
     width: 100%;
@@ -37,20 +37,20 @@
   &__close {
     display: inline-block;
     cursor: pointer;
-    padding: to-rem(0) to-rem(16);
+    padding: styles.to-rem(0) styles.to-rem(16);
 
     svg {
-      height: to-rem(24);
-      width: to-rem(24);
+      height: styles.to-rem(24);
+      width: styles.to-rem(24);
 
       g {
-        fill: #4A0FCB;
+        fill: styles.$interdimensional-blue;
       }
     }
   }
 
   &__footer {
-    padding-top: to-rem(16);
+    padding-top: styles.to-rem(16);
     flex-wrap: wrap;
     justify-content: center;
     display: flex;
@@ -70,11 +70,11 @@
     }
 
     .button__update {
-      background-color: #12AD2B;
+      background-color: styles.$dark-pastel-green;
     }
 
     .button__exit {
-      background-color: #C35817;
+      background-color: styles.$alloy-orange;
     }
   }
 }

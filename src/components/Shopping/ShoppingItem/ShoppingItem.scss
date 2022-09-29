@@ -1,9 +1,9 @@
-@import "../../../styles/base.scss";
+@use "../../../styles/base.scss" as styles;
 
 .item__list {
   display: flex;
   justify-content: space-between;
-  border-bottom: to-rem(1) solid #D1D0CE;
+  border-bottom: styles.to-rem(1) solid styles.$american-silver;
 }
 
 .item__left {
@@ -13,13 +13,13 @@
   overflow: hidden;
   cursor: pointer;
 
-  @media screen and (min-width: 569px) {
-    padding: to-rem(0) to-rem(24);
+  @include styles.breakpoint(min-width, mobile) {
+    padding: styles.to-rem(0) styles.to-rem(24);
     width: calc(100% - 150px);
   }
 
-  @media screen and (max-width: 568px) {
-    padding: to-rem(0) to-rem(8);
+  @include styles.breakpoint(max-width, mobile) {
+    padding: styles.to-rem(0) styles.to-rem(8);
     width: calc(100% - 120px);
   }
 }
@@ -27,73 +27,73 @@
 .item__right {
   display: flex;
 
-  @media screen and (min-width: 569px) {
-    width: to-rem(150);
+  @include styles.breakpoint(min-width, mobile) {
+    width: styles.to-rem(150);
   }
 
-  @media screen and (max-width: 568px) {
-    width: to-rem(120);
+  @include styles.breakpoint(max-width, mobile) {
+    width: styles.to-rem(120);
   }
 }
 
 .item__category {
   font-family: "Source Pro Italic", sans-serif;
-  color: #D1D0CE;
-  font-size: to-rem(16);
-  line-height: to-rem(24);
+  color: styles.$american-silver;
+  font-size: styles.to-rem(16);
+  line-height: styles.to-rem(24);
 }
 
 .item__name {
   font-family: "Source Pro Regular", sans-serif;
-  margin: to-rem(0);
+  margin: styles.to-rem(0);
   word-break: break-word;
-  color: #4A0FCB;
+  color: styles.$interdimensional-blue;
 
-  @media screen and (min-width: 569px) {
-    font-size: to-rem(24);
-    line-height: to-rem(32);
+  @include styles.breakpoint(min-width, mobile) {
+    font-size: styles.to-rem(24);
+    line-height: styles.to-rem(32);
   }
 
-  @media screen and (max-width: 568px) {
-    font-size: to-rem(20);
-    line-height: to-rem(28);
+  @include styles.breakpoint(max-width, mobile) {
+    font-size: styles.to-rem(20);
+    line-height: styles.to-rem(28);
   }
 }
 
 .item__button {
-  padding-top: to-rem(45);
-  padding-bottom: to-rem(45);
+  padding-top: styles.to-rem(45);
+  padding-bottom: styles.to-rem(45);
 
-  @media screen and (min-width: 569px) {
-    width: to-rem(75);
+  @include styles.breakpoint(min-width, mobile) {
+    width: styles.to-rem(75);
   }
 
-  @media screen and (max-width: 568px) {
-    width: to-rem(60);
+  @include styles.breakpoint(max-width, mobile) {
+    width: styles.to-rem(60);
   }
 
   &--edit {
-    background-color: #C11B17;
+    background-color: styles.$international-orange;
   }
 
   &--delete {
-    background-color: #34282C;
+    background-color: styles.$black-coffee;
   }
 
   svg {
-    height: to-rem(32);
-    width: to-rem(32);
+    height: styles.to-rem(32);
+    width: styles.to-rem(32);
   }
 }
 
 .item__completed {
-  background-color: #00FA9A;
+  background-color: styles.$medium-spring-green;
 
   .item__name {
-    color: #254117;
+    color: styles.$black-leather-jacket;
   }
 
   .item__category {
-    color: #4E9258;
+    color: styles.$middle-green;
   }
 }

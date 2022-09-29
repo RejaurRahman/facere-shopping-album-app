@@ -1,4 +1,4 @@
-@import "../../../styles/base.scss";
+@use "../../../styles/base.scss" as styles;
 
 .button {
   appearance: none;
@@ -6,20 +6,20 @@
   cursor: pointer;
 
   &--rounded {
-    width: 64px;
-    height: 64px;
+    width: styles.to-rem(64);
+    height: styles.to-rem(64);
     border-radius: 50%;
   }
 
   svg {
-    height: to-rem(32);
-    width: to-rem(32);
+    height: styles.to-rem(32);
+    width: styles.to-rem(32);
 
     path,
     g,
     polygon,
     rect {
-      fill: #FFF;
+      fill: styles.$white;
     }
   }
 }

@@ -1,34 +1,34 @@
-@import "../../../styles/base.scss";
+@use "../../../styles/base.scss" as styles;
 
 .list {
   list-style-type: none;
-  padding-left: to-rem(0);
-  margin: to-rem(0);
+  padding-left: styles.to-rem(0);
+  margin: styles.to-rem(0);
   height: calc(100% - 41px);
   overflow-y: auto;
 }
 
 .alert {
-  margin: 0 auto;
-  padding-top: to-rem(16);
+  margin: styles.to-rem(0) auto;
+  padding-top: styles.to-rem(16);
 
-  @media screen and (min-width: 992px) {
+  @include styles.breakpoint(min-width, tablet) {
     max-width: calc(100% - 200px);
   }
 
-  @media screen and (max-width: 991px) {
+  @include styles.breakpoint(max-width, tablet) {
     max-width: calc(100% - 64px);
   }
 
   &__message {
     font-family: "Source Pro Light", sans-serif;
-    margin: to-rem(0);
-    font-size: to-rem(16);
-    line-height: to-rem(14);
-    color: #FFF;
-    padding: to-rem(12) to-rem(20);
-    border-radius: to-rem(4);
-    border: to-rem(1) solid #4A0FCB;
-    background-color: #85219D;
+    margin: styles.to-rem(0);
+    font-size: styles.to-rem(16);
+    line-height: styles.to-rem(14);
+    color: styles.$white;
+    padding: styles.to-rem(12) styles.to-rem(20);
+    border-radius: styles.to-rem(4);
+    border: styles.to-rem(1) solid styles.$interdimensional-blue;
+    background-color: styles.$grape;
   }
 }

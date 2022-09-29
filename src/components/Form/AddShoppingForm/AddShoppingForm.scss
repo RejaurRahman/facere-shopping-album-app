@@ -1,4 +1,4 @@
-@import "../../../styles/base.scss";
+@use "../../../styles/base.scss" as styles;
 
 .form {
   display: flex;
@@ -7,156 +7,156 @@
   position: relative;
   z-index: 1;
 
-  @media screen and (max-width: 991px) {
+  @include styles.breakpoint(max-width, tablet) {
     justify-content: center;
   }
 }
 
 .button__submit {
-  background-color: #12AD2B;
+  background-color: styles.$dark-pastel-green;
 
-  @media screen and (min-width: 992px) {
-    margin: to-rem(0) to-rem(4) to-rem(0) to-rem(4);
+  @include styles.breakpoint(min-width, tablet) {
+    margin: styles.to-rem(0) styles.to-rem(4) styles.to-rem(0) styles.to-rem(4);
   }
 
-  @media screen and (max-width: 991px) {
-    margin: to-rem(4) to-rem(4) to-rem(0) to-rem(4);
+  @include styles.breakpoint(max-width, tablet) {
+    margin: styles.to-rem(4) styles.to-rem(4) styles.to-rem(0) styles.to-rem(4);
   }
 }
 
 .button__cancel {
-  background-color: #E8A317;
+  background-color: styles.$marigold;
 
-  @media screen and (min-width: 992px) {
-    margin: to-rem(0) to-rem(4) to-rem(0) to-rem(4);
+  @include styles.breakpoint(min-width, tablet) {
+    margin: styles.to-rem(0) styles.to-rem(4) styles.to-rem(0) styles.to-rem(4);
   }
 
-  @media screen and (max-width: 991px) {
-    margin: to-rem(4) to-rem(4) to-rem(0) to-rem(4);
+  @include styles.breakpoint(max-width, tablet) {
+    margin: styles.to-rem(4) styles.to-rem(4) styles.to-rem(0) styles.to-rem(4);
   }
 }
 
 .input__category {
   font-family: "Source Pro Light", sans-serif;
-  font-size: to-rem(16);
+  font-size: styles.to-rem(16);
   appearance: none;
-  height: to-rem(32);
-  border-radius: to-rem(0);
-  border-top: to-rem(1) solid #D1D0CE;
-  border-left: to-rem(1) solid #D1D0CE;
-  border-right: to-rem(1) solid #D1D0CE;
-  border-bottom: to-rem(3) solid #85219D;
-  padding: to-rem(2) to-rem(12);
-  color: #85219D;
+  height: styles.to-rem(32);
+  border-radius: styles.to-rem(0);
+  border-top: styles.to-rem(1) solid styles.$american-silver;
+  border-left: styles.to-rem(1) solid styles.$american-silver;
+  border-right: styles.to-rem(1) solid styles.$american-silver;
+  border-bottom: styles.to-rem(3) solid styles.$grape;
+  padding: styles.to-rem(2) styles.to-rem(12);
+  color: styles.$grape;
 
-  @media screen and (min-width: 992px) {
-    margin-right: to-rem(8);
+  @include styles.breakpoint(min-width, tablet) {
+    margin-right: styles.to-rem(8);
   }
 
-  @media screen and (max-width: 991px) {
+  @include styles.breakpoint(max-width, tablet) {
     flex-basis: 100%;
   }
 
   &.empty-category {
     font-family: "Source Pro Light", sans-serif;
-    border: to-rem(3) solid #C11B17;
-    color: #C11B17;
+    border: styles.to-rem(3) solid styles.$international-orange;
+    color: styles.$international-orange;
     box-sizing: border-box;
-    height: to-rem(40);
+    height: styles.to-rem(40);
 
     &::-webkit-input-placeholder {
-      color: #C11B17;
+      color: styles.$international-orange;
     }
 
     &::-moz-placeholder {
-      color: #C11B17;
+      color: styles.$international-orange;
     }
 
     &:-ms-input-placeholder {
-      color: #C11B17;
+      color: styles.$international-orange;
     }
 
     &:-moz-placeholder {
-      color: #C11B17;
+      color: styles.$international-orange;
     }
   }
 
   &::-webkit-input-placeholder {
-    color: #85219D;
+    color: styles.$grape;
   }
 
   &::-moz-placeholder {
-    color: #85219D;
+    color: styles.$grape;
   }
 
   &:-ms-input-placeholder {
-    color: #85219D;
+    color: styles.$grape;
   }
 
   &:-moz-placeholder {
-    color: #85219D;
+    color: styles.$grape;
   }
 }
 
 .input__text {
   font-family: "Source Pro Light", sans-serif;
-  font-size: to-rem(16);
+  font-size: styles.to-rem(16);
   appearance: none;
-  height: to-rem(32);
-  border-radius: to-rem(0);
-  border-top: to-rem(1) solid #D1D0CE;
-  border-left: to-rem(1) solid #D1D0CE;
-  border-right: to-rem(1) solid #D1D0CE;
-  border-bottom: to-rem(3) solid #85219D;
-  padding: to-rem(2) to-rem(12);
-  color: #85219D;
+  height: styles.to-rem(32);
+  border-radius: styles.to-rem(0);
+  border-top: styles.to-rem(1) solid styles.$american-silver;
+  border-left: styles.to-rem(1) solid styles.$american-silver;
+  border-right: styles.to-rem(1) solid styles.$american-silver;
+  border-bottom: styles.to-rem(3) solid styles.$grape;
+  padding: styles.to-rem(2) styles.to-rem(12);
+  color: styles.$grape;
 
-  @media screen and (min-width: 992px) {
-    margin-right: to-rem(8);
+  @include styles.breakpoint(min-width, tablet) {
+    margin-right: styles.to-rem(8);
   }
 
-  @media screen and (max-width: 991px) {
+  @include styles.breakpoint(max-width, tablet) {
     flex-basis: 100%;
-    margin-bottom: to-rem(4);
+    margin-bottom: styles.to-rem(4);
   }
 
   &.empty-title {
     font-family: "Source Pro Light", sans-serif;
-    border: to-rem(3) solid #C11B17;
-    color: #C11B17;
+    border: styles.to-rem(3) solid styles.$international-orange;
+    color: styles.$international-orange;
     box-sizing: border-box;
-    height: to-rem(40);
+    height: styles.to-rem(40);
 
     &::-webkit-input-placeholder {
-      color: #C11B17;
+      color: styles.$international-orange;
     }
 
     &::-moz-placeholder {
-      color: #C11B17;
+      color: styles.$international-orange;
     }
 
     &:-ms-input-placeholder {
-      color: #C11B17;
+      color: styles.$international-orange;
     }
 
     &:-moz-placeholder {
-      color: #C11B17;
+      color: styles.$international-orange;
     }
   }
 
   &::-webkit-input-placeholder {
-    color: #85219D;
+    color: styles.$grape;
   }
 
   &::-moz-placeholder {
-    color: #85219D;
+    color: styles.$grape;
   }
 
   &:-ms-input-placeholder {
-    color: #85219D;
+    color: styles.$grape;
   }
 
   &:-moz-placeholder {
-    color: #85219D;
+    color: styles.$grape;
   }
 }

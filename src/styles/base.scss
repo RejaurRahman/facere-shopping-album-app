@@ -1,4 +1,4 @@
-@import "./colours";
-@import "./fonts";
-@import "./breakpoints";
-@import "./mixins";
+@forward "./colours";
+@forward "./fonts";
+@forward "./breakpoints";
+@forward "./mixins";

@@ -1,3 +1,5 @@
+@use "./styles/base.scss" as styles;
+
 .app {
   display: flex;
   height: 100vh;
@@ -5,11 +7,11 @@
 
   &__container {
     width: 85%;
-    margin: 0 auto;
-    background-color: #fff;
+    margin: styles.to-rem(0) auto;
+    background-color: styles.$white;
     position: relative;
 
-    @media screen and (min-width: 992px) {
+    @include styles.breakpoint(min-width, tablet) {
       width: 75%;
     }
   }
