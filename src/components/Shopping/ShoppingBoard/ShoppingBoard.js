@@ -1,12 +1,15 @@
-import React from "react";
-import ShoppingList from "../ShoppingList/ShoppingList";
-import Card from "../../UI/Card/Card";
-import "./ShoppingBoard.scss";
+import React from 'react'
+import ShoppingList from '../ShoppingList/ShoppingList'
+import Card from '../../UI/Card/Card'
+import './ShoppingBoard.scss'
 
 const ShoppingBoard = (props) => {
-  const filteredShopping = props.currentCategory === "All" ? props.items : props.items.filter((expense) => {
-    return expense.category === props.currentCategory;
-  });
+  const filteredShopping =
+    props.currentCategory === 'All'
+      ? props.items
+      : props.items.filter((expense) => {
+          return expense.category === props.currentCategory
+        })
 
   return (
     <>
@@ -19,7 +22,7 @@ const ShoppingBoard = (props) => {
         />
       </Card>
     </>
-  );
-};
+  )
+}
 
-export default ShoppingBoard;
+export default ShoppingBoard

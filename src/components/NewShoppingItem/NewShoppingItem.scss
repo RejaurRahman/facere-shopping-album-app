@@ -1,4 +1,4 @@
-@use "../../styles/base.scss" as styles;
+@use '../../styles/base.scss' as styles;
 
 .button__add {
   margin: styles.to-rem(0);
@@ -31,7 +31,7 @@
     z-index: 0;
 
     @include styles.breakpoint(min-width, tablet) {
-      content: "";
+      content: '';
     }
 
     @include styles.breakpoint(max-width, tablet) {

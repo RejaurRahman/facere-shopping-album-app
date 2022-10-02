@@ -1,10 +1,10 @@
-@use "../../../styles/base.scss" as styles;
+@use '../../../styles/base.scss' as styles;
 
 .form__edit {
   justify-content: center;
 
   .input {
-    font-family: "Source Pro Light", sans-serif;
+    font-family: 'Source Pro Light', sans-serif;
     font-size: styles.to-rem(16);
     width: 100%;
     box-sizing: border-box;
@@ -37,7 +37,7 @@
   }
 
   .error__message {
-    font-family: "Source Pro Bold", sans-serif;
+    font-family: 'Source Pro Bold', sans-serif;
     color: styles.$international-orange;
     font-size: styles.to-rem(14);
     margin: styles.to-rem(0) styles.to-rem(0) styles.to-rem(16) styles.to-rem(0);

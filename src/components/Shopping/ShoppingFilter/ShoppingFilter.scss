@@ -1,4 +1,4 @@
-@use "../../../styles/base.scss" as styles;
+@use '../../../styles/base.scss' as styles;
 
 .filter {
   position: relative;
@@ -15,13 +15,13 @@
 
   &:before,
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     right: styles.to-rem(-23);
   }
 
   &:before {
-    background-image: url("../../../assets/icons/arrow-down.png");
+    background-image: url('../../../assets/icons/arrow-down.png');
     background-repeat: no-repeat;
     right: styles.to-rem(-20);
     top: styles.to-rem(7);
@@ -42,7 +42,8 @@
   select {
     appearance: none;
     border: none;
-    box-shadow: styles.to-rem(0) styles.to-rem(5) styles.to-rem(25) rgba(styles.$black, .2);
+    box-shadow: styles.to-rem(0) styles.to-rem(5) styles.to-rem(25)
+      rgba(styles.$black, 0.2);
     background-color: styles.$interdimensional-blue;
     color: styles.$white;
     padding: styles.to-rem(4);

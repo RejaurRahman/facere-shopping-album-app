@@ -1,5 +1,5 @@
-@use "sass:math";
-@use "./breakpoints" as *;
+@use 'sass:math';
+@use './breakpoints' as *;
 
 @mixin breakpoint($direction, $breakpoint) {
   $breakpoint-value: map-get($breakpoints, $breakpoint);
@@ -16,6 +16,6 @@
 }
 
 @function to-rem($value) {
-  $remValue: ($value / 16) + rem;
-  @return $remValue;
+  $rem-value: (math.div($value, 16)) + rem;
+  @return $rem-value;
 }

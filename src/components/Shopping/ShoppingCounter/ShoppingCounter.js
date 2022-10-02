@@ -1,8 +1,8 @@
-import React from "react";
-import "./ShoppingCounter.scss";
+import React from 'react'
+import './ShoppingCounter.scss'
 
 const ShoppingCounter = (props) => {
-  const completedItems = props.items.filter((item) => item.isCompleted).length;
+  const completedItems = props.items.filter((item) => item.isCompleted).length
   return (
     props.items.length > 0 && (
       <>
@@ -12,8 +12,8 @@ const ShoppingCounter = (props) => {
             <span
               className={`counter__amount ${
                 completedItems === props.items.length
-                  ? "counter__amount--completed"
-                  : "counter__amount--current__amount"
+                  ? 'counter__amount--completed'
+                  : 'counter__amount--current__amount'
               }`}
             >
               {completedItems}
@@ -25,7 +25,7 @@ const ShoppingCounter = (props) => {
         </div>
       </>
     )
-  );
-};
+  )
+}
 
-export default ShoppingCounter;
+export default ShoppingCounter

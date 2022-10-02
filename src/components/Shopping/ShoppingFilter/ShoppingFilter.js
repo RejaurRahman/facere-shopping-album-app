@@ -1,10 +1,10 @@
-import React from "react";
-import "./ShoppingFilter.scss";
+import React from 'react'
+import './ShoppingFilter.scss'
 
 const ShoppingFilter = (props) => {
   const dropdownChangeHandler = (event) => {
-    props.onChangeFilter(event.target.value);
-  };
+    props.onChangeFilter(event.target.value)
+  }
 
   return (
     <div className="filter">
@@ -15,7 +15,7 @@ const ShoppingFilter = (props) => {
         <option value="DIY">DIY</option>
       </select>
     </div>
-  );
-};
+  )
+}
 
-export default ShoppingFilter;
+export default ShoppingFilter

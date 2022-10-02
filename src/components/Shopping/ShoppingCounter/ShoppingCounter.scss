@@ -1,4 +1,4 @@
-@use "../../../styles/base.scss" as styles;
+@use '../../../styles/base.scss' as styles;
 
 .counter {
   position: absolute;
@@ -21,7 +21,7 @@
   }
 
   &__divider {
-    font-family: "Source Pro Regular", sans-serif;
+    font-family: 'Source Pro Regular', sans-serif;
     font-size: styles.to-rem(22);
     line-height: styles.to-rem(22);
     margin: styles.to-rem(0) styles.to-rem(8);
@@ -30,7 +30,7 @@
   }
 
   &__amount {
-    font-family: "Source Pro Bold", sans-serif;
+    font-family: 'Source Pro Bold', sans-serif;
     font-size: styles.to-rem(12);
     line-height: styles.to-rem(12);
     border-radius: styles.to-rem(4);
@@ -53,7 +53,7 @@
   }
 
   &__text {
-    font-family: "Source Pro Regular", sans-serif;
+    font-family: 'Source Pro Regular', sans-serif;
     font-size: styles.to-rem(12);
     line-height: styles.to-rem(12);
     color: styles.$interdimensional-blue;

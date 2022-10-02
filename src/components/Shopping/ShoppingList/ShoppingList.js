@@ -1,6 +1,6 @@
-import React from "react";
-import ShoppingItem from "../ShoppingItem/ShoppingItem";
-import "./ShoppingList.scss";
+import React from 'react'
+import ShoppingItem from '../../Shopping/ShoppingItem/ShoppingItem'
+import './ShoppingList.scss'
 
 const ShoppingList = (props) => {
   if (props.items.length === 0) {
@@ -13,22 +13,20 @@ const ShoppingList = (props) => {
 
   return (
     <ul className="list">
-      {
-        props.items.map((expense) => (
-          <ShoppingItem
-            key={expense.id}
-            shopItemId={expense.id}
-            title={expense.title}
-            category={expense.category}
-            onDeleteShopping={props.onDeleteShopping}
-            onCompleteShopping={props.onCompleteShopping}
-            onEditShopping={props.onEditHandler}
-            isCompleted={expense.isCompleted}
-          />
-        ))
-      }
+      {props.items.map((expense) => (
+        <ShoppingItem
+          key={expense.id}
+          shopItemId={expense.id}
+          title={expense.title}
+          category={expense.category}
+          onDeleteShopping={props.onDeleteShopping}
+          onCompleteShopping={props.onCompleteShopping}
+          onEditShopping={props.onEditHandler}
+          isCompleted={expense.isCompleted}
+        />
+      ))}
     </ul>
-  );
-};
+  )
+}
 
-export default ShoppingList;
+export default ShoppingList

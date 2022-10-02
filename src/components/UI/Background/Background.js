@@ -1,5 +1,5 @@
-import React from "react";
-import "./Background.scss";
+import React from 'react'
+import './Background.scss'
 
 const Background = () => {
   return (
@@ -12,7 +12,7 @@ const Background = () => {
         <div className="background__right--bottom"></div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Background;
+export default Background

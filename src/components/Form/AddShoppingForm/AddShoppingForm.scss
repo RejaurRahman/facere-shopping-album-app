@@ -1,4 +1,4 @@
-@use "../../../styles/base.scss" as styles;
+@use '../../../styles/base.scss' as styles;
 
 .form {
   display: flex;
@@ -37,7 +37,7 @@
 }
 
 .input__category {
-  font-family: "Source Pro Light", sans-serif;
+  font-family: 'Source Pro Light', sans-serif;
   font-size: styles.to-rem(16);
   appearance: none;
   height: styles.to-rem(32);
@@ -58,7 +58,7 @@
   }
 
   &.empty-category {
-    font-family: "Source Pro Light", sans-serif;
+    font-family: 'Source Pro Light', sans-serif;
     border: styles.to-rem(3) solid styles.$international-orange;
     color: styles.$international-orange;
     box-sizing: border-box;
@@ -99,7 +99,7 @@
 }
 
 .input__text {
-  font-family: "Source Pro Light", sans-serif;
+  font-family: 'Source Pro Light', sans-serif;
   font-size: styles.to-rem(16);
   appearance: none;
   height: styles.to-rem(32);
@@ -121,7 +121,7 @@
   }
 
   &.empty-title {
-    font-family: "Source Pro Light", sans-serif;
+    font-family: 'Source Pro Light', sans-serif;
     border: styles.to-rem(3) solid styles.$international-orange;
     color: styles.$international-orange;
     box-sizing: border-box;

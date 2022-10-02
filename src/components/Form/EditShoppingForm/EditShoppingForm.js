@@ -1,52 +1,49 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
-import Button from "../../UI/Button/Button";
-import Modal from "../../UI/Modal/Modal";
-import { ReactComponent as TickIcon } from "../../../assets/icons/tick.svg";
-import { ReactComponent as MinusIcon } from "../../../assets/icons/minus-cancel.svg";
-import "./EditShoppingForm.scss";
+import React, { useState } from 'react'
+import ReactDOM from 'react-dom'
+import Button from '../../UI/Button/Button'
+import Modal from '../../UI/Modal/Modal'
+import { ReactComponent as TickIcon } from '../../../assets/icons/tick.svg'
+import { ReactComponent as MinusIcon } from '../../../assets/icons/minus-cancel.svg'
+import './EditShoppingForm.scss'
 
 const EditShoppingForm = (props) => {
-  const [enteredTitle, setEnteredTitle] = useState("");
-  const [enteredCategory, setEnteredCategory] = useState("");
-  const [validationError, setValidationError] = useState("");
+  const [enteredTitle, setEnteredTitle] = useState('')
+  const [enteredCategory, setEnteredCategory] = useState('')
+  const [validationError, setValidationError] = useState('')
 
   const titleChangeHandler = (event) => {
-    setEnteredTitle(event.target.value);
-  };
+    setEnteredTitle(event.target.value)
+  }
 
   const categoryChangeHandler = (event) => {
-    setEnteredCategory(event.target.value);
-  };
+    setEnteredCategory(event.target.value)
+  }
 
   const submitHandler = (event) => {
-    event.preventDefault();
-    setValidationError("");
+    event.preventDefault()
+    setValidationError('')
 
     if (enteredTitle.trim().length === 0) {
-      setValidationError("Title can't be empty");
+      setValidationError("Title can't be empty")
     } else if (enteredCategory.trim().length === 0) {
-      setValidationError("Category can't be empty");
+      setValidationError("Category can't be empty")
     } else {
       const shoppingData = {
         title: enteredTitle,
         category: enteredCategory,
-      };
+      }
 
-      props.onCompleteEdit(shoppingData);
-      setEnteredTitle("");
-      setEnteredCategory("");
+      props.onCompleteEdit(shoppingData)
+      setEnteredTitle('')
+      setEnteredCategory('')
     }
-  };
+  }
 
   return (
     <>
       {ReactDOM.createPortal(
         <Modal onClick={props.onCancelEdit}>
-          <form
-            onSubmit={submitHandler}
-            className="form form__edit"
-          >
+          <form onSubmit={submitHandler} className="form form__edit">
             <input
               type="text"
               value={enteredTitle}
@@ -82,10 +79,10 @@ const EditShoppingForm = (props) => {
             </div>
           </form>
         </Modal>,
-        document.getElementById("modal-root")
+        document.getElementById('modal-root')
       )}
     </>
-  );
+  )
 }
 
-export default EditShoppingForm;
+export default EditShoppingForm

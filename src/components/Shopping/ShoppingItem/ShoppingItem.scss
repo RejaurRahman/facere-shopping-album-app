@@ -1,4 +1,4 @@
-@use "../../../styles/base.scss" as styles;
+@use '../../../styles/base.scss' as styles;
 
 .item__list {
   display: flex;
@@ -37,14 +37,14 @@
 }
 
 .item__category {
-  font-family: "Source Pro Italic", sans-serif;
+  font-family: 'Source Pro Italic', sans-serif;
   color: styles.$american-silver;
   font-size: styles.to-rem(16);
   line-height: styles.to-rem(24);
 }
 
 .item__name {
-  font-family: "Source Pro Regular", sans-serif;
+  font-family: 'Source Pro Regular', sans-serif;
   margin: styles.to-rem(0);
   word-break: break-word;
   color: styles.$interdimensional-blue;

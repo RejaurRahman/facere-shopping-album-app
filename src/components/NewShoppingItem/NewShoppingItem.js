@@ -1,72 +1,68 @@
-import React, { useState } from "react";
-import AddShoppingForm from "../Form/AddShoppingForm/AddShoppingForm";
-import Button from "../UI/Button/Button";
-import ShoppingFilter from "../Shopping/ShoppingFilter/ShoppingFilter";
-import "./NewShoppingItem.scss";
-import { ReactComponent as AddIcon } from "../../assets/icons/add-plus.svg";
+import React, { useState } from 'react'
+import AddShoppingForm from '../Form/AddShoppingForm/AddShoppingForm'
+import Button from '../UI/Button/Button'
+import ShoppingFilter from '../Shopping/ShoppingFilter/ShoppingFilter'
+import './NewShoppingItem.scss'
+import { ReactComponent as AddIcon } from '../../assets/icons/add-plus.svg'
 
 const NewShoppingItem = (props) => {
-  const [isAdding, setIsAdding] = useState(false);
+  const [isAdding, setIsAdding] = useState(false)
 
-  const [filteredCategory, setFilteredCategory] = useState("All");
+  const [filteredCategory, setFilteredCategory] = useState('All')
 
   const filterChangeHandler = async (selectedCategory) => {
-    await setFilteredCategory(selectedCategory);
-    props.onFilterValueChange(selectedCategory);
-  };
+    await setFilteredCategory(selectedCategory)
+    props.onFilterValueChange(selectedCategory)
+  }
 
   const saveShoppingDataHandler = (enteredShoppingData) => {
     const shoppingData = {
       ...enteredShoppingData,
       id: Math.random().toString(),
-      isCompleted: false
-    };
+      isCompleted: false,
+    }
 
-    props.onAddShopping(shoppingData);
-    setIsAdding(false);
-  };
+    props.onAddShopping(shoppingData)
+    setIsAdding(false)
+  }
 
   const startAddingHandler = () => {
-    setIsAdding(true);
-  };
+    setIsAdding(true)
+  }
 
   const stopAddingHandler = () => {
-    setIsAdding(false);
-  };
+    setIsAdding(false)
+  }
 
   return (
     <div className="new-expense">
-      {
-        !isAdding && (
-          <Button
-            type="button"
-            className="button--rounded button__add"
-            onClick={startAddingHandler}
-          >
-            <AddIcon />
-          </Button>
-        )
-      }
+      {!isAdding && (
+        <Button
+          type="button"
+          className="button--rounded button__add"
+          onClick={startAddingHandler}
+        >
+          <AddIcon />
+        </Button>
+      )}
 
-      {
-        isAdding && (
-          <AddShoppingForm
-            onSaveShoppingData={saveShoppingDataHandler}
-            onCancel={stopAddingHandler}
-          />
-        )
-      }
+      {isAdding && (
+        <AddShoppingForm
+          onSaveShoppingData={saveShoppingDataHandler}
+          onCancel={stopAddingHandler}
+        />
+      )}
 
-      {
-        props.isExpenseAdded ? (
-          <ShoppingFilter
-            selected={filteredCategory}
-            onChangeFilter={filterChangeHandler}
-          />
-        ) : ""
-      }
+      {props.isExpenseAdded ? (
+        <ShoppingFilter
+          selected={filteredCategory}
+          onChangeFilter={filterChangeHandler}
+        />
+      ) : (
+        ''
+      )}
     </div>
-  );
-};
+  )
+}
 
-export default NewShoppingItem;
+export default NewShoppingItem

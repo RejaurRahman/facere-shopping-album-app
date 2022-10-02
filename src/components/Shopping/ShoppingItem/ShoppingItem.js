@@ -1,28 +1,30 @@
-import React from "react";
-import Button from "../../UI/Button/Button";
-import Card from "../../UI/Card/Card";
-import "./ShoppingItem.scss";
-import { ReactComponent as EditIcon } from "../../../assets/icons/edit-pencil.svg";
-import { ReactComponent as DeleteIcon } from "../../../assets/icons/trash-bin.svg";
+import React from 'react'
+import Button from '../../UI/Button/Button'
+import Card from '../../UI/Card/Card'
+import './ShoppingItem.scss'
+import { ReactComponent as EditIcon } from '../../../assets/icons/edit-pencil.svg'
+import { ReactComponent as DeleteIcon } from '../../../assets/icons/trash-bin.svg'
 
 const ShoppingItem = (props) => {
   const deleteHandler = (event, id) => {
-    props.onDeleteShopping(id);
-  };
+    props.onDeleteShopping(id)
+  }
 
   const completeHandler = (index) => {
-    props.onCompleteShopping(index);
+    props.onCompleteShopping(index)
   }
 
   const editHandler = (id) => {
-    props.onEditShopping(id);
+    props.onEditShopping(id)
   }
 
   return (
     <li className="item">
       <Card className="item__list">
         <div
-          className={"item__left " + (props.isCompleted ? "item__completed" : "")}
+          className={
+            'item__left ' + (props.isCompleted ? 'item__completed' : '')
+          }
           onClick={() => completeHandler(props.shopItemId)}
         >
           <span className="item__category">{props.category}</span>
@@ -46,7 +48,7 @@ const ShoppingItem = (props) => {
         </div>
       </Card>
     </li>
-  );
-};
+  )
+}
 
-export default ShoppingItem;
+export default ShoppingItem

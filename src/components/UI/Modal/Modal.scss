@@ -1,4 +1,4 @@
-@use "../../../styles/base.scss" as styles;
+@use '../../../styles/base.scss' as styles;
 
 .modal {
   position: fixed;
@@ -16,7 +16,8 @@
     position: relative;
     z-index: 2;
     background-color: styles.$white;
-    padding: styles.to-rem(16) styles.to-rem(0) styles.to-rem(0) styles.to-rem(0);
+    padding: styles.to-rem(16) styles.to-rem(0) styles.to-rem(0)
+      styles.to-rem(0);
     width: 100%;
     max-width: styles.to-rem(250);
 

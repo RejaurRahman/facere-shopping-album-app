@@ -1,15 +1,15 @@
-import React from "react";
-import "./Button.scss";
+import React from 'react'
+import './Button.scss'
 
 const Button = (props) => {
-  const defineClass = "button " + props.className;
-  const buttonType = props.type;
+  const defineClass = 'button ' + props.className
+  const buttonType = props.type
 
   return (
     <button className={defineClass} type={buttonType} onClick={props.onClick}>
-      { props.children }
+      {props.children}
     </button>
-  );
+  )
 }
 
-export default Button;
+export default Button
