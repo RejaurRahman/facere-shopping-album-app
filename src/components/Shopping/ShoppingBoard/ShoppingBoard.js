@@ -8,8 +8,8 @@ const ShoppingBoard = (props) => {
     props.currentCategory === 'All'
       ? props.items
       : props.items.filter((expense) => {
-          return expense.category === props.currentCategory
-        })
+        return expense.category === props.currentCategory
+      })
 
   return (
     <>

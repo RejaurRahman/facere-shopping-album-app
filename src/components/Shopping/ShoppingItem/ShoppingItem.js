@@ -6,7 +6,7 @@ import { ReactComponent as EditIcon } from '../../../assets/icons/edit-pencil.sv
 import { ReactComponent as DeleteIcon } from '../../../assets/icons/trash-bin.svg'
 
 const ShoppingItem = (props) => {
-  const deleteHandler = (event, id) => {
+  const deleteHandler = (id) => {
     props.onDeleteShopping(id)
   }
 
