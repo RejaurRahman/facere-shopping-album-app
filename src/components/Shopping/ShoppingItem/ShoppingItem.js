@@ -41,7 +41,7 @@ const ShoppingItem = (props) => {
           <Button
             type="button"
             className="item__button item__button--delete"
-            onClick={(event) => deleteHandler(event, props.shopItemId)}
+            onClick={() => deleteHandler(props.shopItemId)}
           >
             <DeleteIcon />
           </Button>
