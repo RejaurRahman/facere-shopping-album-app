@@ -8,6 +8,7 @@ const ShoppingCounter = (props) => {
       <>
         <div className="counter">
           <div className="counter__left"></div>
+
           <div className="counter__right">
             <span
               className={`counter__amount ${
@@ -18,6 +19,7 @@ const ShoppingCounter = (props) => {
             >
               {completedItems}
             </span>
+
             <span className="counter__divider">/</span>
             <span className="counter__amount">{props.items.length}</span>
             <span className="counter__text">completed</span>

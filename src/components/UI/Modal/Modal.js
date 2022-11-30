@@ -11,8 +11,10 @@ const Modal = (props) => {
             <CloseIcon />
           </span>
         </div>
+
         {props.children}
       </div>
+
       <div className="modal__overlay" onClick={props.onClick}></div>
     </div>
   )

@@ -13,18 +13,20 @@ const ShoppingList = (props) => {
 
   return (
     <ul className="list">
-      {props.items.map((expense) => (
-        <ShoppingItem
-          key={expense.id}
-          shopItemId={expense.id}
-          title={expense.title}
-          category={expense.category}
-          onDeleteShopping={props.onDeleteShopping}
-          onCompleteShopping={props.onCompleteShopping}
-          onEditShopping={props.onEditHandler}
-          isCompleted={expense.isCompleted}
-        />
-      ))}
+      {
+        props.items.map((expense) => (
+          <ShoppingItem
+            key={expense.id}
+            shopItemId={expense.id}
+            title={expense.title}
+            category={expense.category}
+            onDeleteShopping={props.onDeleteShopping}
+            onCompleteShopping={props.onCompleteShopping}
+            onEditShopping={props.onEditHandler}
+            isCompleted={expense.isCompleted}
+          />
+        ))
+      }
     </ul>
   )
 }

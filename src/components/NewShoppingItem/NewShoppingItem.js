@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import AddShoppingForm from '../Form/AddShoppingForm/AddShoppingForm'
 import Button from '../UI/Button/Button'
 import ShoppingFilter from '../Shopping/ShoppingFilter/ShoppingFilter'
-import './NewShoppingItem.scss'
 import { ReactComponent as AddIcon } from '../../assets/icons/add-plus.svg'
+import './NewShoppingItem.scss'
 
 const NewShoppingItem = (props) => {
   const [isAdding, setIsAdding] = useState(false)
@@ -19,7 +19,7 @@ const NewShoppingItem = (props) => {
     const shoppingData = {
       ...enteredShoppingData,
       id: Math.random().toString(),
-      isCompleted: false,
+      isCompleted: false
     }
 
     props.onAddShopping(shoppingData)
@@ -36,31 +36,37 @@ const NewShoppingItem = (props) => {
 
   return (
     <div className="new-expense">
-      {!isAdding && (
-        <Button
-          type="button"
-          className="button--rounded button__add"
-          onClick={startAddingHandler}
-        >
-          <AddIcon />
-        </Button>
-      )}
+      {
+        !isAdding && (
+          <Button
+            type="button"
+            className="button--rounded button__add"
+            onClick={startAddingHandler}
+          >
+            <AddIcon />
+          </Button>
+        )
+      }
 
-      {isAdding && (
-        <AddShoppingForm
-          onSaveShoppingData={saveShoppingDataHandler}
-          onCancel={stopAddingHandler}
-        />
-      )}
+      {
+        isAdding && (
+          <AddShoppingForm
+            onSaveShoppingData={saveShoppingDataHandler}
+            onCancel={stopAddingHandler}
+          />
+        )
+      }
 
-      {props.isExpenseAdded ? (
-        <ShoppingFilter
-          selected={filteredCategory}
-          onChangeFilter={filterChangeHandler}
-        />
-      ) : (
-        ''
-      )}
+      {
+        props.isExpenseAdded ? (
+          <ShoppingFilter
+            selected={filteredCategory}
+            onChangeFilter={filterChangeHandler}
+          />
+        ) : (
+          ''
+        )
+      }
     </div>
   )
 }

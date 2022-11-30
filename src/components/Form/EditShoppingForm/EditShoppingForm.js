@@ -52,6 +52,7 @@ const EditShoppingForm = (props) => {
               placeholder="Change entered task"
               onChange={titleChangeHandler}
             />
+
             <input
               type="text"
               value={enteredCategory}
@@ -60,14 +61,19 @@ const EditShoppingForm = (props) => {
               placeholder="Change entered Category (For Ex. Food)"
               onChange={categoryChangeHandler}
             />
+
             <div className="modal__footer">
-              {validationError && (
-                <p className="error__message">{validationError}</p>
-              )}
+              {
+                validationError && (
+                  <p className="error__message">{validationError}</p>
+                )
+              }
+
               <div className="modal__footer--container">
                 <Button type="submit" className="button__update">
                   <TickIcon />
                 </Button>
+
                 <Button
                   type="button"
                   className="button__exit"

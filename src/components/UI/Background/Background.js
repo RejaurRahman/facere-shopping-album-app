@@ -7,6 +7,7 @@ const Background = () => {
       <div className="background__left">
         <div className="background__left--side"></div>
       </div>
+
       <div className="background__right">
         <div className="background__right--top"></div>
         <div className="background__right--bottom"></div>
