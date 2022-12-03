@@ -8,13 +8,9 @@ import './App.scss'
 
 const App = () => {
   const [expenses, setExpenses] = useState([])
-
   const [filteredCategory, setFilteredCategory] = useState('All')
-
   const [isExpenseAdded, setIsExpenseAdded] = useState(false)
-
   const [isEditing, setIsEditing] = useState(false)
-
   const [editItemId, setEditItemId] = useState()
 
   const addShoppingHandler = (expense) => {
@@ -71,6 +67,7 @@ const App = () => {
       setEditItemId('')
       return
     }
+
     const newExpenseList = [...expenses]
 
     newExpenseList.map((item) => {
@@ -97,6 +94,7 @@ const App = () => {
   return (
     <>
       <Background />
+
       <div className="app">
         <div className="app__container">
           <NewShoppingItem
@@ -105,15 +103,17 @@ const App = () => {
             isExpenseAdded={isExpenseAdded}
           />
 
-          {isEditing ? (
-            <EditShoppingForm
-              onCancelEdit={onCancelEdit}
-              onCompleteEdit={onCompleteEdit}
-              id={editItemId}
-            />
-          ) : (
-            ''
-          )}
+          {
+            isEditing ? (
+              <EditShoppingForm
+                onCancelEdit={onCancelEdit}
+                onCompleteEdit={onCompleteEdit}
+                id={editItemId}
+              />
+            ) : (
+              ''
+            )
+          }
 
           <ShoppingBoard
             onCompleteShopping={completeShoppingHandler}
@@ -122,6 +122,7 @@ const App = () => {
             items={expenses}
             currentCategory={filteredCategory}
           />
+
           <ShoppingCounter
             items={
               filteredCategory === 'All'

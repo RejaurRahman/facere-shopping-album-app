@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import Button from '../../UI/Button/Button'
-import './AddShoppingForm.scss'
 import { ReactComponent as AddIcon } from '../../../assets/icons/add-plus.svg'
 import { ReactComponent as CancelIcon } from '../../../assets/icons/back-cancel.svg'
+import './AddShoppingForm.scss'
 
 const AddShoppingForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState('')
@@ -40,7 +40,10 @@ const AddShoppingForm = (props) => {
   }
 
   return (
-    <form onSubmit={submitHandler} className="form">
+    <form
+      onSubmit={submitHandler}
+      className="form"
+    >
       <input
         type="text"
         value={enteredTitle}
@@ -51,6 +54,7 @@ const AddShoppingForm = (props) => {
         placeholder="Enter task"
         onChange={titleChangeHandler}
       />
+
       <input
         type="text"
         value={enteredCategory}
@@ -61,9 +65,14 @@ const AddShoppingForm = (props) => {
         placeholder="Enter Category (For Ex. Food)"
         onChange={categoryChangeHandler}
       />
-      <Button type="submit" className="button--rounded button__submit">
+
+      <Button
+        type="submit"
+        className="button--rounded button__submit"
+      >
         <AddIcon />
       </Button>
+
       <Button
         type="button"
         className="button--rounded button__cancel"

@@ -7,7 +7,6 @@ import './NewShoppingItem.scss'
 
 const NewShoppingItem = (props) => {
   const [isAdding, setIsAdding] = useState(false)
-
   const [filteredCategory, setFilteredCategory] = useState('All')
 
   const filterChangeHandler = async (selectedCategory) => {
