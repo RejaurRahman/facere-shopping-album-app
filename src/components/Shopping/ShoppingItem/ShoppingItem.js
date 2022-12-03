@@ -27,8 +27,12 @@ const ShoppingItem = (props) => {
           }
           onClick={() => completeHandler(props.shopItemId)}
         >
-          <span className="item__category">{props.category}</span>
-          <p className="item__name">{props.title}</p>
+          <span className="item__category">
+            {props.category}
+          </span>
+          <p className="item__name">
+            {props.title}
+          </p>
         </div>
 
         <div className="item__right">

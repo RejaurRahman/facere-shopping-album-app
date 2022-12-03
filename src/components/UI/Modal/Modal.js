@@ -7,7 +7,10 @@ const Modal = (props) => {
     <div className="modal">
       <div className="modal__box">
         <div className="modal__box--top">
-          <span className="modal__close" onClick={props.onClick}>
+          <span
+            className="modal__close"
+            onClick={props.onClick}
+          >
             <CloseIcon />
           </span>
         </div>
@@ -15,7 +18,10 @@ const Modal = (props) => {
         {props.children}
       </div>
 
-      <div className="modal__overlay" onClick={props.onClick}></div>
+      <div
+        className="modal__overlay"
+        onClick={props.onClick}
+      />
     </div>
   )
 }

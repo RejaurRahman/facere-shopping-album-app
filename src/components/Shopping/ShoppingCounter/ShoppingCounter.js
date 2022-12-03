@@ -3,11 +3,12 @@ import './ShoppingCounter.scss'
 
 const ShoppingCounter = (props) => {
   const completedItems = props.items.filter((item) => item.isCompleted).length
+
   return (
     props.items.length > 0 && (
       <>
         <div className="counter">
-          <div className="counter__left"></div>
+          <div className="counter__left" />
 
           <div className="counter__right">
             <span
@@ -20,9 +21,15 @@ const ShoppingCounter = (props) => {
               {completedItems}
             </span>
 
-            <span className="counter__divider">/</span>
-            <span className="counter__amount">{props.items.length}</span>
-            <span className="counter__text">completed</span>
+            <span className="counter__divider">
+              /
+            </span>
+            <span className="counter__amount">
+              {props.items.length}
+            </span>
+            <span className="counter__text">
+              completed
+            </span>
           </div>
         </div>
       </>
