@@ -3,6 +3,14 @@ import ShoppingItem from '../../Shopping/ShoppingItem/ShoppingItem'
 import './ShoppingList.scss'
 
 const ShoppingList = (props) => {
+  if (props.isLoading) {
+    return (
+      <div className="alert">
+        <h2 className="alert__message">Loading...</h2>
+      </div>
+    )
+  }
+
   if (props.items.length === 0) {
     return (
       <div className="alert">
@@ -14,16 +22,16 @@ const ShoppingList = (props) => {
   return (
     <ul className="list">
       {
-        props.items.map((expense) => (
+        props.items.map((expense, index) => (
           <ShoppingItem
-            key={expense.id}
+            category={expense.category}
+            key={index + 1}
+            isCompleted={expense.isCompleted}
+            onCompleteShopping={props.onCompleteShopping}
+            onDeleteShopping={props.onDeleteShopping}
+            onEditShopping={props.onEditHandler}
             shopItemId={expense.id}
             title={expense.title}
-            category={expense.category}
-            onDeleteShopping={props.onDeleteShopping}
-            onCompleteShopping={props.onCompleteShopping}
-            onEditShopping={props.onEditHandler}
-            isCompleted={expense.isCompleted}
           />
         ))
       }
