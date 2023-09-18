@@ -12,10 +12,18 @@ const ShoppingFilter = (props) => {
         value={props.selected}
         onChange={dropdownChangeHandler}
       >
-        <option value="All">All</option>
-        <option value="Food">Food</option>
-        <option value="Furniture">Furniture</option>
-        <option value="DIY">DIY</option>
+        <option key={Math.random()} value="All">
+          All
+        </option>
+
+        {
+          props.uniqueCategories.length > 0 &&
+          props.uniqueCategories.map((category, index) => (
+            <option key={index + 1} value={category}>
+              {category}
+            </option>
+          ))
+        }
       </select>
     </div>
   )
