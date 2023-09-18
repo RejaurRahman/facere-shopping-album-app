@@ -37,17 +37,17 @@ const ShoppingItem = (props) => {
 
         <div className="item__right">
           <Button
-            type="button"
             className="item__button item__button--edit"
             onClick={() => editHandler(props.shopItemId)}
+            type="button"
           >
             <EditIcon />
           </Button>
 
           <Button
-            type="button"
             className="item__button item__button--delete"
             onClick={() => deleteHandler(props.shopItemId)}
+            type="button"
           >
             <DeleteIcon />
           </Button>

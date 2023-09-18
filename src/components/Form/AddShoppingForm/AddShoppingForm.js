@@ -67,16 +67,16 @@ const AddShoppingForm = (props) => {
       />
 
       <Button
-        type="submit"
         className="button--rounded button__submit"
+        type="submit"
       >
         <AddIcon />
       </Button>
 
       <Button
-        type="button"
         className="button--rounded button__cancel"
         onClick={props.onCancel}
+        type="button"
       >
         <CancelIcon />
       </Button>

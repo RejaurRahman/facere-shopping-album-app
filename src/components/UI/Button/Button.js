@@ -8,8 +8,8 @@ const Button = (props) => {
   return (
     <button
       className={defineClass}
-      type={buttonType}
       onClick={props.onClick}
+      type={buttonType}
     >
       {props.children}
     </button>

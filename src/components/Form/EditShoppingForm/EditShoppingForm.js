@@ -45,25 +45,25 @@ const EditShoppingForm = (props) => {
         ReactDOM.createPortal(
           <Modal onClick={props.onCancelEdit}>
             <form
-              onSubmit={submitHandler}
               className="form form__edit"
+              onSubmit={submitHandler}
             >
               <input
-                type="text"
-                value={enteredTitle}
                 className="input input__edit-text"
                 name="text"
-                placeholder="Change entered task"
                 onChange={titleChangeHandler}
+                placeholder="Change entered task"
+                type="text"
+                value={enteredTitle}
               />
 
               <input
-                type="text"
-                value={enteredCategory}
                 className="input input__edit-category"
                 name="text"
-                placeholder="Change entered Category (For Ex. Food)"
                 onChange={categoryChangeHandler}
+                placeholder="Change entered Category (For Ex. Food)"
+                type="text"
+                value={enteredCategory}
               />
 
               <div className="modal__footer">
@@ -77,16 +77,16 @@ const EditShoppingForm = (props) => {
 
                 <div className="modal__footer--container">
                   <Button
-                    type="submit"
                     className="button__update"
+                    type="submit"
                   >
                     <TickIcon />
                   </Button>
 
                   <Button
-                    type="button"
                     className="button__exit"
                     onClick={props.onCancelEdit}
+                    type="button"
                   >
                     <MinusIcon />
                   </Button>
