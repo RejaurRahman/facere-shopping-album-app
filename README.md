@@ -65,3 +65,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 - Sentry.io integrated so errors are tracked and monitored via the Sentry.io application dashboard
 - ESLint, Prettier and Stylelint setup so issues found out before deployment to production
+- Store, edit and delete data which is stored in Firebase
