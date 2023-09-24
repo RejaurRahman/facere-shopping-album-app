@@ -6,7 +6,7 @@ const ShoppingFilter = (props) => {
     props.onChangeFilter(event.target.value)
   }
 
-  return (
+  return props.uniqueCategories.length > 0 ? (
     <div className="filter">
       <select
         value={props.selected}
@@ -17,7 +17,6 @@ const ShoppingFilter = (props) => {
         </option>
 
         {
-          props.uniqueCategories.length > 0 &&
           props.uniqueCategories.map((category, index) => (
             <option key={index + 1} value={category}>
               {category}
@@ -26,7 +25,7 @@ const ShoppingFilter = (props) => {
         }
       </select>
     </div>
-  )
+  ) : null
 }
 
 export default ShoppingFilter

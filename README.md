@@ -6,6 +6,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 [Production URL](https://facere-shopping-album.netlify.app/)
 
+In order to run the project .env needs to be added to the root of the repository with Firebase DB Settings:
+
+```
+REACT_APP_API_KEY={API KEY VALUE}
+REACT_APP_AUTH_DOMAIN={AUTH DOMAIN VALUE}
+REACT_APP_PROJECT_ID={PROJECT ID VALUE}
+REACT_APP_STORAGE_BUCKET={STORAGE BUCKET VALUE}
+REACT_APP_MESSAGING_SENDER_ID={MESSAGING SENDER ID VALUE}
+REACT_APP_APP_ID={APP ID VALUE}
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
