@@ -1,5 +1,14 @@
 import React from 'react'
-import './ShoppingCounter.scss'
+
+import {
+  Completed,
+  Counter,
+  CounterBase,
+  CounterDivider,
+  CounterRight,
+  CounterText,
+  CurrentAmount
+} from './ShoppingCounter.styles'
 
 const ShoppingCounter = (props) => {
   const completedItems = props.items.filter((item) => item.isCompleted).length
@@ -7,31 +16,30 @@ const ShoppingCounter = (props) => {
   return (
     props.items.length > 0 && (
       <>
-        <div className="counter">
-          <div className="counter__left" />
-
-          <div className="counter__right">
-            <span
-              className={`counter__amount ${
-                completedItems === props.items.length
-                  ? 'counter__amount--completed'
-                  : 'counter__amount--current__amount'
-              }`}
-            >
-              {completedItems}
-            </span>
-
-            <span className="counter__divider">
+        <Counter>
+          <CounterRight>
+            <>
+              {completedItems === props.items.length ? (
+                <Completed>
+                  {completedItems}
+                </Completed>
+              ) : (
+                <CurrentAmount>
+                  {completedItems}
+                </CurrentAmount>
+              )}
+            </>
+            <CounterDivider>
               /
-            </span>
-            <span className="counter__amount">
+            </CounterDivider>
+            <CounterBase>
               {props.items.length}
-            </span>
-            <span className="counter__text">
+            </CounterBase>
+            <CounterText>
               completed
-            </span>
-          </div>
-        </div>
+            </CounterText>
+          </CounterRight>
+        </Counter>
       </>
     )
   )

@@ -1,10 +1,8 @@
 import React from 'react'
 
 const Card = (props) => {
-  const defineClass = 'card ' + props.className
-
   return (
-    <div className={defineClass}>
+    <div>
       {props.children}
     </div>
   )

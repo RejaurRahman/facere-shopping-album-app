@@ -1,28 +1,34 @@
 import React from 'react'
+
 import { ReactComponent as CloseIcon } from '../../../assets/icons/close.svg'
-import './Modal.scss'
+
+import {
+  ModalBox,
+  ModalBoxTop,
+  ModalClose,
+  ModalOverlay,
+  ModalWrapper
+} from './Modal.styles'
 
 const Modal = (props) => {
   return (
-    <div className="modal">
-      <div className="modal__box">
-        <div className="modal__box--top">
-          <span
-            className="modal__close"
+    <ModalWrapper>
+      <ModalBox>
+        <ModalBoxTop>
+          <ModalClose
             onClick={props.onClick}
           >
             <CloseIcon />
-          </span>
-        </div>
+          </ModalClose>
+        </ModalBoxTop>
 
         {props.children}
-      </div>
+      </ModalBox>
 
-      <div
-        className="modal__overlay"
+      <ModalOverlay
         onClick={props.onClick}
       />
-    </div>
+    </ModalWrapper>
   )
 }
 

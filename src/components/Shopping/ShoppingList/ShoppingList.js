@@ -1,26 +1,32 @@
 import React from 'react'
+
 import ShoppingItem from '../../Shopping/ShoppingItem/ShoppingItem'
-import './ShoppingList.scss'
+
+import {
+  Alert,
+  AlertMessage,
+  List
+} from './ShoppingList.styles'
 
 const ShoppingList = (props) => {
   if (props.isLoading) {
     return (
-      <div className="alert">
-        <h2 className="alert__message">Loading...</h2>
-      </div>
+      <Alert>
+        <AlertMessage>Loading...</AlertMessage>
+      </Alert>
     )
   }
 
   if (props.items.length === 0) {
     return (
-      <div className="alert">
-        <h2 className="alert__message">Found no shopping data.</h2>
-      </div>
+      <Alert>
+        <AlertMessage>Found no shopping data.</AlertMessage>
+      </Alert>
     )
   }
 
   return (
-    <ul className="list">
+    <List>
       {
         props.items.map((expense, index) => (
           <ShoppingItem
@@ -35,7 +41,7 @@ const ShoppingList = (props) => {
           />
         ))
       }
-    </ul>
+    </List>
   )
 }
 

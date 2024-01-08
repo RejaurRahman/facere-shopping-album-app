@@ -1,5 +1,9 @@
 import React from 'react'
-import './ShoppingFilter.scss'
+
+import {
+  Filter,
+  FilterSelect
+} from './ShoppingFilter.styles'
 
 const ShoppingFilter = (props) => {
   const dropdownChangeHandler = (event) => {
@@ -7,8 +11,8 @@ const ShoppingFilter = (props) => {
   }
 
   return props.uniqueCategories.length > 0 ? (
-    <div className="filter">
-      <select
+    <Filter>
+      <FilterSelect
         value={props.selected}
         onChange={dropdownChangeHandler}
       >
@@ -23,8 +27,8 @@ const ShoppingFilter = (props) => {
             </option>
           ))
         }
-      </select>
-    </div>
+      </FilterSelect>
+    </Filter>
   ) : null
 }
 

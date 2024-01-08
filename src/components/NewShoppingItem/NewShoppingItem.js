@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
+
 import AddShoppingForm from '../Form/AddShoppingForm/AddShoppingForm'
-import Button from '../UI/Button/Button'
+import Button, { BUTTON_TYPE_CLASSES } from '../UI/Button/Button'
 import ShoppingFilter from '../Shopping/ShoppingFilter/ShoppingFilter'
+
 import { ReactComponent as AddIcon } from '../../assets/icons/add-plus.svg'
+
 import firebase from '../../firebase'
-import './NewShoppingItem.scss'
+
+import { NewExpense } from './NewShoppingItem.styles'
 
 const NewShoppingItem = (props) => {
   const [isAdding, setIsAdding] = useState(false)
@@ -53,11 +57,11 @@ const NewShoppingItem = (props) => {
   }
 
   return (
-    <div className="new-expense">
+    <NewExpense>
       {
         !isAdding && (
           <Button
-            className="button--rounded button__add"
+            buttonType={BUTTON_TYPE_CLASSES.add}
             onClick={startAddingHandler}
             type="button"
           >
@@ -80,7 +84,7 @@ const NewShoppingItem = (props) => {
         selected={filteredCategory}
         uniqueCategories={props.uniqueCategories}
       />
-    </div>
+    </NewExpense>
   )
 }
 

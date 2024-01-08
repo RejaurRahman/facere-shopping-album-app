@@ -1,8 +1,14 @@
 import React, { useState } from 'react'
-import Button from '../../UI/Button/Button'
+
+import Button, { BUTTON_TYPE_CLASSES } from '../../UI/Button/Button'
+
 import { ReactComponent as AddIcon } from '../../../assets/icons/add-plus.svg'
 import { ReactComponent as CancelIcon } from '../../../assets/icons/back-cancel.svg'
-import './AddShoppingForm.scss'
+
+import {
+  Form,
+  InputType
+} from './AddShoppingForm.styles'
 
 const AddShoppingForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState('')
@@ -40,14 +46,13 @@ const AddShoppingForm = (props) => {
   }
 
   return (
-    <form
+    <Form
       onSubmit={submitHandler}
-      className="form"
     >
-      <input
+      <InputType
         type="text"
         value={enteredTitle}
-        className={`input input__text ${
+        className={`${
           validationTitleError ? validationTitleError : ''
         }`}
         name="text"
@@ -55,10 +60,10 @@ const AddShoppingForm = (props) => {
         onChange={titleChangeHandler}
       />
 
-      <input
+      <InputType
         type="text"
         value={enteredCategory}
-        className={`input input__category ${
+        className={`${
           validationCategoryError ? validationCategoryError : ''
         }`}
         name="text"
@@ -67,20 +72,20 @@ const AddShoppingForm = (props) => {
       />
 
       <Button
-        className="button--rounded button__submit"
+        buttonType={BUTTON_TYPE_CLASSES.submit}
         type="submit"
       >
         <AddIcon />
       </Button>
 
       <Button
-        className="button--rounded button__cancel"
+        buttonType={BUTTON_TYPE_CLASSES.cancel}
         onClick={props.onCancel}
         type="button"
       >
         <CancelIcon />
       </Button>
-    </form>
+    </Form>
   )
 }
 

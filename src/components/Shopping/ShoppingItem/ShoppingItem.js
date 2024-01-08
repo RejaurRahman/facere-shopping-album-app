@@ -1,9 +1,18 @@
 import React from 'react'
-import Button from '../../UI/Button/Button'
-import Card from '../../UI/Card/Card'
+
+import Button, { BUTTON_TYPE_CLASSES } from '../../UI/Button/Button'
+
 import { ReactComponent as EditIcon } from '../../../assets/icons/edit-pencil.svg'
 import { ReactComponent as DeleteIcon } from '../../../assets/icons/trash-bin.svg'
-import './ShoppingItem.scss'
+
+import { ListCard } from '../../UI/Card/Card.styles'
+import {
+  Category,
+  ItemComplete,
+  ItemLeft,
+  ItemRight,
+  Name
+} from './ShoppingItem.styles'
 
 const ShoppingItem = (props) => {
   const deleteHandler = (id) => {
@@ -19,25 +28,35 @@ const ShoppingItem = (props) => {
   }
 
   return (
-    <li className="item">
-      <Card className="item__list">
-        <div
-          className={
-            'item__left ' + (props.isCompleted ? 'item__completed' : '')
-          }
+    <li>
+      <ListCard>
+        <ItemLeft
           onClick={() => completeHandler(props.shopItemId)}
         >
-          <span className="item__category">
-            {props.category}
-          </span>
-          <p className="item__name">
-            {props.title}
-          </p>
-        </div>
+          {props.isCompleted ? (
+            <ItemComplete>
+              <Category>
+                {props.category}
+              </Category>
+              <Name>
+                {props.title}
+              </Name>
+            </ItemComplete>
+          ) : (
+            <>
+              <Category>
+                {props.category}
+              </Category>
+              <Name>
+                {props.title}
+              </Name>
+            </>
+          )}
+        </ItemLeft>
 
-        <div className="item__right">
+        <ItemRight>
           <Button
-            className="item__button item__button--edit"
+            buttonType={BUTTON_TYPE_CLASSES.itemEdit}
             onClick={() => editHandler(props.shopItemId)}
             type="button"
           >
@@ -45,14 +64,14 @@ const ShoppingItem = (props) => {
           </Button>
 
           <Button
-            className="item__button item__button--delete"
+            buttonType={BUTTON_TYPE_CLASSES.itemDelete}
             onClick={() => deleteHandler(props.shopItemId)}
             type="button"
           >
             <DeleteIcon />
           </Button>
-        </div>
-      </Card>
+        </ItemRight>
+      </ListCard>
     </li>
   )
 }

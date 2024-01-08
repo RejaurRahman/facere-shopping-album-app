@@ -1,10 +1,21 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
-import Button from '../../UI/Button/Button'
+
+import Button, { BUTTON_TYPE_CLASSES } from '../../UI/Button/Button'
 import Modal from '../../UI/Modal/Modal'
+
 import { ReactComponent as TickIcon } from '../../../assets/icons/tick.svg'
 import { ReactComponent as MinusIcon } from '../../../assets/icons/minus-cancel.svg'
-import './EditShoppingForm.scss'
+
+import {
+  ErrorMessage,
+  Form,
+  Input
+} from './EditShoppingForm.styles'
+import {
+  ModalFooter,
+  ModalFooterContainer
+} from '../../UI/Modal/Modal.styles'
 
 const EditShoppingForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState('')
@@ -44,12 +55,10 @@ const EditShoppingForm = (props) => {
       {
         ReactDOM.createPortal(
           <Modal onClick={props.onCancelEdit}>
-            <form
-              className="form form__edit"
+            <Form
               onSubmit={submitHandler}
             >
-              <input
-                className="input input__edit-text"
+              <Input
                 name="text"
                 onChange={titleChangeHandler}
                 placeholder="Change entered task"
@@ -57,8 +66,7 @@ const EditShoppingForm = (props) => {
                 value={enteredTitle}
               />
 
-              <input
-                className="input input__edit-category"
+              <Input
                 name="text"
                 onChange={categoryChangeHandler}
                 placeholder="Change entered Category (For Ex. Food)"
@@ -66,33 +74,33 @@ const EditShoppingForm = (props) => {
                 value={enteredCategory}
               />
 
-              <div className="modal__footer">
+              <ModalFooter>
                 {
                   validationError && (
-                    <p className="error__message">
+                    <ErrorMessage>
                       {validationError}
-                    </p>
+                    </ErrorMessage>
                   )
                 }
 
-                <div className="modal__footer--container">
+                <ModalFooterContainer>
                   <Button
-                    className="button__update"
+                    buttonType={BUTTON_TYPE_CLASSES.update}
                     type="submit"
                   >
                     <TickIcon />
                   </Button>
 
                   <Button
-                    className="button__exit"
+                    buttonType={BUTTON_TYPE_CLASSES.exit}
                     onClick={props.onCancelEdit}
                     type="button"
                   >
                     <MinusIcon />
                   </Button>
-                </div>
-              </div>
-            </form>
+                </ModalFooterContainer>
+              </ModalFooter>
+            </Form>
           </Modal>,
           document.getElementById('modal-root')
         )

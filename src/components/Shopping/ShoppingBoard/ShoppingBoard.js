@@ -1,7 +1,9 @@
 import React from 'react'
+
 import ShoppingList from '../ShoppingList/ShoppingList'
-import Card from '../../UI/Card/Card'
-import './ShoppingBoard.scss'
+
+import { Board } from './ShoppingBoard.styles'
+import { BaseCard } from '../../UI/Card/Card.styles'
 
 const ShoppingBoard = (props) => {
   const filteredShopping =
@@ -12,8 +14,8 @@ const ShoppingBoard = (props) => {
       })
 
   return (
-    <>
-      <Card className="shopping">
+    <Board>
+      <BaseCard>
         <ShoppingList
           isLoading={props.isLoading}
           items={filteredShopping}
@@ -21,8 +23,8 @@ const ShoppingBoard = (props) => {
           onDeleteShopping={props.onDeleteShopping}
           onEditHandler={props.onEditHandler}
         />
-      </Card>
-    </>
+      </BaseCard>
+    </Board>
   )
 }
 

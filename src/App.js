@@ -1,11 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, {
+  useEffect,
+  useState
+} from 'react'
+
 import NewShoppingItem from './components/NewShoppingItem/NewShoppingItem'
 import ShoppingBoard from './components/Shopping/ShoppingBoard/ShoppingBoard'
 import Background from './components/UI/Background/Background'
 import EditShoppingForm from './components/Form/EditShoppingForm/EditShoppingForm'
 import ShoppingCounter from './components/Shopping/ShoppingCounter/ShoppingCounter'
+
 import firebase from './firebase'
-import './App.scss'
+
+import {
+  AppContainer,
+  AppRoute
+} from './App.styles'
 
 const App = () => {
   const [expenses, setExpenses] = useState([])
@@ -191,8 +200,8 @@ const App = () => {
     <>
       <Background />
 
-      <div className="app">
-        <div className="app__container">
+      <AppRoute>
+        <AppContainer>
           <NewShoppingItem
             isExpenseAdded={isExpenseAdded}
             onAddShopping={addShoppingHandler}
@@ -228,8 +237,8 @@ const App = () => {
                 : expenses.filter((item) => item.category === filteredCategory)
             }
           />
-        </div>
-      </div>
+        </AppContainer>
+      </AppRoute>
     </>
   )
 }

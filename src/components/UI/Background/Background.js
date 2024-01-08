@@ -1,18 +1,26 @@
 import React from 'react'
-import './Background.scss'
+
+import {
+  BackgroundLeft,
+  BackgroundLeftSide,
+  BackgroundRight,
+  BackgroundRightBottom,
+  BackgroundRightTop,
+  BackgroundWrapper
+} from './Background.styles'
 
 const Background = () => {
   return (
-    <div className="background">
-      <div className="background__left">
-        <div className="background__left--side" />
-      </div>
+    <BackgroundWrapper>
+      <BackgroundLeft>
+        <BackgroundLeftSide />
+      </BackgroundLeft>
 
-      <div className="background__right">
-        <div className="background__right--top" />
-        <div className="background__right--bottom" />
-      </div>
-    </div>
+      <BackgroundRight>
+        <BackgroundRightTop />
+        <BackgroundRightBottom />
+      </BackgroundRight>
+    </BackgroundWrapper>
   )
 }
 

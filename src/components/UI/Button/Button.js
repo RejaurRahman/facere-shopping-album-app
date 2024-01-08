@@ -1,18 +1,46 @@
 import React from 'react'
-import './Button.scss'
+
+import {
+  ButtonAdd,
+  ButtonCancel,
+  ButtonExit,
+  ButtonItemDelete,
+  ButtonItemEdit,
+  ButtonSubmit,
+  ButtonUpdate
+} from './Button.styles'
+
+export const BUTTON_TYPE_CLASSES = {
+  add: 'add',
+  cancel: 'cancel',
+  exit: 'exit',
+  itemDelete: 'item-delete',
+  itemEdit: 'item-edit',
+  submit: 'submit',
+  update: 'update'
+}
+
+const getButton = (buttonType = BUTTON_TYPE_CLASSES.add) =>
+  ({
+    [BUTTON_TYPE_CLASSES.add]: ButtonAdd,
+    [BUTTON_TYPE_CLASSES.cancel]: ButtonCancel,
+    [BUTTON_TYPE_CLASSES.exit]: ButtonExit,
+    [BUTTON_TYPE_CLASSES.itemDelete]: ButtonItemDelete,
+    [BUTTON_TYPE_CLASSES.itemEdit]: ButtonItemEdit,
+    [BUTTON_TYPE_CLASSES.submit]: ButtonSubmit,
+    [BUTTON_TYPE_CLASSES.update]: ButtonUpdate
+  }[buttonType]);
 
 const Button = (props) => {
-  const defineClass = 'button ' + props.className
-  const buttonType = props.type
+  const CustomButton = getButton(props.buttonType)
 
   return (
-    <button
-      className={defineClass}
+    <CustomButton
       onClick={props.onClick}
-      type={buttonType}
+      type={props.type}
     >
       {props.children}
-    </button>
+    </CustomButton>
   )
 }
 
